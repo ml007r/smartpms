@@ -70,6 +70,7 @@ public class Abschlussarbeit {
         this.id = id;
     }
 
+    @Column(name = "typ", precision = 1, scale = 0, nullable = false)
     public TYP_ABSCHLUSSARBEIT getTyp() {
         return typ;
     }
@@ -78,6 +79,7 @@ public class Abschlussarbeit {
         this.typ = typ;
     }
 
+    @Column(name = "thema", length = 150, nullable = false)
     public String getThema() {
         return thema;
     }
@@ -86,6 +88,7 @@ public class Abschlussarbeit {
         this.thema = thema;
     }
 
+    @Column(name = "thema", length = 1000, nullable = false)
     public String getBeschreibung() {
         return beschreibung;
     }
@@ -94,6 +97,8 @@ public class Abschlussarbeit {
         this.beschreibung = beschreibung;
     }
 
+    @Temporal(TemporalType.DATE)
+    @Column(name = "abgabetermin")
     public Date getAbgabetermin() {
         return abgabetermin;
     }
@@ -102,6 +107,7 @@ public class Abschlussarbeit {
         this.abgabetermin = abgabetermin;
     }
 
+    @Column(name = "note", precision = 1, scale = 1)
     public double getNote() {
         return note;
     }
@@ -110,6 +116,7 @@ public class Abschlussarbeit {
         this.note = note;
     }
 
+    @Column(name = "ects", precision = 2, scale = 1)
     public double getEcts() {
         return ects;
     }
