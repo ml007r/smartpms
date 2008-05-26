@@ -16,8 +16,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/Dozent.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/Dozent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smartPMS.iws" afterPath="$PROJECT_DIR$/smartPMS.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/ejb3/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/Abschlussarbeit.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/Abschlussarbeit.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/Lehrangebot.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/Lehrangebot.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smartPMS.ipr" afterPath="$PROJECT_DIR$/smartPMS.ipr" />
     </list>
     <ignored path="smartPMS.iws" />
@@ -81,19 +84,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="smartPMS.iws" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/smartPMS.iws">
+      <file leaf-file-name="Dozent.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ejb3/src/smartPMS/modell/Dozent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="41" selection-start="4252" selection-end="4252" vertical-scroll-proportion="2.0635514">
+            <state line="38" column="26" selection-start="664" selection-end="664" vertical-scroll-proportion="0.80727273">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lehrangebot.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ejb3/src/smartPMS/modell/Lehrangebot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="5" selection-start="477" selection-end="477" vertical-scroll-proportion="0.54545456">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="smartPMS.ipr" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smartPMS.ipr">
+      <file leaf-file-name="Abschlussarbeit.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ejb3/src/smartPMS/modell/Abschlussarbeit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="43" selection-start="82" selection-end="82" vertical-scroll-proportion="-5.233645">
+            <state line="70" column="5" selection-start="1546" selection-end="1546" vertical-scroll-proportion="0.47102803">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Klausur.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ejb3/src/smartPMS/modell/Klausur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="0" selection-start="754" selection-end="1001" vertical-scroll-proportion="0.22056074">
               <folding />
             </state>
           </provider>
@@ -117,6 +142,82 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="smartPMS" />
           <option name="myItemType" value="com.intellij.javaee.module.view.nodes.JavaeeProjectNodeDescriptor" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="smartPMS" />
+          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.JavaeeProjectNodeDescriptor" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="JPA Facets" />
+          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.FacetHolderNodeDescriptor" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="ejb3" />
+          <option name="myItemType" value="com.intellij.jpa.view.nodes.PersistenceFacetNodeDescriptor" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="smartPMS" />
+          <option name="myItemType" value="com.intellij.jpa.view.nodes.PersistenceUnitNodeDescriptor" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="smartPMS" />
+          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.JavaeeProjectNodeDescriptor" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="JPA Facets" />
+          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.FacetHolderNodeDescriptor" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="ejb3" />
+          <option name="myItemType" value="com.intellij.jpa.view.nodes.PersistenceFacetNodeDescriptor" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="smartPMS" />
+          <option name="myItemType" value="com.intellij.jpa.view.nodes.PersistenceUnitNodeDescriptor" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Klausur (smartPMS.modell)" />
+          <option name="myItemType" value="com.intellij.jpa.view.nodes.PersistentObjectNodeDescriptor" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="smartPMS" />
+          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.JavaeeProjectNodeDescriptor" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="JPA Facets" />
+          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.FacetHolderNodeDescriptor" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="ejb3" />
+          <option name="myItemType" value="com.intellij.jpa.view.nodes.PersistenceFacetNodeDescriptor" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="smartPMS" />
+          <option name="myItemType" value="com.intellij.jpa.view.nodes.PersistenceUnitNodeDescriptor" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Abschlussarbeit (smartPMS.modell)" />
+          <option name="myItemType" value="com.intellij.jpa.view.nodes.PersistentObjectNodeDescriptor" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="smartPMS" />
+          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.JavaeeProjectNodeDescriptor" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="JPA Facets" />
+          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.FacetHolderNodeDescriptor" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="ejb3" />
+          <option name="myItemType" value="com.intellij.jpa.view.nodes.PersistenceFacetNodeDescriptor" />
         </PATH_ELEMENT>
       </PATH>
     </subPane>
@@ -151,7 +252,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="0.5" version="1" splitterProportion="0.5">
+    <navigator currentView="J2EEPane" currentSubView="file" proportions="0.5" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -178,102 +279,6 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="smartPMS.modell" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree">
-    <UpdateInfo date="26.05.08 14:01" ActionInfo="_Update">
-      <UpdatedFiles>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated from server" />
-          <option name="myStatusName" value="Changed on server" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CHANGED_ON_SERVER" />
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Updated" />
-            <option name="myStatusName" value="Changed" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="UPDATED" />
-            <PATH vcs="svn" revision="18">$PROJECT_DIR$/ejb3/src/smartPMS/modell/Dokument.java</PATH>
-            <PATH vcs="svn" revision="18">$PROJECT_DIR$/ejb3/src/smartPMS/modell/Lehrangebot.java</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Created" />
-            <option name="myStatusName" value="Created" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="CREATED" />
-            <PATH vcs="svn" revision="18">$PROJECT_DIR$/ejb3/src/smartPMS/modell/Termin.java</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Deleted" />
-            <option name="myStatusName" value="Deleted" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="true" />
-            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Restored" />
-            <option name="myStatusName" value="Will be restored" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="RESTORED" />
-          </FILE-GROUP>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Modified" />
-          <option name="myStatusName" value="Modified" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MODIFIED" />
-          <PATH>$PROJECT_DIR$/ejb3/META-INF/persistence.xml</PATH>
-          <PATH>$PROJECT_DIR$/smartPMS.ipr</PATH>
-          <PATH>$PROJECT_DIR$/smartPMS.iws</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Skipped" />
-          <option name="myStatusName" value="Skipped" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SKIPPED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with conflicts" />
-          <option name="myStatusName" value="Will be merged with conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_CONFLICTS" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged" />
-          <option name="myStatusName" value="Will be merged" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Not in repository" />
-          <option name="myStatusName" value="Not in repository" />
-          <option name="mySupportsDeletion" value="true" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UNKNOWN" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally added" />
-          <option name="myStatusName" value="Locally added" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_ADDED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally removed" />
-          <option name="myStatusName" value="Locally removed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_REMOVED" />
-        </FILE-GROUP>
-      </UpdatedFiles>
-    </UpdateInfo>
   </component>
   <component name="RunManager" selected="Geronimo Server.smartPMS">
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -570,32 +575,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ejb3/src/smartPMS/modell/Klausur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="60" selection-end="60" vertical-scroll-proportion="0.16707617">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ejb3/src/smartPMS/modell/Abschlussarbeit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="3" selection-start="234" selection-end="234" vertical-scroll-proportion="0.24626866">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ejb3/src/smartPMS/modell/Professor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="28" selection-start="92" selection-end="92" vertical-scroll-proportion="0.13953489">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ejb3/src/smartPMS/modell/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="0.3759036">
           <folding />
         </state>
       </provider>
@@ -642,17 +624,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/smartPMS.ipr">
+    <entry file="file://$PROJECT_DIR$/smartPMS.iws">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="43" selection-start="82" selection-end="82" vertical-scroll-proportion="-5.233645">
+        <state line="92" column="41" selection-start="4218" selection-end="4218" vertical-scroll-proportion="0.022429906">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/smartPMS.iws">
+    <entry file="file://$PROJECT_DIR$/smartPMS.ipr">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="41" selection-start="4252" selection-end="4252" vertical-scroll-proportion="2.0635514">
+        <state line="1" column="43" selection-start="82" selection-end="82" vertical-scroll-proportion="0.022429906">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb3/src/smartPMS/modell/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="18" selection-start="1918" selection-end="1918" vertical-scroll-proportion="0.33271027">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb3/src/smartPMS/modell/Dozent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="26" selection-start="664" selection-end="664" vertical-scroll-proportion="0.80727273">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb3/src/smartPMS/modell/Lehrangebot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="5" selection-start="477" selection-end="477" vertical-scroll-proportion="0.54545456">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb3/src/smartPMS/modell/Klausur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="0" selection-start="754" selection-end="1001" vertical-scroll-proportion="0.22056074">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb3/src/smartPMS/modell/Abschlussarbeit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="5" selection-start="1546" selection-end="1546" vertical-scroll-proportion="0.47102803">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
