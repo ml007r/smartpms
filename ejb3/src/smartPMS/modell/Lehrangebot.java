@@ -12,9 +12,17 @@ import javax.persistence.Entity;
 @Entity
 public class Lehrangebot {
 
+    public Lehrangebot(int nr,String bez){
+        this.nummer = nr;
+        this.bezeichnung = bez;
+    }
+
     private int nummer;
-    //ganz wichtig
+  
     private String bezeichnung;
+
+    protected Lehrangebot() {
+    }
 
     public boolean speichern(){
           return true;
