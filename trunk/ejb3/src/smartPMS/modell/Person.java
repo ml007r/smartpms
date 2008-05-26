@@ -2,6 +2,7 @@ package smartPMS.modell;
 
 import javax.persistence.Entity;
 import java.util.Date;
+import java.util.Calendar;
 
 /**
  * Created by IntelliJ IDEA.
@@ -12,7 +13,6 @@ import java.util.Date;
  */
 @Entity
 public abstract class Person {
-
 
     // NameT
 
