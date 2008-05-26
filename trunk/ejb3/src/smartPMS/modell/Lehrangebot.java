@@ -12,20 +12,18 @@ import javax.persistence.Entity;
 @Entity
 public class Lehrangebot {
 
-    public Lehrangebot(int nr,String bez){
-        this.nummer = nr;
-        this.bezeichnung = bez;
-    }
+    private long id;
 
     private int nummer;
-  
+
     private String bezeichnung;
 
     protected Lehrangebot() {
     }
 
-    public boolean speichern(){
-          return true;
+    public Lehrangebot(int nr, String bez) {
+        this.nummer = nr;
+        this.bezeichnung = bez;
     }
 
     public String getBezeichnung() {

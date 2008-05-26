@@ -6,5 +6,6 @@
         <class>smartPMS.modell.Hilfskraft</class>
         <class>smartPMS.modell.Student</class>
         <class>smartPMS.modell.Dozent</class>
+        <class>smartPMS.modell.Professor</class>
     </persistence-unit>
 </persistence>

@@ -1,6 +1,7 @@
 package smartPMS.modell;
 
 import javax.persistence.Entity;
+import java.util.Collection;
 
 /**
  * Created by IntelliJ IDEA.
@@ -13,11 +14,19 @@ import javax.persistence.Entity;
 public class Dozent extends Person {
 
     private long id;
-    
 
     private String buero;
 
+    private Collection<Lehrangebot> lehrangebot;
 
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getBuero() {
         return buero;
@@ -25,5 +34,13 @@ public class Dozent extends Person {
 
     public void setBuero(String buero) {
         this.buero = buero;
+    }
+
+    public Collection<Lehrangebot> getLehrangebot() {
+        return lehrangebot;
+    }
+
+    public void setLehrangebot(Collection<Lehrangebot> lehrangebot) {
+        this.lehrangebot = lehrangebot;
     }
 }

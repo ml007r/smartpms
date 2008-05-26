@@ -1,6 +1,6 @@
 package smartPMS.modell;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -15,20 +15,33 @@ public class Abschlussarbeit {
 
     private long id;
 
-    private String typ;
+    public enum TYP_ABSCHLUSSARBEIT {
+        DIPLOM, BACHELOR, MASTER
+    }
+
+    private TYP_ABSCHLUSSARBEIT typ;
+
     private String thema;
+
     private String beschreibung;
+
     private Date abgabetermin;
+
     private double note;
+
     private double ects = 30.0;
 
+    private Professor professor;
 
-    protected Abschlussarbeit() {
-
-    }
+    private Student student;
 
     /**
      *
+     */
+    protected Abschlussarbeit() {
+    }
+
+    /**
      * @param typ
      * @param thema
      * @param beschreibung
@@ -36,7 +49,7 @@ public class Abschlussarbeit {
      * @param note
      * @param ects
      */
-    public Abschlussarbeit(String typ, String thema, String beschreibung, Date abgabetermin, double note, double ects) {
+    public Abschlussarbeit(TYP_ABSCHLUSSARBEIT typ, String thema, String beschreibung, Date abgabetermin, double note, double ects) {
         this.typ = typ;
         this.thema = thema;
         this.beschreibung = beschreibung;
@@ -45,6 +58,10 @@ public class Abschlussarbeit {
         this.ects = ects;
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_abschlussarbeit_id")
+    @SequenceGenerator(name = "seq_abschlussarbeit_id", sequenceName = "seq_abschlussarbeit_id", allocationSize = 1)
+    @Column(name = "id", precision = 10, scale = 0)
     public long getId() {
         return id;
     }
@@ -53,11 +70,11 @@ public class Abschlussarbeit {
         this.id = id;
     }
 
-    public String getTyp() {
+    public TYP_ABSCHLUSSARBEIT getTyp() {
         return typ;
     }
 
-    public void setTyp(String typ) {
+    public void setTyp(TYP_ABSCHLUSSARBEIT typ) {
         this.typ = typ;
     }
 
