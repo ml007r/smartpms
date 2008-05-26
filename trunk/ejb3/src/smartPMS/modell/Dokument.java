@@ -11,14 +11,21 @@ import javax.persistence.Entity;
  */
 @Entity
 public class Dokument {
-    //ganz wichtig
-    private String Name;
-     //ganz wichtig
+
+    private String name;
+
+    public Dokument(String name){
+        this.name = name;
+    }
+
+    protected Dokument() {
+    }
+
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        name = name;
     }
 }
