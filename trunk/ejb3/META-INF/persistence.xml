@@ -2,10 +2,13 @@
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
 
     <persistence-unit name="smartPMS">
-        <class>smartPMS.modell.Person</class>
-        <class>smartPMS.modell.Hilfskraft</class>
-        <class>smartPMS.modell.Student</class>
-        <class>smartPMS.modell.Dozent</class>
-        <class>smartPMS.modell.Professor</class>
+          <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+        <properties>
+            <property name="openjpa.ConnectionURL" value=""/>
+            <property name="openjpa.ConnectionDriverName" value=""/>
+            <property name="openjpa.ConnectionUserName" value=""/>
+            <property name="openjpa.ConnectionPassword" value=""/>
+            <property name="openjpa.Log" value="DefaultLevel=TRACE, Tool=INFO"/>
+        </properties>
     </persistence-unit>
 </persistence>

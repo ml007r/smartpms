@@ -1,8 +1,8 @@
 package smartPMS.form;
 
+import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionErrors;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -20,8 +20,7 @@ public class PersonForm extends ActionForm {
     }
 
     public ActionErrors validate(ActionMapping actionMapping, HttpServletRequest httpServletRequest) {
-
-
-
+        ActionErrors errors = new ActionErrors();
+        return errors;
     }
 }

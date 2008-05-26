@@ -10,6 +10,7 @@
 
     <form-beans>
         <form-bean name="personForm" type="smartPMS.form.PersonForm"/>
+        <form-bean name="klausurForm" type="smartPMS.form.KlausurForm"/>
     </form-beans>
 
     <action-mappings>
