@@ -5,9 +5,6 @@
 		http://java.sun.com/xml/ns/javaee/application_5.xsd"
              version="5">
     <display-name>MyApp</display-name>
-    <module id="EJB">
-        <ejb>ejb3.jar</ejb>
-    </module>
     <module id="Web">
         <web>
             <web-uri>web.war</web-uri>

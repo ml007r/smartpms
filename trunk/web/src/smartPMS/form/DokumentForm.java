@@ -1,5 +1,7 @@
 package smartPMS.form;
 
+import org.apache.struts.action.ActionForm;
+
 /**
  * Created by IntelliJ IDEA.
  * User: tbs
@@ -7,5 +9,5 @@ package smartPMS.form;
  * Time: 15:21:47
  * To change this template use File | Settings | File Templates.
  */
-public class DokumentForm {
+public class DokumentForm extends ActionForm {
 }

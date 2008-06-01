@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+        "http://struts.apache.org/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+
+    <!-- Allgemeines Template -->
+    <definition name="template" path="/jsp/template.jsp">
+        <description>Allgemeines Template</description>
+        <put name="title" value="" type="string"/>
+        <put name="header" value="/jsp/template/header.jsp" type="page"/>
+        <put name="menu" value="/jsp/template/navigation.jsp" type="page"/>
+        <put name="content" value="/jsp/template/content.jsp" type="page"/>
+        <put name="footer" value="/jsp/template/footer.jsp" type="page"/>
+    </definition>
+
+    <!-- Benutzeranmeldung -->
+    <definition name="anmelden" extends="template">
+        <description>Startseite nach dem Anmelden</description>
+        <put name="title" value="Benutzeranmeldung" type="string"/>
+        <put name="menu" value="" />
+        <put name="content" value="/jsp/login.jsp" type="page"/>
+    </definition>
+
+    <!-- Template fuer alle Aktionen -->
+    <definition name="angemeldet" extends="template">
+        <description>Nach der Benutzeranmeldung ist das Menu zu sehen</description>
+        <put name="menu" value="/jsp/template/navigation.jsp" type="page"/>
+    </definition>
+
+    <!-- Startseite direkt nach der Benutzeranmeldung -->
+    <definition name="startseite" extends="angemeldet">
+        <description>Startseite nach dem Anmelden</description>
+        <put name="title" value="Startseite" type="string"/>
+        <put name="content" value="/jsp/startseite.jsp" type="page"/>
+    </definition>
+
+
+    <!-- Lehrangebotsübersicht -->
+    <definition name="lehrangebot" extends="angemeldet">
+        <description>Startseite der Lehrangebote (Uebersicht)</description>
+        <put name="title" value="Lehrangebotsübersicht" type="string"/>
+        <put name="content" value="/jsp/lehrangebot/startseite.jsp" type="page"/>
+    </definition>
+
+    <!-- Neues Lehrangebot erstellen -->
+    <definition name="lehrangebot_neu" extends="angemeldet">
+        <description>Neues Lehrangebot erstellen</description>
+        <put name="title" value="Neues Lehrangebot" type="string"/>
+        <put name="content" value="/jsp/lehrangebot/formular.jsp" type="page"/>
+    </definition>
+
+    <!-- Lehrangebot bearbeiten -->
+    <definition name="lehrangebot_bearbeiten" extends="lehrangebot_neu">
+        <description>Ein bestehendes Lehrangebot bearbeiten</description>
+        <put name="title" value="Lehrangebot bearbeiten" type="string"/>
+    </definition>
+
+
+    <!-- Dokumentenübersicht -->
+    <definition name="dokument" extends="angemeldet">
+        <description>Startseite der Dokumente</description>
+        <put name="title" value="Dokumentenübersicht" type="string"/>
+        <put name="content" value="/jsp/dokument/startseite.jsp" type="page"/>
+    </definition>
+
+    <!-- Neues Dokument erstellen -->
+    <definition name="dokument_neu" extends="angemeldet">
+        <description>Neues Dokument erstellen</description>
+        <put name="title" value="Neues Dokumente" type="string"/>
+        <put name="content" value="/jsp/dokument/formular.jsp" type="page"/>
+    </definition>
+
+    <!--  Dokument bearbeiten -->
+    <definition name="dokument_bearbeiten" extends="dokument_neu">
+        <description>Ein bestehendes Dokument bearbeiten</description>
+        <put name="title" value="Dokument bearbeiten" type="string"/>
+    </definition>
+
+    <!-- (Neues) Dokument hochladen -->
+    <definition name="dokument_hochladen" extends="angemeldet">
+        <description>Dokument hochladen</description>
+        <put name="title" value="Dokument hochladen" type="string"/>
+        <put name="content" value="/jsp/dokument/hochladen.jsp" type="page"/>
+    </definition>
+
+
+    <!-- Klausuren -->
+    <definition name="klausur" extends="angemeldet">
+        <description>Startseite der Klausuren</description>
+        <put name="title" value="Klausurenübersicht" type="string"/>
+        <put name="content" value="/jsp/klausur/startseite.jsp" type="page"/>
+    </definition>
+
+    <!-- Neue Klausur erstellen -->
+    <definition name="klausur_neu" extends="angemeldet">
+        <description>Neue Klausur erstellen</description>
+        <put name="title" value="Neue Klausur" type="string"/>
+        <put name="content" value="/jsp/klausur/formular.jsp" type="page"/>
+    </definition>
+
+    <!--  Dokument bearbeiten -->
+    <definition name="klausur_bearbeiten" extends="klausur_neu">
+        <description>Eine bestehende Klausur bearbeiten</description>
+        <put name="title" value="Klausur bearbeiten" type="string"/>
+    </definition>
+
+    <!-- Klausur benoten -->
+    <definition name="klausur_noten" extends="angemeldet">
+        <description>Klausur benoten</description>
+        <put name="title" value="Klausur benoten" type="string"/>
+        <put name="content" value="/jsp/klausur/benoten.jsp" type="page"/>
+    </definition>
+
+
+    <!-- Abschlussarbeitenübersicht -->
+    <definition name="abschlussarbeit" extends="angemeldet">
+        <description>Startseite der Abschlussarbeiten</description>
+        <put name="title" value="Abschlussarbeitenübersicht" type="string"/>
+        <put name="content" value="/jsp/abschlussarbeit/startseite.jsp" type="page"/>
+    </definition>
+
+    <!-- Neue Klausur erstellen -->
+    <definition name="abschlussarbeit_neu" extends="angemeldet">
+        <description>Neue Abschlussarbeit erstellen</description>
+        <put name="title" value="Neue Abschlussarbeit" type="string"/>
+        <put name="content" value="/jsp/abschlussarbeit/formular.jsp" type="page"/>
+    </definition>
+
+    <!--  Dokument bearbeiten -->
+    <definition name="abschlussarbeit_bearbeiten" extends="klausur_neu">
+        <description>Eine bestehende Abschlussarbeit bearbeiten</description>
+        <put name="title" value="Abschlussarbeit bearbeiten" type="string"/>
+    </definition>
+
+    <!-- Klausur benoten -->
+    <definition name="abschlussarbeit_benoten" extends="angemeldet">
+        <description>Abschlussarbeit benoten</description>
+        <put name="title" value="Abschlussarbeit benoten" type="string"/>
+        <put name="content" value="/jsp/abschlussarbeit/benoten.jsp" type="page"/>
+    </definition>
+
+
+    <!-- Statistik -->
+    <definition name="statistik" extends="angemeldet">
+        <description>Statistikübersicht</description>
+        <put name="title" value="Statistische Auswertungen" type="string"/>
+        <put name="content" value="/jsp/statistik/startseite.jsp" type="page"/>
+    </definition>
+
+
+    <!-- Hilftskräfteübersicht -->
+    <definition name="hilfskraft" extends="angemeldet">
+        <description>Hilftskräfteübersicht</description>
+        <put name="title" value="Hilfskräfteübersicht" type="string"/>
+        <put name="content" value="/jsp/hilfskraft/startseite.jsp" type="page"/>
+    </definition>
+
+     <!-- Neue Hilfskraft erstellen -->
+    <definition name="hilfskraft_neu" extends="angemeldet">
+        <description>Neue Hilfskraft erstellen</description>
+        <put name="title" value="Neue Hilfskraft" type="string"/>
+        <put name="content" value="/jsp/hilfskraft/formular.jsp" type="page"/>
+    </definition>
+
+    <!--  Hilfskraft bearbeiten -->
+    <definition name="hilfskraft_bearbeiten" extends="klausur_neu">
+        <description>Eine bestehende Hilfskraft bearbeiten</description>
+        <put name="title" value="Hilfskraft bearbeiten" type="string"/>
+    </definition>
+
+
+</tiles-definitions>
