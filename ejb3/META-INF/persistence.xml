@@ -2,7 +2,8 @@
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
 
     <persistence-unit name="smartPMS">
-          <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+        <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+        <class>smartPMS.modell.Teilnahme</class>
         <properties>
             <property name="openjpa.ConnectionURL" value=""/>
             <property name="openjpa.ConnectionDriverName" value=""/>

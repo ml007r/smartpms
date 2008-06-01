@@ -22,11 +22,23 @@
           <setting name="BUILD_ONLY_WEB_RESOURCES" value="false" />
         </building>
         <packaging>
+          <containerElement type="module" name="ejb3">
+            <attribute name="method" value="0" />
+            <attribute name="URI" value="/WEB-INF/classes" />
+          </containerElement>
           <containerElement type="module" name="web">
             <attribute name="method" value="1" />
             <attribute name="URI" value="/WEB-INF/classes" />
           </containerElement>
+          <containerElement type="library" name="Geronimo 2.0.2" level="application_server_libraries">
+            <attribute name="method" value="0" />
+            <attribute name="URI" value="&lt;N/A&gt;" />
+          </containerElement>
           <containerElement type="library" name="struts" level="project">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib" />
+          </containerElement>
+          <containerElement type="library" name="struts (2)" level="project">
             <attribute name="method" value="1" />
             <attribute name="URI" value="/WEB-INF/lib" />
           </containerElement>
@@ -65,6 +77,8 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="struts" level="project" />
+    <orderEntry type="module" module-name="ejb3" />
+    <orderEntry type="library" name="struts (2)" level="project" />
     <orderEntryProperties />
   </component>
 </module>

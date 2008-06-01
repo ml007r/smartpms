@@ -16,7 +16,7 @@
   </component>
   <component name="CompilerConfiguration">
     <option name="DEFAULT_COMPILER" value="Javac" />
-    <option name="DEPLOY_AFTER_MAKE" value="0" />
+    <option name="DEPLOY_AFTER_MAKE" value="1" />
     <resourceExtensions>
       <entry name=".+\.(properties|xml|html|dtd|tld)" />
       <entry name=".+\.(gif|png|jpeg|jpg)" />
@@ -55,6 +55,19 @@
   </component>
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
+  </component>
+  <component name="FacetAutodetectingManager">
+    <autodetection-disabled>
+      <facet-type id="jpa">
+        <modules>
+          <module name="test">
+            <files>
+              <file url="file://$PROJECT_DIR$/test/src/META-INF/persistence.xml" />
+            </files>
+          </module>
+        </modules>
+      </facet-type>
+    </autodetection-disabled>
   </component>
   <component name="IdProvider" IDEtalkID="8DA027A16305D87F55FC5900AF81C70A" />
   <component name="InspectionProjectProfileManager">
@@ -230,7 +243,7 @@
       <module fileurl="file://$PROJECT_DIR$/web/web.iml" filepath="$PROJECT_DIR$/web/web.iml" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" assert-keyword="true" jdk-15="true" project-jdk-name="1.5" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="ResourceManagerContainer">
@@ -264,6 +277,16 @@
         <root url="jar://$PROJECT_DIR$/web/lib/commons-logging.jar!/" />
         <root url="jar://$PROJECT_DIR$/web/lib/commons-validator.jar!/" />
         <root url="jar://$PROJECT_DIR$/web/lib/oro.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="struts (2)">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/web/lib/struts-taglib.jar!/" />
+        <root url="jar://$PROJECT_DIR$/web/lib/struts-tiles.jar!/" />
+        <root url="jar://$PROJECT_DIR$/web/lib/struts-el.jar!/" />
+        <root url="jar://$PROJECT_DIR$/web/lib/standard.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />

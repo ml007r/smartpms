@@ -1,6 +1,7 @@
 package smartPMS.modell;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Date;
 
 /**
@@ -23,6 +24,12 @@ public class Klausur {
     private Date ende;
 
     private double ects = 5.0;
+
+    //
+
+    private Lehrangebot lehrangebot;
+
+    private Collection<Teilnahme> teilnahmen;
 
     /**
      *
@@ -93,5 +100,21 @@ public class Klausur {
 
     public void setEcts(double ects) {
         this.ects = ects;
+    }
+
+    public Lehrangebot getLehrangebot() {
+        return lehrangebot;
+    }
+
+    public void setLehrangebot(Lehrangebot lehrangebot) {
+        this.lehrangebot = lehrangebot;
+    }
+
+    public Collection<Teilnahme> getTeilnahmen() {
+        return teilnahmen;
+    }
+
+    public void setTeilnahmen(Collection<Teilnahme> teilnahmen) {
+        this.teilnahmen = teilnahmen;
     }
 }

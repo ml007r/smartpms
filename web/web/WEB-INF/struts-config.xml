@@ -7,23 +7,317 @@
 
 <struts-config>
 
+    <display-name>smartPMS</display-name>
+
+    <description>Struts Konfiguration fuer smartPMS</description>
 
     <form-beans>
-        <form-bean name="personForm" type="smartPMS.form.PersonForm"/>
+
+        <!-- smartPMS global -->
+        <form-bean name="loginForm" type="smartPMS.form.LoginForm"/>
+        <form-bean name="startseiteForm" type="smartPMS.form.StartseiteForm"/>
+
+        <!-- Lehrangebotsverwaltung -->
+        <form-bean name="lehrangebotListeForm" type="smartPMS.form.LehrangebotListe"/>
+        <form-bean name="lehrangebotForm" type="smartPMS.form.Lehrangebot"/>
+
+        <!-- Dokumentenverwaltung -->
+        <form-bean name="dokumentListeForm" type="smartPMS.form.DokumentListeForm"/>
+        <form-bean name="dokumentForm" type="smartPMS.form.DokumentForm"/>
+
+        <!-- Klausurenverwaltung -->
+        <form-bean name="klausurListeForm" type="smartPMS.form.KlausurListeForm"/>
         <form-bean name="klausurForm" type="smartPMS.form.KlausurForm"/>
+        <form-bean name="klausurNotenForm" type="smartPMS.form.KlausurNotenForm"/>
+
+        <!-- Abschlussarbeitenverwalung -->
+        <form-bean name="abschlussarbeitListeForm" type="smartPMS.form.AbschlussarbeitListeForm"/>
+        <form-bean name="abschlussarbeitForm" type="smartPMS.form.AbschlussarbeitForm"/>
+
+        <!-- Statistische Auswertungen -->
+        <form-bean name="statistikForm" type="smartPMS.form.StatistikForm"/>
+
+        <!-- Hilfskraftverwaltung -->
+        <form-bean name="hilfskraftListeForm" type="smartPMS.form.HilfskraftListeForm"/>
+        <form-bean name="hilfskraftForm" type="smartPMS.form.HilfskraftForm"/>
+
+
     </form-beans>
 
     <action-mappings>
 
-        <action path="/PersonAnlegen"
-                type="smartPMS.action.person.PersonAnlegen" name="personForm" validate="true"
-                input="/person/anlegen.jsp">
-            <forward name="success" path="/PersonListeAnzeigen.do"/>
-            <forward name="failure" path="/person/anlegen.jsp"/>
+        <!-- Benutzeranmeldung -->
+        <action path="/Anmelden" type="smartPMS.action.Anmeldung" name="loginForm" validate="false">
+            <forward name="failure" path="anmelden"/>
+            <forward name="success" path="startseite"/>
         </action>
 
-        
+        <!-- Startseite -->
+        <action path="/Startseite" type="smartPMS.action.Startseite" name="startseiteForm" validate="false">
+            <forward name="success" path="startseite"/>
+        </action>
+
+
+        <!-- **************************************************************************************************** -->
+        <!-- ****** Lehrangebotsverwaltung ********************************************************************** -->
+        <!-- **************************************************************************************************** -->
+
+
+        <!-- Lehrangebotsübersicht  -->
+        <action path="/lehrangebot/Ansicht" type="smartPMS.action.lehrangebot.Ansicht" name="lehrangebotListeForm"
+                validate="false">
+            <forward name="success" path="lehrangebot"/>
+        </action>
+
+        <!-- Neues Lehrangebot anlegen (Speichern) -->
+        <action path="/lehrangebot/Anlegen" type="smartPMS.action.lehrangebot.Anlegen" name="lehrangebotForm"
+                validate="true" input="lehrangebot_neu">
+            <forward name="failure" path="lehrangebot_neu"/>
+            <forward name="success" path="lehrangebot"/>
+            <forward name="success_neu" path="lehrangebot_neu"/>
+        </action>
+
+        <!-- Bestehendes Lehrangebot bearbeiten (Anzeigen) -->
+        <action path="/lehrangebot/Bearbeiten" type="smartPMS.action.lehrangebot.Bearbeiten" name="lehrangebotForm"
+                validate="false">
+            <forward name="failure" path="lehrangebot"/>
+            <forward name="success" path="lehrangebot_bearbeiten"/>
+        </action>
+
+        <!-- Bestehendes Lehrangebot speichern -->
+        <action path="/lehrangebot/Speichern" type="smartPMS.action.lehrangebot.Speichern" name="lehrangebotForm"
+                validate="true" input="lehrangebot_bearbeiten">
+            <forward name="failure" path="lehrangebot_bearbeiten"/>
+            <forward name="success" path="lehrangebot"/>
+        </action>
+
+        <!-- Lehrangebot entfernen -->
+        <action path="/lehrangebot/Entfernen" type="smartPMS.action.lehrangebot.Entfernen" name="lehrangebotForm"
+                validate="false">
+            <forward name="success" path="lehrangebot"/>
+        </action>
+
+
+        <!-- **************************************************************************************************** -->
+        <!-- ****** Dokumentenverwaltung ************************************************************************ -->
+        <!-- **************************************************************************************************** -->
+
+
+        <!-- Dokumentübersicht -->
+        <action path="/dokument/Ansicht" type="smartPMS.action.dokument.Ansicht" name="dokumentListeForm"
+                validate="false">
+            <forward name="success" path="dokument"/>
+        </action>
+
+        <!-- Neues Dokument anlegen (Speichern) -->
+        <action path="/dokument/Anlegen" type="smartPMS.action.dokument.Anlegen" name="dokumentForm"
+                validate="true" input="dokument_neu">
+            <forward name="failure" path="dokument_neu"/>
+            <forward name="success" path="dokument"/>
+            <forward name="success_neu" path="dokument_neu"/>
+        </action>
+
+        <!-- Dokument bearbeiten (Anzeige) -->
+        <action path="/dokument/Bearbeiten" type="smartPMS.action.dokument.Bearbeiten" name="dokumentForm"
+                validate="false">
+            <forward name="failure" path="dokument"/>
+            <forward name="success" path="dokument_bearbeiten"/>
+        </action>
+
+        <!-- Bestehendes Dokument speichern -->
+        <action path="/dokument/Speichern" type="smartPMS.action.dokument.Speichern" name="dokumentForm"
+                validate="true" input="dokument_bearbeiten">
+            <forward name="failure" path="dokument_bearbeiten"/>
+            <forward name="success" path="dokument"/>
+        </action>
+
+        <!-- Dokument entfernen -->
+        <action path="/dokument/Entfernen" type="smartPMS.action.dokument.Entfernen" name="dokumentForm"
+                validate="false">
+            <forward name="success" path="dokument"/>
+        </action>
+
+
+        <!-- **************************************************************************************************** -->
+        <!-- ****** Klausurenverwaltung ************************************************************************* -->
+        <!-- **************************************************************************************************** -->
+
+
+        <!-- Klausurübersicht  -->
+        <action path="/klausur/Ansicht" type="smartPMS.action.klausur.Ansicht" name="klausurListeForm"
+                validate="false">
+            <forward name="success" path="klausur"/>
+        </action>
+
+        <!-- Neue Klausur anlegen (Speichern) -->
+        <action path="/klausur/Anlegen" type="smartPMS.action.klausur.Anlegen" name="klausurForm"
+                validate="true" input="klausur_neu">
+            <forward name="failure" path="klausur_neu"/>
+            <forward name="success" path="klausur"/>
+            <forward name="success_neu" path="klausur_neu"/>
+        </action>
+
+        <!-- Klausur bearbeiten (Anzeigen) -->
+        <action path="/klausur/Bearbeiten" type="smartPMS.action.klausur.Bearbeiten" name="klausurForm"
+                validate="false">
+            <forward name="failure" path="klausur"/>
+            <forward name="success" path="klausur_bearbeiten"/>
+        </action>
+
+        <!-- Bestehendes Klausur speichern -->
+        <action path="/klausur/Speichern" type="smartPMS.action.klausur.Speichern" name="klausurForm"
+                validate="true" input="klausur_bearbeiten">
+            <forward name="failure" path="klausur_bearbeiten"/>
+            <forward name="success" path="klausur"/>
+        </action>
+
+        <!-- Klausurnoten anzeigen -->
+        <action path="/klausur/noten/Anzeigen" type="smartPMS.action.klausur.NotenAnzeigen" name="klausurNotenForm"
+                validate="false">
+            <forward name="failure" path="klausur"/>
+            <forward name="success" path="klausur_noten"/>
+        </action>
+
+        <!-- Klausurnoten speichern -->
+        <action path="/klausur/noten/Speichern" type="smartPMS.action.klausur.NotenSpeichern" name="klausurNotenForm"
+                input="klausur_noten"
+                validate="true">
+            <forward name="failure" path="klausur_noten"/>
+            <forward name="success" path="klausur"/>
+        </action>
+
+        <!-- Klausur entfernen -->
+        <action path="/klausur/Entfernen" type="smartPMS.action.klausur.Entfernen" name="klausurForm"
+                validate="false">
+            <forward name="success" path="klausur"/>
+        </action>
+
+
+        <!-- **************************************************************************************************** -->
+        <!-- ****** Abschlussarbeitenverwaltung ***************************************************************** -->
+        <!-- **************************************************************************************************** -->
+
+
+        <!-- Abschlussarbeitübersicht  -->
+        <action path="/abschlussarbeit/Ansicht" type="smartPMS.action.abschlussarbeit.Ansicht"
+                name="abschlussarbeitListeForm"
+                validate="false">
+            <forward name="success" path="abschlussarbeit"/>
+        </action>
+
+        <!-- Neue Klausur anlegen (Speichern) -->
+        <action path="/abschlussarbeit/Anlegen" type="smartPMS.action.abschlussarbeit.Anlegen"
+                name="abschlussarbeitForm"
+                validate="true" input="abschlussarbeit_neu">
+            <forward name="failure" path="abschlussarbeit_neu"/>
+            <forward name="success" path="abschlussarbeit"/>
+            <forward name="success_neu" path="abschlussarbeit_neu"/>
+        </action>
+
+        <!-- Klausur bearbeiten (Anzeigen) -->
+        <action path="/abschlussarbeit/Bearbeiten" type="smartPMS.action.abschlussarbeit.Bearbeiten"
+                name="abschlussarbeitForm"
+                validate="false">
+            <forward name="failure" path="abschlussarbeit"/>
+            <forward name="success" path="abschlussarbeit_bearbeiten"/>
+        </action>
+
+        <!-- Bestehendes Klausur speichern -->
+        <action path="/abschlussarbeit/Speichern" type="smartPMS.action.abschlussarbeit.Speichern"
+                name="abschlussarbeitForm"
+                validate="true" input="abschlussarbeit_bearbeiten">
+            <forward name="failure" path="abschlussarbeit_bearbeiten"/>
+            <forward name="success" path="abschlussarbeit"/>
+        </action>
+
+        <!-- Klausur entfernen -->
+        <action path="/abschlussarbeit/Entfernen" type="smartPMS.action.abschlussarbeit.Entfernen"
+                name="abschlussarbeitForm"
+                validate="false">
+            <forward name="success" path="abschlussarbeit"/>
+        </action>
+
+
+        <!-- **************************************************************************************************** -->
+        <!-- ****** Statistische Auswertung ********************************************************************* -->
+        <!-- **************************************************************************************************** -->
+
+
+        <!-- Statistische Auswertung  -->
+        <action path="/statistik/Ansicht" type="smartPMS.action.statistik.Ansicht"
+                name="statistikForm"
+                validate="false">
+            <forward name="success" path="statistik"/>
+        </action>
+
+
+        <!-- **************************************************************************************************** -->
+        <!-- ****** Hilfskraftverwaltung ************************************************************************ -->
+        <!-- **************************************************************************************************** -->
+
+
+        <!-- Hilfskraftübersicht -->
+        <action path="/hilfskraft/Ansicht" type="smartPMS.action.hilfskraft.Ansicht"
+                name="hilfskraftListeForm"
+                validate="false">
+            <forward name="success" path="hilfskraft"/>
+        </action>
+
+        <!-- Neue Hilfskraft anlegen (Speichern) -->
+        <action path="/hilfskraft/Anlegen" type="smartPMS.action.hilfskraft.Anlegen"
+                name="hilfskraftForm"
+                validate="true" input="hilfskraft_neu">
+            <forward name="failure" path="hilfskraft_neu"/>
+            <forward name="success" path="hilfskraft"/>
+            <forward name="success_neu" path="hilfskraft_neu"/>
+        </action>
+
+        <!-- Hilfskraft bearbeiten (Anzeigen) -->
+        <action path="/hilfskraft/Bearbeiten" type="smartPMS.action.hilfskraft.Bearbeiten"
+                name="hilfskraftForm"
+                validate="false">
+            <forward name="failure" path="hilfskraft"/>
+            <forward name="success" path="hilfskraft_bearbeiten"/>
+        </action>
+
+        <!-- Bestehende Hilfskraft speichern -->
+        <action path="/hilfskraft/Speichern" type="smartPMS.action.hilfskraft.Speichern"
+                name="hilfskraftForm"
+                validate="true" input="hilfskraft_bearbeiten">
+            <forward name="failure" path="hilfskraft_bearbeiten"/>
+            <forward name="success" path="hilfskraft"/>
+        </action>
+
+        <!-- Hilfskraft entfernen -->
+        <action path="/hilfskraft/Entfernen" type="smartPMS.action.hilfskraft.Entfernen"
+                name="hilfskraftForm"
+                validate="false">
+            <forward name="success" path="hilfskraft"/>
+        </action>
+
 
     </action-mappings>
+
+    <global-exceptions>
+        <exception key="error" type="java.lang.Exception"/>
+    </global-exceptions>
+    <global-forwards>
+
+    </global-forwards>
+
+
+    <message-resources parameter="MessageResources"/>
+
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <plug-in className="org.apache.struts.tiles.TilesPlugin">
+        <set-property value="/WEB-INF/tiles-defs.xml" property="definitions-config"/>
+    </plug-in>
+
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property value="/org/apache/struts/validator/validator-rules.xml,/WEB-INF/validation.xml"
+                      property="pathnames"/>
+    </plug-in>
+
 
 </struts-config>
