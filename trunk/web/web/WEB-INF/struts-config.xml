@@ -18,8 +18,8 @@
         <form-bean name="startseiteForm" type="smartPMS.form.StartseiteForm"/>
 
         <!-- Lehrangebotsverwaltung -->
-        <form-bean name="lehrangebotListeForm" type="smartPMS.form.LehrangebotListe"/>
-        <form-bean name="lehrangebotForm" type="smartPMS.form.Lehrangebot"/>
+        <form-bean name="lehrangebotListeForm" type="smartPMS.form.LehrangebotListeForm"/>
+        <form-bean name="lehrangebotForm" type="smartPMS.form.LehrangebotForm"/>
 
         <!-- Dokumentenverwaltung -->
         <form-bean name="dokumentListeForm" type="smartPMS.form.DokumentListeForm"/>
@@ -69,7 +69,7 @@
             <forward name="success" path="lehrangebot"/>
         </action>
 
-        <!-- Neues Lehrangebot anlegen (Speichern) -->
+        <!-- Neues LehrangebotForm anlegen (Speichern) -->
         <action path="/lehrangebot/Anlegen" type="smartPMS.action.lehrangebot.Anlegen" name="lehrangebotForm"
                 validate="true" input="lehrangebot_neu">
             <forward name="failure" path="lehrangebot_neu"/>
@@ -77,21 +77,21 @@
             <forward name="success_neu" path="lehrangebot_neu"/>
         </action>
 
-        <!-- Bestehendes Lehrangebot bearbeiten (Anzeigen) -->
+        <!-- Bestehendes LehrangebotForm bearbeiten (Anzeigen) -->
         <action path="/lehrangebot/Bearbeiten" type="smartPMS.action.lehrangebot.Bearbeiten" name="lehrangebotForm"
                 validate="false">
             <forward name="failure" path="lehrangebot"/>
             <forward name="success" path="lehrangebot_bearbeiten"/>
         </action>
 
-        <!-- Bestehendes Lehrangebot speichern -->
+        <!-- Bestehendes LehrangebotForm speichern -->
         <action path="/lehrangebot/Speichern" type="smartPMS.action.lehrangebot.Speichern" name="lehrangebotForm"
                 validate="true" input="lehrangebot_bearbeiten">
             <forward name="failure" path="lehrangebot_bearbeiten"/>
             <forward name="success" path="lehrangebot"/>
         </action>
 
-        <!-- Lehrangebot entfernen -->
+        <!-- LehrangebotForm entfernen -->
         <action path="/lehrangebot/Entfernen" type="smartPMS.action.lehrangebot.Entfernen" name="lehrangebotForm"
                 validate="false">
             <forward name="success" path="lehrangebot"/>
@@ -294,6 +294,7 @@
                 validate="false">
             <forward name="success" path="hilfskraft"/>
         </action>
+        <action path="/abschlussarbeit/Benoten"/>
 
 
     </action-mappings>

@@ -17,16 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class KlausurAnlegen extends Action {
 
-    /**
-     * @param actionMapping
-     * @param actionForm
-     * @param httpServletRequest
-     * @param httpServletResponse
-     * @return
-     * @throws Exception
-     */
     public ActionForward execute(ActionMapping actionMapping, ActionForm actionForm, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
-
         return actionMapping.findForward("success");
     }
 }

@@ -20,8 +20,8 @@
     <definition name="anmelden" extends="template">
         <description>Startseite nach dem Anmelden</description>
         <put name="title" value="Benutzeranmeldung" type="string"/>
-        <put name="menu" value="" />
-        <put name="content" value="/jsp/login.jsp" type="page"/>
+        <put name="menu" value=""/>
+        <put name="content" value="/jsp/anmelden.jsp" type="page"/>
     </definition>
 
     <!-- Template fuer alle Aktionen -->
@@ -45,14 +45,14 @@
         <put name="content" value="/jsp/lehrangebot/startseite.jsp" type="page"/>
     </definition>
 
-    <!-- Neues Lehrangebot erstellen -->
+    <!-- Neues LehrangebotForm erstellen -->
     <definition name="lehrangebot_neu" extends="angemeldet">
         <description>Neues Lehrangebot erstellen</description>
         <put name="title" value="Neues Lehrangebot" type="string"/>
         <put name="content" value="/jsp/lehrangebot/formular.jsp" type="page"/>
     </definition>
 
-    <!-- Lehrangebot bearbeiten -->
+    <!-- LehrangebotForm bearbeiten -->
     <definition name="lehrangebot_bearbeiten" extends="lehrangebot_neu">
         <description>Ein bestehendes Lehrangebot bearbeiten</description>
         <put name="title" value="Lehrangebot bearbeiten" type="string"/>
@@ -158,7 +158,7 @@
         <put name="content" value="/jsp/hilfskraft/startseite.jsp" type="page"/>
     </definition>
 
-     <!-- Neue Hilfskraft erstellen -->
+    <!-- Neue Hilfskraft erstellen -->
     <definition name="hilfskraft_neu" extends="angemeldet">
         <description>Neue Hilfskraft erstellen</description>
         <put name="title" value="Neue Hilfskraft" type="string"/>

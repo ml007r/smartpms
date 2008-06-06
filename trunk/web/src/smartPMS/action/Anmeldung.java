@@ -22,8 +22,13 @@ public class Anmeldung extends Action {
 
         LoginForm loginForm = (LoginForm) actionForm;
 
+        // LogIn gibts nicht
+
+
         if (httpServletRequest.getSession().getAttribute("loggedUser") == null) {
-            return actionMapping.findForward("failure");
+            //
+
+            //return actionMapping.findForward("failure");
         }
 
         return actionMapping.findForward("success");
