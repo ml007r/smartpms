@@ -6,44 +6,40 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
-<%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
+<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
+<%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean" %>
 
-<div id="navigation">
+<div id="menu">
     <ul>
         <li>
-            <html:link action="/lehrangebot/Ansicht" />
-            <a href="#">Lehrangebote verwalten</a>
-            <ul>
-                <li><a href="#">Neues Lehrangebot</a></li>
-            </ul>
+            <html:link action="/lehrangebot/Ansicht" titleKey="menu_lehrangebot">
+                <bean:message key="menu_lehrangebot"/>
+            </html:link>
         </li>
         <li>
-            <a href="#">Dokumente verwalten</a>
-            <ul>
-                <li><a href="#">Neues Dokument</a></li>
-            </ul>
+            <html:link action="/dokument/Ansicht" titleKey="menu_dokument">
+                <bean:message key="menu_dokument"/>
+            </html:link>
         </li>
         <li>
-            <a href="#">Klausuren verwalten</a>
-            <ul>
-                <li><a href="#">Neue Klausur</a></li>
-                <li><a href="#">Klausur benoten</a></li>
-            </ul>
+            <html:link action="/klausur/Ansicht" titleKey="menu_klausur">
+                <bean:message key="menu_klausur"/>
+            </html:link>
         </li>
         <li>
-            <a href="#">Abschlussarbeiten verwalten</a>
-            <ul>
-                <li><a href="#">Abschlussarbeit eintragen</a></li>
-                <li><a href="#">Abschlussarbeit bewerten</a></li>
-            </ul>
+            <html:link action="/abschlussarbeit/Ansicht" titleKey="menu_abschlussarbeit">
+                <bean:message key="menu_abschlussarbeit"/>
+            </html:link>
         </li>
-        <li><a href="#">Statistische Auswertung</a></li>
         <li>
-            <a href="#">HilfskrŠfte verwalten</a>
-            <ul>
-                <li><a href="#">Hilfskraft einstellen</a></li>
-            </ul>
+            <html:link action="/statistik/Ansicht" titleKey="menu_statistik">
+                <bean:message key="menu_statistik"/>
+            </html:link>
+        </li>
+        <li>
+            <html:link action="/hilfskraft/Ansicht" titleKey="menu_hilfskraft">
+                <bean:message key="menu_hilfskraft"/>
+            </html:link>
         </li>
     </ul>
 </div>

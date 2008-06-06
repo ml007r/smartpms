@@ -8,24 +8,25 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://struts.apache.org/tags-tiles" prefix="tiles" %>
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean" %>
-<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
+<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
 
 <html>
 <head>
     <title><bean:message key="page_title_default"/> :: <tiles:getAsString name="title"/></title>
-    <link type="text/css" rel="stylesheet" href="/css/smartPMS.css" />
+    <link type="text/css" rel="stylesheet" href="/smartPMS/css/smartPMS.css"/>
+    <link type="text/css" rel="stylesheet" href="/smartPMS/css/menu.css"/>
 </head>
 <body>
 <div id="wrapper">
     <div id="header">
         <tiles:insert attribute="header"/>
     </div>
-    <div id="menu">
-        <tiles:insert attribute="menu" />
+    <div id="navigation">
+        <tiles:insert attribute="menu"/>
     </div>
     <div id="messages">
-        <html:errors />
-        </div>
+        <html:errors/>
+    </div>
     <div id="content">
         <tiles:insert attribute="content"/>
     </div>
