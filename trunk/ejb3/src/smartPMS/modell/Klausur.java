@@ -1,7 +1,6 @@
 package smartPMS.modell;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Date;
 
 /**
@@ -17,19 +16,17 @@ public class Klausur {
 
     private long id;
 
-    private Date datum;
-
     private Date beginn;
 
     private Date ende;
 
     private double ects = 5.0;
 
-    //
+    private double mindestEcts = 0.0;
 
     private Lehrangebot lehrangebot;
 
-    private Collection<Teilnahme> teilnahmen;
+    //private Collection<Teilnahme> teilnahmen;
 
     /**
      *
@@ -39,21 +36,21 @@ public class Klausur {
 
 
     /**
-     * @param datum
+     * Mindestkonstruktor
+     *
      * @param beginn
      * @param ende
-     * @param ects
+     * @param lehrangebot
      */
-    public Klausur(Date datum, Date beginn, Date ende, double ects) {
-        this.datum = datum;
+    public Klausur(Date beginn, Date ende, Lehrangebot lehrangebot) {
         this.beginn = beginn;
         this.ende = ende;
-        this.ects = ects;
+        this.lehrangebot = lehrangebot;
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_klausur_id")
-    @SequenceGenerator(name = "seq_klausur_id", sequenceName = "seq_klausur_id", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "klausurId")
+    @SequenceGenerator(name = "klausurId", sequenceName = "seq_klausur_id", allocationSize = 1)
     @Column(name = "id", precision = 10, scale = 0)
     public long getId() {
         return id;
@@ -63,17 +60,7 @@ public class Klausur {
         this.id = id;
     }
 
-    @Temporal(TemporalType.DATE)
-    @Column(name = "datum")
-    public Date getDatum() {
-        return datum;
-    }
-
-    public void setDatum(Date datum) {
-        this.datum = datum;
-    }
-
-    @Temporal(TemporalType.TIME)
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "beginn")
     public Date getBeginn() {
         return beginn;
@@ -83,7 +70,7 @@ public class Klausur {
         this.beginn = beginn;
     }
 
-    @Temporal(TemporalType.TIME)
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "ende")
     public Date getEnde() {
         return ende;
@@ -93,7 +80,7 @@ public class Klausur {
         this.ende = ende;
     }
 
-    @Column(name = "ects", precision = 1, scale = 1)
+    @Column(name = "ects", precision = 2, scale = 1)
     public double getEcts() {
         return ects;
     }
@@ -102,6 +89,7 @@ public class Klausur {
         this.ects = ects;
     }
 
+    @ManyToOne
     public Lehrangebot getLehrangebot() {
         return lehrangebot;
     }
@@ -110,11 +98,12 @@ public class Klausur {
         this.lehrangebot = lehrangebot;
     }
 
-    public Collection<Teilnahme> getTeilnahmen() {
-        return teilnahmen;
-    }
-
-    public void setTeilnahmen(Collection<Teilnahme> teilnahmen) {
-        this.teilnahmen = teilnahmen;
-    }
+//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "klausur")
+//    public Collection<Teilnahme> getTeilnahmen() {
+//        return teilnahmen;
+//    }
+//
+//    public void setTeilnahmen(Collection<Teilnahme> teilnahmen) {
+//        this.teilnahmen = teilnahmen;
+//    }
 }

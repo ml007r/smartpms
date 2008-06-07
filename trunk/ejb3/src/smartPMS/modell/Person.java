@@ -1,8 +1,7 @@
 package smartPMS.modell;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 import java.util.Date;
-import java.util.Calendar;
 
 /**
  * Created by IntelliJ IDEA.
@@ -12,13 +11,16 @@ import java.util.Calendar;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
+@Table(name = "person")
+@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorColumn(name = "typ")
 public abstract class Person {
+
+    private long id;
 
     // NameT
 
     private String anrede;
-
-    private String titel;
 
     private String vorname;
 
@@ -26,9 +28,9 @@ public abstract class Person {
 
     // AdresseT
 
-    private String strasse;
+    private String anschrift1;
 
-    private String hausnummer;
+    private String anschrift2;
 
     private String postleitzahl;
 
@@ -51,13 +53,41 @@ public abstract class Person {
     protected Person() {
     }
 
-    protected Person(String anrede, String titel, String vorname, String nachname, String strasse, String hausnummer, String postleitzahl, String wohnort, String telefon, String telefax, String mobiltelefon, String email, Date geburtsdatum) {
+    /**
+     * Minimaler Konstruktor
+     *
+     * @param anrede
+     * @param vorname
+     * @param nachname
+     */
+    protected Person(String anrede, String vorname, String nachname) {
         this.anrede = anrede;
-        this.titel = titel;
         this.vorname = vorname;
         this.nachname = nachname;
-        this.strasse = strasse;
-        this.hausnummer = hausnummer;
+    }
+
+    /**
+     * Vollständiger Konstruktor
+     *
+     * @param anrede
+     * @param vorname
+     * @param nachname
+     * @param anschrift1
+     * @param anschrift2
+     * @param postleitzahl
+     * @param wohnort
+     * @param telefon
+     * @param telefax
+     * @param mobiltelefon
+     * @param email
+     * @param geburtsdatum
+     */
+    protected Person(String anrede, String vorname, String nachname, String anschrift1, String anschrift2, String postleitzahl, String wohnort, String telefon, String telefax, String mobiltelefon, String email, Date geburtsdatum) {
+        this.anrede = anrede;
+        this.vorname = vorname;
+        this.nachname = nachname;
+        this.anschrift1 = anschrift1;
+        this.anschrift2 = anschrift2;
         this.postleitzahl = postleitzahl;
         this.wohnort = wohnort;
         this.telefon = telefon;
@@ -67,6 +97,19 @@ public abstract class Person {
         this.geburtsdatum = geburtsdatum;
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "personId")
+    @SequenceGenerator(name = "personId", sequenceName = "seq_person_id", allocationSize = 1)
+    @Column(name = "id", precision = 10, scale = 0)
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    @Column(name = "anrede", length = 4, nullable = false)
     public String getAnrede() {
         return anrede;
     }
@@ -75,14 +118,7 @@ public abstract class Person {
         this.anrede = anrede;
     }
 
-    public String getTitel() {
-        return titel;
-    }
-
-    public void setTitel(String titel) {
-        this.titel = titel;
-    }
-
+    @Column(name = "vorname", length = 50, nullable = false)
     public String getVorname() {
         return vorname;
     }
@@ -91,6 +127,7 @@ public abstract class Person {
         this.vorname = vorname;
     }
 
+    @Column(name = "nachname", length = 100, nullable = false)
     public String getNachname() {
         return nachname;
     }
@@ -99,22 +136,25 @@ public abstract class Person {
         this.nachname = nachname;
     }
 
-    public String getStrasse() {
-        return strasse;
+    @Column(name = "anschrift1", length = 100)
+    public String getAnschrift1() {
+        return anschrift1;
     }
 
-    public void setStrasse(String strasse) {
-        this.strasse = strasse;
+    public void setAnschrift1(String anschrift1) {
+        this.anschrift1 = anschrift1;
     }
 
-    public String getHausnummer() {
-        return hausnummer;
+    @Column(name = "anschrift2", length = 100)
+    public String getAnschrift2() {
+        return anschrift2;
     }
 
-    public void setHausnummer(String hausnummer) {
-        this.hausnummer = hausnummer;
+    public void setAnschrift2(String anschrift2) {
+        this.anschrift2 = anschrift2;
     }
 
+    @Column(name = "postleitzahl", length = 5)
     public String getPostleitzahl() {
         return postleitzahl;
     }
@@ -123,6 +163,7 @@ public abstract class Person {
         this.postleitzahl = postleitzahl;
     }
 
+    @Column(name = "wohnort", length = 100)
     public String getWohnort() {
         return wohnort;
     }
@@ -131,6 +172,7 @@ public abstract class Person {
         this.wohnort = wohnort;
     }
 
+    @Column(name = "telefon", length = 20)
     public String getTelefon() {
         return telefon;
     }
@@ -139,6 +181,7 @@ public abstract class Person {
         this.telefon = telefon;
     }
 
+    @Column(name = "telefax", length = 20)
     public String getTelefax() {
         return telefax;
     }
@@ -147,6 +190,7 @@ public abstract class Person {
         this.telefax = telefax;
     }
 
+    @Column(name = "mobiltelefon", length = 20)
     public String getMobiltelefon() {
         return mobiltelefon;
     }
@@ -155,6 +199,7 @@ public abstract class Person {
         this.mobiltelefon = mobiltelefon;
     }
 
+    @Column(name = "email", length = 255)
     public String getEmail() {
         return email;
     }
@@ -163,6 +208,8 @@ public abstract class Person {
         this.email = email;
     }
 
+    @Temporal(TemporalType.DATE)
+    @Column(name = "geburtsdatum")
     public Date getGeburtsdatum() {
         return geburtsdatum;
     }

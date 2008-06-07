@@ -7,13 +7,11 @@
  */
 package smartPMS.session;
 
-import smartPMS.modell.Abschlussarbeit;
+//import smartPMS.modell.Abschlussarbeit;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import java.util.Collection;
-import java.util.Date;
 
 @Stateless(name = "AbschlussarbeitSessionEJB")
 public class AbschlussarbeitSessionBean {
@@ -24,15 +22,15 @@ public class AbschlussarbeitSessionBean {
     public AbschlussarbeitSessionBean() {
     }
 
-    /**
-     * @return
-     */
-    public Collection<Abschlussarbeit> getAbschlussarbeiten() {
-        return (Collection<Abschlussarbeit>) manager.createQuery("SELECT a FROM Abschlussarbeit a WHERE a.abgabetermin >= :datum").setParameter("datum", new Date()).getResultList();
-    }
-
-    public Abschlussarbeit getAbschlussarbeit(long id) {
-        return manager.find(Abschlussarbeit.class, id);
-    }
+//    /**
+//     * @return
+//     */
+//    public Collection<Abschlussarbeit> getAbschlussarbeiten() {
+//        return (Collection<Abschlussarbeit>) manager.createQuery("SELECT a FROM Abschlussarbeit a WHERE a.abgabetermin >= :datum").setParameter("datum", new Date()).getResultList();
+//    }
+//
+//    public Abschlussarbeit getAbschlussarbeit(long id) {
+//        return manager.find(Abschlussarbeit.class, id);
+//    }
 
 }

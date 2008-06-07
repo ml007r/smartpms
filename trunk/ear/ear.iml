@@ -17,8 +17,8 @@
         </building>
         <packaging>
           <containerElement type="facet" facetId="ejb3/ejb/EJB">
-            <attribute name="method" value="0" />
-            <attribute name="URI" value="&lt;N/A&gt;" />
+            <attribute name="method" value="4" />
+            <attribute name="URI" value="ejb3.jar" />
             <attribute name="contextRoot" value="&lt;N/A&gt;" />
           </containerElement>
           <containerElement type="facet" facetId="web/web/Web">
