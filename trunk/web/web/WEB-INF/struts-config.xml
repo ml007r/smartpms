@@ -44,6 +44,16 @@
 
     </form-beans>
 
+
+    <global-exceptions>
+        <exception key="error" type="java.lang.Exception"/>
+    </global-exceptions>
+
+    <global-forwards>
+
+    </global-forwards>
+
+
     <action-mappings>
 
         <!-- Benutzeranmeldung -->
@@ -296,20 +306,13 @@
         </action>
         <action path="/abschlussarbeit/Benoten"/>
 
-
     </action-mappings>
 
-    <global-exceptions>
-        <exception key="error" type="java.lang.Exception"/>
-    </global-exceptions>
-    <global-forwards>
-
-    </global-forwards>
-
-
-    <message-resources parameter="MessageResources"/>
-
     <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="MessageResources" key="smartPMS"/>
+
+    <message-resources parameter="ValidatorResources"/>
 
     <plug-in className="org.apache.struts.tiles.TilesPlugin">
         <set-property value="/WEB-INF/tiles-defs.xml" property="definitions-config"/>
@@ -319,6 +322,5 @@
         <set-property value="/org/apache/struts/validator/validator-rules.xml,/WEB-INF/validation.xml"
                       property="pathnames"/>
     </plug-in>
-
 
 </struts-config>

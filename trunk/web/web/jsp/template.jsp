@@ -12,7 +12,7 @@
 
 <html>
 <head>
-    <title><bean:message key="page_title_default"/> :: <tiles:getAsString name="title"/></title>
+    <title><bean:message bundle="smartPMS" key="page_title_default"/> :: <tiles:getAsString name="title"/></title>
     <link type="text/css" rel="stylesheet" href="/smartPMS/css/smartPMS.css"/>
     <link type="text/css" rel="stylesheet" href="/smartPMS/css/menu.css"/>
 </head>

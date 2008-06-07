@@ -4,6 +4,5 @@
         xmlns:naming="http://geronimo.apache.org/xml/ns/naming-1.2"
         xmlns:security="http://geronimo.apache.org/xml/ns/security-1.2"
         xmlns:sys="http://geronimo.apache.org/xml/ns/deployment-1.2">
-    <context-root>/smartPMS
-    </context-root>
+    <context-root>/smartPMS</context-root>
 </web-app>

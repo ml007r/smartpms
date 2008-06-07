@@ -4,19 +4,19 @@
 
 <div class="buttonBar" id="">
     <html:link action="/abschlussarbeit/Anlegen" titleKey="abschlussarbeit_anlegen">
-        <bean:message key="abschlussarbeit_anlegen"/>
+        <bean:message bundle="smartPMS" key="abschlussarbeit_anlegen"/>
     </html:link>
 </div>
 <div id="">
-    <h1><bean:message key="abschlussarbeit_verwaltung"/></h1>
+    <h1><bean:message bundle="smartPMS" key="abschlussarbeit_verwaltung"/></h1>
     <table id="abschlussarbeit">
         <tr>
-            <th><bean:message key="abschlussarbeit_typ"/></th>
-            <th><bean:message key="abschlussarbeit_student"/></th>
-            <th><bean:message key="abschlussarbeit_thema"/></th>
-            <th><bean:message key="abschlussarbeit_note"/></th>
-            <th><bean:message key="abschlussarbeit_abgabetermin"/></th>
-            <th><bean:message key="tabelle_aktion"/></th>
+            <th><bean:message bundle="smartPMS" key="abschlussarbeit_typ"/></th>
+            <th><bean:message bundle="smartPMS" key="abschlussarbeit_student"/></th>
+            <th><bean:message bundle="smartPMS" key="abschlussarbeit_thema"/></th>
+            <th><bean:message bundle="smartPMS" key="abschlussarbeit_note"/></th>
+            <th><bean:message bundle="smartPMS" key="abschlussarbeit_abgabetermin"/></th>
+            <th><bean:message bundle="smartPMS" key="tabelle_aktion"/></th>
         </tr>
         <logic:iterate id="abschlussarbeit" name="abschlussarbeitListeForm" property="abschlussarbeiten">
             <tr>
