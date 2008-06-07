@@ -5,16 +5,16 @@
 
 <div class="buttonBar" id="">
     <html:link action="/lehrangebot/Anlegen" titleKey="lehrangebot_anlegen">
-        <bean:message key="lehrangebot_anlegen"/>
+        <bean:message bundle="smartPMS" key="lehrangebot_anlegen"/>
     </html:link>
 </div>
 <div id="">
-    <h1><bean:message key="lehrangebot_verwaltung"/></h1>
+    <h1><bean:message bundle="smartPMS" key="lehrangebot_verwaltung"/></h1>
     <table id="lehrangebot">
         <tr>
-            <th><bean:message key="lehrangebot_code"/></th>
-            <th><bean:message key="lehrangebot_bezeichnung"/></th>
-            <th><bean:message key="tabelle_aktion"/></th>
+            <th><bean:message bundle="smartPMS" key="lehrangebot_code"/></th>
+            <th><bean:message bundle="smartPMS" key="lehrangebot_bezeichnung"/></th>
+            <th><bean:message bundle="smartPMS" key="tabelle_aktion"/></th>
         </tr>
         <logic:iterate id="lehrangebot" name="lehrangebotListeForm" property="lehrangebot">
             <tr>

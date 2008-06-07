@@ -9,7 +9,7 @@
         <html:submit titleKey="lehrangebot_speichern"/>
     </div>
     <div id="formular">
-        <h1><bean:message key="lehrangebot"/></h1>
+        <h1><bean:message bundle="smartPMS" key="lehrangebot"/></h1>
 
         <div class="feld">
             <label for="code"><bean:write name="lehrangebot" property="code"/></label>

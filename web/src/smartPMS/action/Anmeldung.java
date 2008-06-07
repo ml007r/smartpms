@@ -1,9 +1,8 @@
 package smartPMS.action;
 
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.struts.action.*;
 import smartPMS.form.LoginForm;
 
 import javax.servlet.http.HttpServletRequest;
@@ -18,19 +17,26 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class Anmeldung extends Action {
 
+    private static Log logger = LogFactory.getLog(Anmeldung.class);
+
+    @Override
     public ActionForward execute(ActionMapping actionMapping, ActionForm actionForm, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
 
         LoginForm loginForm = (LoginForm) actionForm;
 
-        // LogIn gibts nicht
+        if (logger.isInfoEnabled())
+            logger.info("Benutzeranmeldung: " + loginForm.getBenutzername());
 
+        // nachschauen ob der name in PERSON Tabelle steht
 
-        if (httpServletRequest.getSession().getAttribute("loggedUser") == null) {
-            //
-
-            //return actionMapping.findForward("failure");
+        if (true) {
+            httpServletRequest.getSession().setAttribute("loggedUser", "bla");
+            return actionMapping.findForward("success");
         }
 
-        return actionMapping.findForward("success");
+        ActionErrors errors = new ActionErrors();
+        errors.add("benutzername", new ActionMessage("benutzername_falsch"));
+        super.addErrors(httpServletRequest, errors);
+        return actionMapping.findForward("failure");
     }
 }

@@ -13,32 +13,32 @@
     <ul>
         <li>
             <html:link action="/lehrangebot/Ansicht" titleKey="menu_lehrangebot">
-                <bean:message key="menu_lehrangebot"/>
+                <bean:message bundle="smartPMS" key="menu_lehrangebot"/>
             </html:link>
         </li>
         <li>
             <html:link action="/dokument/Ansicht" titleKey="menu_dokument">
-                <bean:message key="menu_dokument"/>
+                <bean:message bundle="smartPMS" key="menu_dokument"/>
             </html:link>
         </li>
         <li>
             <html:link action="/klausur/Ansicht" titleKey="menu_klausur">
-                <bean:message key="menu_klausur"/>
+                <bean:message bundle="smartPMS" key="menu_klausur"/>
             </html:link>
         </li>
         <li>
             <html:link action="/abschlussarbeit/Ansicht" titleKey="menu_abschlussarbeit">
-                <bean:message key="menu_abschlussarbeit"/>
+                <bean:message bundle="smartPMS" key="menu_abschlussarbeit"/>
             </html:link>
         </li>
         <li>
             <html:link action="/statistik/Ansicht" titleKey="menu_statistik">
-                <bean:message key="menu_statistik"/>
+                <bean:message bundle="smartPMS" key="menu_statistik"/>
             </html:link>
         </li>
         <li>
             <html:link action="/hilfskraft/Ansicht" titleKey="menu_hilfskraft">
-                <bean:message key="menu_hilfskraft"/>
+                <bean:message bundle="smartPMS" key="menu_hilfskraft"/>
             </html:link>
         </li>
     </ul>
