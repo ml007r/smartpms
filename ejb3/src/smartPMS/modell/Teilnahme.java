@@ -1,6 +1,6 @@
 package smartPMS.modell;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 /**
  * Created by IntelliJ IDEA.
@@ -10,19 +10,19 @@ import javax.persistence.Entity;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
+@Table(name = "teilnahme")
 public class Teilnahme {
 
-    private long id;
-
-    private double note;
-
-    private int versuch;
-
-    // Assotiationen
+    @EmbeddedId
+    private TeilnahmePK primaryKey;
 
     private Student student;
 
     private Klausur klausur;
+
+    private int versuch = 1;
+
+    private double note;
 
     /**
      * Standardkonstruktor
@@ -33,42 +33,16 @@ public class Teilnahme {
     /**
      * Pflichtkonstruktor
      *
-     * @param note
-     * @param versuch
      * @param student
      * @param klausur
      */
-    public Teilnahme(double note, int versuch, Student student, Klausur klausur) {
-        this.note = note;
-        this.versuch = versuch;
+    public Teilnahme(Student student, Klausur klausur) {
         this.student = student;
         this.klausur = klausur;
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public double getNote() {
-        return note;
-    }
-
-    public void setNote(double note) {
-        this.note = note;
-    }
-
-    public int getVersuch() {
-        return versuch;
-    }
-
-    public void setVersuch(int versuch) {
-        this.versuch = versuch;
-    }
-
+    @ManyToOne
+    @JoinColumn(name = "student", referencedColumnName = "id", insertable = false, updatable = false)
     public Student getStudent() {
         return student;
     }
@@ -77,11 +51,31 @@ public class Teilnahme {
         this.student = student;
     }
 
+    @ManyToOne
+    @JoinColumn(name = "klausur", referencedColumnName = "id", insertable = false, updatable = false)
     public Klausur getKlausur() {
         return klausur;
     }
 
     public void setKlausur(Klausur klausur) {
         this.klausur = klausur;
+    }
+
+    @Column(name = "versuch")
+    public int getVersuch() {
+        return versuch;
+    }
+
+    public void setVersuch(int versuch) {
+        this.versuch = versuch;
+    }
+
+    @Column(name = "versuch", precision = 2, scale = 0)
+    public double getNote() {
+        return note;
+    }
+
+    public void setNote(double note) {
+        this.note = note;
     }
 }

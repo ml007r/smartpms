@@ -11,6 +11,7 @@ import java.util.Date;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
+@Table(name = "ABSCHLUSSARBEIT")
 public class Abschlussarbeit {
 
     private long id;
@@ -31,7 +32,8 @@ public class Abschlussarbeit {
 
     private double ects = 30.0;
 
-    private Professor professor;
+    // TODO Dozent -> Professor
+    private Dozent professor;
 
     private Student student;
 
@@ -59,9 +61,9 @@ public class Abschlussarbeit {
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_abschlussarbeit_id")
-    @SequenceGenerator(name = "seq_abschlussarbeit_id", sequenceName = "seq_abschlussarbeit_id", allocationSize = 1)
-    @Column(name = "id", precision = 10, scale = 0)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "abschlussarbeitId")
+    @SequenceGenerator(name = "abschlussarbeitId", sequenceName = "SEQ_ABSCHLUSSARBEIT_ID", allocationSize = 1)
+    @Column(name = "ID", precision = 10, scale = 0)
     public long getId() {
         return id;
     }
@@ -70,7 +72,8 @@ public class Abschlussarbeit {
         this.id = id;
     }
 
-    @Column(name = "typ", precision = 1, scale = 0, nullable = false)
+    @Enumerated(EnumType.ORDINAL)
+    @Column(name = "TYP", precision = 1, scale = 0, nullable = false)
     public TYP_ABSCHLUSSARBEIT getTyp() {
         return typ;
     }
@@ -79,7 +82,7 @@ public class Abschlussarbeit {
         this.typ = typ;
     }
 
-    @Column(name = "thema", length = 150, nullable = false)
+    @Column(name = "THEMA", length = 150, nullable = false)
     public String getThema() {
         return thema;
     }
@@ -88,7 +91,7 @@ public class Abschlussarbeit {
         this.thema = thema;
     }
 
-    @Column(name = "thema", length = 1000, nullable = false)
+    @Column(name = "BESCHREIBUNG", length = 255, nullable = false)
     public String getBeschreibung() {
         return beschreibung;
     }
@@ -98,7 +101,7 @@ public class Abschlussarbeit {
     }
 
     @Temporal(TemporalType.DATE)
-    @Column(name = "abgabetermin")
+    @Column(name = "ABGABETERMIN")
     public Date getAbgabetermin() {
         return abgabetermin;
     }
@@ -107,7 +110,7 @@ public class Abschlussarbeit {
         this.abgabetermin = abgabetermin;
     }
 
-    @Column(name = "note", precision = 1, scale = 1)
+    @Column(name = "NOTE", precision = 1, scale = 1)
     public double getNote() {
         return note;
     }
@@ -116,12 +119,30 @@ public class Abschlussarbeit {
         this.note = note;
     }
 
-    @Column(name = "ects", precision = 2, scale = 1)
+    @Column(name = "ECTS", precision = 2, scale = 1)
     public double getEcts() {
         return ects;
     }
 
     public void setEcts(double ects) {
         this.ects = ects;
+    }
+
+    @ManyToOne()
+    public Dozent getProfessor() {
+        return professor;
+    }
+
+    public void setProfessor(Dozent professor) {
+        this.professor = professor;
+    }
+
+    @ManyToOne()
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
     }
 }

@@ -7,16 +7,13 @@
  */
 package smartPMS.session;
 
-import smartPMS.modell.Klausur;
-import smartPMS.modell.Lehrangebot;
-import smartPMS.modell.Teilnahme;
-import smartPMS.transfer.KlausurVO;
+//import smartPMS.modell.Klausur;
+//import smartPMS.modell.Lehrangebot;
+//import smartPMS.modell.Teilnahme;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import java.util.ArrayList;
-import java.util.Collection;
 
 @Stateless(name = "KlausurSessionEJB")
 public class KlausurSessionBean {
@@ -30,57 +27,56 @@ public class KlausurSessionBean {
     public KlausurSessionBean() {
     }
 
-    public long klausurAnlegen(KlausurVO klausur) {
-        if (klausur == null) {
-            throw new IllegalArgumentException();
-        }
-
-        Klausur k = new Klausur(klausur.getDatum(), klausur.getBeginn(), klausur.getEnde(), klausur.getEcts());
-        k.setLehrangebot(entityManager.find(Lehrangebot.class, klausur.getLehrangebotId()));
-        entityManager.persist(k);
-
-        return k.getId();
-    }
-
-    public void klausurSpeichern(KlausurVO klausur) throws IllegalAccessException {
-
-        if (klausur == null) {
-            throw new IllegalArgumentException();
-        }
-
-        if (klausur.getId() == 0) {
-            throw new IllegalAccessException();
-        }
-
-        Klausur k = entityManager.find(Klausur.class, klausur.getId());
-        k.setDatum(klausur.getDatum());
-        k.setBeginn(klausur.getBeginn());
-        k.setEnde(klausur.getEnde());
-        k.setEcts(klausur.getEcts());
-        k.setLehrangebot(entityManager.find(Lehrangebot.class, klausur.getLehrangebotId()));
-        entityManager.merge(k);
-    }
-
-    public void klausurEntfernen(long klausurId) {
-        entityManager.remove(entityManager.find(Klausur.class, klausurId));
-    }
-
-    public Klausur getKlausur(long klausurId) {
-        return entityManager.find(Klausur.class, klausurId);
-    }
-
-    public Collection<Teilnahme> getKlausurTeilnahmen(long klausurId) {
-        Collection<Teilnahme> teilnahmen = new ArrayList<Teilnahme>();
-        return teilnahmen;
-    }
-
-    public void klausurBenoten(Collection<Teilnahme> teilnahmen) {
-        for (Teilnahme t : teilnahmen) {
-            if (t.getId() == 0) {
-                entityManager.persist(t);
-            } else {
-                entityManager.merge(t);
-            }
-        }
-    }
+//    public long klausurAnlegen(KlausurVO klausur) {
+////        if (klausur == null) {
+////            throw new IllegalArgumentException();
+////        }
+////
+////        Klausur k = new Klausur(klausur.getBeginn(), klausur.getEnde(), entityManager.find(Lehrangebot.class, klausur.getLehrangebotId()));
+////        k.setLehrangebot(entityManager.find(Lehrangebot.class, klausur.getLehrangebotId()));
+////        entityManager.persist(k);
+////
+////        return k.getId();
+//    }
+//
+//    public void klausurSpeichern(KlausurVO klausur) throws IllegalAccessException {
+//
+////        if (klausur == null) {
+////            throw new IllegalArgumentException();
+////        }
+////
+////        if (klausur.getId() == 0) {
+////            throw new IllegalAccessException();
+////        }
+////
+////        Klausur k = entityManager.find(Klausur.class, klausur.getId());
+////        k.setBeginn(klausur.getBeginn());
+////        k.setEnde(klausur.getEnde());
+////        k.setEcts(klausur.getEcts());
+////        k.setLehrangebot(entityManager.find(Lehrangebot.class, klausur.getLehrangebotId()));
+////        entityManager.merge(k);
+//    }
+//
+//    public void klausurEntfernen(long klausurId) {
+//       // entityManager.remove(entityManager.find(Klausur.class, klausurId));
+//    }
+//
+//    public Klausur getKlausur(long klausurId) {
+//      //  return entityManager.find(Klausur.class, klausurId);
+//    }
+//
+//    public Collection<Teilnahme> getKlausurTeilnahmen(long klausurId) {
+//     //   Collection<Teilnahme> teilnahmen = new ArrayList<Teilnahme>();
+//      //  return teilnahmen;
+//    }
+//
+//    public void klausurBenoten(Collection<Teilnahme> teilnahmen) {
+////        for (Teilnahme t : teilnahmen) {
+////            try {
+////                entityManager.persist(t);
+////            } catch (EJBException e) {
+////
+////            }
+////        }
+//    }
 }
