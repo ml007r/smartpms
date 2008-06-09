@@ -64,6 +64,7 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="Geronimo 2.0.2" level="application_server_libraries" />
+    <orderEntry type="library" name="Logging" level="project" />
     <orderEntryProperties />
   </component>
 </module>
