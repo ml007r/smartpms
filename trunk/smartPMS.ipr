@@ -285,8 +285,13 @@
       <CLASSES>
         <root url="jar://$PROJECT_DIR$/web/lib/struts-taglib.jar!/" />
         <root url="jar://$PROJECT_DIR$/web/lib/struts-tiles.jar!/" />
-        <root url="jar://$PROJECT_DIR$/web/lib/struts-el.jar!/" />
-        <root url="jar://$PROJECT_DIR$/web/lib/standard.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="Logging">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/web/lib/commons-logging.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
