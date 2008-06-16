@@ -15,8 +15,8 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-@Stateless(name = "PersonSessionEJB")
-public class PersonSessionBean implements PersonFacade {
+@Stateless
+public class PersonSessionBean implements PersonRemote {
 
     private static Log logger = LogFactory.getLog(PersonSessionBean.class);
 

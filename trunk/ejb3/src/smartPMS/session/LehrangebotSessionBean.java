@@ -26,7 +26,7 @@ import java.util.Collection;
  *
  */
 @Stateless(name = "LehrangebotSessionEJB")
-public class LehrangebotSessionBean {
+public class LehrangebotSessionBean implements LehrangebotFacade {
 
     private static final Log logger = LogFactory.getLog(LehrangebotSessionBean.class);
 
