@@ -33,6 +33,7 @@ public class LehrangebotSessionBean {
     @PersistenceUnit(unitName = "smartPMS")
     private EntityManager entityManager;
 
+
     /**
      *
      */

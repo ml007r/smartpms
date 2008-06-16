@@ -1,6 +1,7 @@
 package smartPMS.modell;
 
 import javax.persistence.Entity;
+import java.io.Serializable;
 
 /**
  * Created by IntelliJ IDEA.
@@ -10,11 +11,11 @@ import javax.persistence.Entity;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-public class Dokument {
+public class Dokument implements Serializable {
 
     private String name;
 
-    public Dokument(String name){
+    public Dokument(String name) {
         this.name = name;
     }
 

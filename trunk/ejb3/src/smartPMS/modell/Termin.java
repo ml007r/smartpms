@@ -1,6 +1,7 @@
 package smartPMS.modell;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -12,7 +13,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "termin")
-public class Termin {
+public class Termin implements Serializable {
 
     public enum TYP {
         VORLESUNG, UEBUNG, PRAKTIKUM, TUTORIUM

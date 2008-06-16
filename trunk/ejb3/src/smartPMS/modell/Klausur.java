@@ -1,6 +1,7 @@
 package smartPMS.modell;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -12,7 +13,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "Klausur")
-public class Klausur {
+public class Klausur implements Serializable {
 
     private long id;
 
