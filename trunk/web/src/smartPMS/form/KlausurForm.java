@@ -3,6 +3,7 @@ package smartPMS.form;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
+import org.apache.struts.action.ActionMessage;
 import smartPMS.transfer.KlausurVO;
 
 import javax.servlet.http.HttpServletRequest;
@@ -38,7 +39,16 @@ public class KlausurForm extends ActionForm {
 
     @Override
     public ActionErrors validate(ActionMapping actionMapping, HttpServletRequest httpServletRequest) {
-        return super.validate(actionMapping, httpServletRequest);
+
+        ActionErrors error = new ActionErrors();
+
+        // in MEssageResources.properties:
+        // klausur_beginn_null=Es wurde kein Beginn eingegeben
+
+        if (klausur.getBeginn() == null)
+            error.add("klausur.beginn", new ActionMessage("klausur_beginn_null"));
+
+
     }
-    
+
 }
