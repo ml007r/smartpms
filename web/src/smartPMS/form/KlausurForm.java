@@ -49,6 +49,7 @@ public class KlausurForm extends ActionForm {
             error.add("klausur.beginn", new ActionMessage("klausur_beginn_null"));
 
 
+        return error;
     }
 
 }
