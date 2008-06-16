@@ -1,6 +1,7 @@
 package smartPMS.modell;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by IntelliJ IDEA.
@@ -11,7 +12,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "teilnahme")
-public class Teilnahme {
+public class Teilnahme implements Serializable {
 
     @EmbeddedId
     private TeilnahmePK primaryKey;

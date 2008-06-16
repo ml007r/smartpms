@@ -1,5 +1,6 @@
 package smartPMS.transfer;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -9,7 +10,7 @@ import java.util.Date;
  * Time: 09:55:18
  * To change this template use File | Settings | File Templates.
  */
-public class KlausurVO {
+public class KlausurVO implements Serializable {
 
     private long id;
 

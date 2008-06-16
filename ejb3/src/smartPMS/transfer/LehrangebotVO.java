@@ -1,5 +1,7 @@
 package smartPMS.transfer;
 
+import java.io.Serializable;
+
 /**
  * Created by IntelliJ IDEA.
  * User: tbs
@@ -7,7 +9,7 @@ package smartPMS.transfer;
  * Time: 10:11:42
  * To change this template use File | Settings | File Templates.
  */
-public class LehrangebotVO {
+public class LehrangebotVO implements Serializable {
 
     private long id;
 

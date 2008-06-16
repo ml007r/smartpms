@@ -7,21 +7,31 @@
  */
 package smartPMS.session;
 
-import smartPMS.modell.Student;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import smartPMS.transfer.SessionUser;
 
 import javax.ejb.Stateless;
-import java.util.Collection;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 @Stateless(name = "PersonSessionEJB")
-public class PersonSessionBean {
+public class PersonSessionBean implements PersonFacade {
+
+    private static Log logger = LogFactory.getLog(PersonSessionBean.class);
+
+    @PersistenceContext(unitName = "smartPMS")
+    private EntityManager entityManager;
+
+
     public PersonSessionBean() {
+        logger.trace(this);
     }
 
-    /**
-     * @param studiengang
-     * @return
-     */
-    public Collection<Student> getStudenten(String studiengang) {
-
+    public SessionUser authProfessor(String name) {
+        logger.info("Suche Benutzerkennung: " + name);
+        return (SessionUser) entityManager.createQuery("SELECT new smartPMS.transfer.SessionUser(p.id, CONCAT(p.vorname,CONCAT(' ', p.nachname)) ) FROM Person p").getSingleResult();
     }
+
+
 }

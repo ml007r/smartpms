@@ -1,6 +1,7 @@
 package smartPMS.modell;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -14,9 +15,13 @@ import java.util.Date;
 @Table(name = "person")
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "typ")
-public abstract class Person {
+public abstract class Person implements Serializable {
 
     private long id;
+
+    public enum PersonType {
+        STUDENT, HILFSKRAFT, DOZENT, PROFESSOR
+    }
 
     // NameT
 
