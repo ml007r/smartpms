@@ -4,10 +4,10 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.struts.action.*;
 import smartPMS.form.LoginForm;
-import smartPMS.session.PersonFacade;
+import smartPMS.server.SmartController;
+import smartPMS.session.PersonSessionFacade;
 import smartPMS.transfer.SessionUser;
 
-import javax.ejb.EJB;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -22,11 +22,6 @@ public class Anmeldung extends Action {
 
     private static Log logger = LogFactory.getLog(Anmeldung.class);
 
-    //(beanName = "PersonSessionEJB", beanInterface = PersonFacade.class)
-
-    @EJB
-    PersonFacade personSessionEJB;
-
     @Override
     public ActionForward execute(ActionMapping actionMapping, ActionForm actionForm, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
 
@@ -35,8 +30,11 @@ public class Anmeldung extends Action {
 
         SessionUser prof = null;
 
+        PersonSessionFacade personEJB = SmartController.getPersonFacade();
+        logger.info(personEJB);
+
         try {
-            personSessionEJB.authProfessor(loginForm.getBenutzername());
+            //personEJB.authProfessor(loginForm.getBenutzername());
         } catch (Exception e) {
             logger.error("Konnte Professor nicht anmelden!", e);
         }

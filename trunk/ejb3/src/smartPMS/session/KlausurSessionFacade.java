@@ -3,8 +3,6 @@ package smartPMS.session;
 import smartPMS.modell.Klausur;
 import smartPMS.transfer.KlausurVO;
 
-import javax.ejb.Local;
-import javax.ejb.Remote;
 import java.util.Collection;
 
 /**
@@ -14,9 +12,7 @@ import java.util.Collection;
  * Time: 20:05:28
  * To change this template use File | Settings | File Templates.
  */
-@Local
-@Remote
-public interface KlausurFacade {
+public interface KlausurSessionFacade {
 
     /**
      * @param Klausur

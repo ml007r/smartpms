@@ -11,18 +11,27 @@ package smartPMS.session;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import smartPMS.interfaces.AbschlussarbeitFacade;
+import smartPMS.interfaces.AbschlussarbeitFacadeHome;
+import smartPMS.interfaces.AbschlussarbeitFacadeLocal;
+import smartPMS.interfaces.AbschlussarbeitFacadeLocalHome;
 import smartPMS.modell.Abschlussarbeit;
 import smartPMS.transfer.AbschlussarbeitVO;
 
-import javax.ejb.EJBException;
-import javax.ejb.Stateless;
+import javax.ejb.*;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.Collection;
 import java.util.Date;
 
-@Stateless(name = "AbschlussarbeitSessionEJB")
-public class AbschlussarbeitSessionBean implements AbschlussarbeitFacade {
+@Stateless(name = "AbschlussarbeitFacade")
+@LocalHome(AbschlussarbeitFacadeLocalHome.class)
+@RemoteHome(AbschlussarbeitFacadeHome.class)
+public class AbschlussarbeitSessionBean implements AbschlussarbeitFacadeLocal, AbschlussarbeitFacade {
+
+    public void ejbCreate() throws CreateException {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
 
     private static final Log logger = LogFactory.getLog(AbschlussarbeitSessionBean.class);
 
@@ -59,4 +68,6 @@ public class AbschlussarbeitSessionBean implements AbschlussarbeitFacade {
     public Collection<Abschlussarbeit> getAbschlussarbeiten() {
         return (Collection<Abschlussarbeit>) manager.createQuery("SELECT a FROM Abschlussarbeit a WHERE a.abgabetermin >= :datum").setParameter("datum", new Date()).getResultList();
     }
+
+
 }

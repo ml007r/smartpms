@@ -41,6 +41,9 @@
         <form-bean name="hilfskraftListeForm" type="smartPMS.form.HilfskraftListeForm"/>
         <form-bean name="hilfskraftForm" type="smartPMS.form.HilfskraftForm"/>
 
+        <!-- Personenverwaltung -->
+        <form-bean name="personListeForm" type="smartPMS.form.PersonListeForm"/>
+        <form-bean name="personForm" type="smartPMS.form.PersonForm"/>
 
     </form-beans>
 
@@ -304,7 +307,27 @@
                 validate="false">
             <forward name="success" path="hilfskraft"/>
         </action>
+
+
         <action path="/abschlussarbeit/Benoten"/>
+
+
+        <!-- Personenverwaltung -->
+        <action path="/verwaltung/person/Anzeigen" type="smartPMS.action.verwaltung.PersonListeAnzeigen"
+                name="personListeForm"
+                validate="false">
+            <forward name="success" path="verwaltung_person_liste"/>
+        </action>
+        <action path="/verwaltung/person/Anlegen" type="smartPMS.action.verwaltung.PersonBearbeiten" name="personForm"
+                validate="false">
+            <forward name="success" path="verwaltung_person_formular"/>
+        </action>
+        <action path="/verwaltung/person/Speichern" type="smartPMS.action.verwaltung.PersonSpeichern" name="personForm"
+                validate="true" input="verwaltung_person_formular">
+            <forward name="success" path="verwaltung_person_liste"/>
+            <forward name="failure" path="verwaltung_person_formular"/>
+        </action>
+
 
     </action-mappings>
 

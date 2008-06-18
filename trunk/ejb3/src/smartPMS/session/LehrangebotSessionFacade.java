@@ -1,8 +1,5 @@
 package smartPMS.session;
 
-import javax.ejb.Local;
-import javax.ejb.Remote;
-
 /**
  * Created by IntelliJ IDEA.
  * User: tbs
@@ -10,7 +7,5 @@ import javax.ejb.Remote;
  * Time: 10:47:40
  * To change this template use File | Settings | File Templates.
  */
-@Local
-@Remote
-public interface LehrangebotFacade {
+public interface LehrangebotSessionFacade {
 }

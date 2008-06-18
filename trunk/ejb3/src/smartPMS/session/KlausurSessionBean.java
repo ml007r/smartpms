@@ -13,19 +13,28 @@ package smartPMS.session;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import smartPMS.interfaces.KlausurFacade;
+import smartPMS.interfaces.KlausurFacadeHome;
+import smartPMS.interfaces.KlausurFacadeLocal;
+import smartPMS.interfaces.KlausurFacadeLocalHome;
 import smartPMS.modell.Klausur;
 import smartPMS.modell.Lehrangebot;
 import smartPMS.modell.Teilnahme;
 import smartPMS.transfer.KlausurVO;
 
-import javax.ejb.EJBException;
-import javax.ejb.Stateless;
+import javax.ejb.*;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.Collection;
 
-@Stateless(name = "KlausurSessionEJB")
-public class KlausurSessionBean implements KlausurFacade {
+@Stateless(name = "KlausurFacade")
+@LocalHome(KlausurFacadeLocalHome.class)
+@RemoteHome(KlausurFacadeHome.class)
+public class KlausurSessionBean implements KlausurFacadeLocal, KlausurFacade {
+
+    public void ejbCreate() throws CreateException {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
 
     private static final Log logger = LogFactory.getLog(KlausurSessionBean.class);
 
@@ -102,4 +111,6 @@ public class KlausurSessionBean implements KlausurFacade {
             }
         }
     }
+
+
 }

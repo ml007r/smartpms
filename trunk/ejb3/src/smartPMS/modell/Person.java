@@ -222,4 +222,48 @@ public abstract class Person implements Serializable {
     public void setGeburtsdatum(Date geburtsdatum) {
         this.geburtsdatum = geburtsdatum;
     }
+
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Person)) return false;
+
+        Person person = (Person) o;
+
+        if (id != person.id) return false;
+        if (anrede != null ? !anrede.equals(person.anrede) : person.anrede != null) return false;
+        if (anschrift1 != null ? !anschrift1.equals(person.anschrift1) : person.anschrift1 != null) return false;
+        if (anschrift2 != null ? !anschrift2.equals(person.anschrift2) : person.anschrift2 != null) return false;
+        if (email != null ? !email.equals(person.email) : person.email != null) return false;
+        if (geburtsdatum != null ? !geburtsdatum.equals(person.geburtsdatum) : person.geburtsdatum != null)
+            return false;
+        if (mobiltelefon != null ? !mobiltelefon.equals(person.mobiltelefon) : person.mobiltelefon != null)
+            return false;
+        if (nachname != null ? !nachname.equals(person.nachname) : person.nachname != null) return false;
+        if (postleitzahl != null ? !postleitzahl.equals(person.postleitzahl) : person.postleitzahl != null)
+            return false;
+        if (telefax != null ? !telefax.equals(person.telefax) : person.telefax != null) return false;
+        if (telefon != null ? !telefon.equals(person.telefon) : person.telefon != null) return false;
+        if (vorname != null ? !vorname.equals(person.vorname) : person.vorname != null) return false;
+        if (wohnort != null ? !wohnort.equals(person.wohnort) : person.wohnort != null) return false;
+
+        return true;
+    }
+
+    public int hashCode() {
+        int result;
+        result = (int) (id ^ (id >>> 32));
+        result = 31 * result + (anrede != null ? anrede.hashCode() : 0);
+        result = 31 * result + (vorname != null ? vorname.hashCode() : 0);
+        result = 31 * result + (nachname != null ? nachname.hashCode() : 0);
+        result = 31 * result + (anschrift1 != null ? anschrift1.hashCode() : 0);
+        result = 31 * result + (anschrift2 != null ? anschrift2.hashCode() : 0);
+        result = 31 * result + (postleitzahl != null ? postleitzahl.hashCode() : 0);
+        result = 31 * result + (wohnort != null ? wohnort.hashCode() : 0);
+        result = 31 * result + (telefon != null ? telefon.hashCode() : 0);
+        result = 31 * result + (telefax != null ? telefax.hashCode() : 0);
+        result = 31 * result + (mobiltelefon != null ? mobiltelefon.hashCode() : 0);
+        result = 31 * result + (email != null ? email.hashCode() : 0);
+        result = 31 * result + (geburtsdatum != null ? geburtsdatum.hashCode() : 0);
+        return result;
+    }
 }

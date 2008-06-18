@@ -17,11 +17,11 @@ public class Abschlussarbeit implements Serializable {
 
     private long id;
 
-    public enum TYP_ABSCHLUSSARBEIT {
+    public enum AbschlussarbeitTyp {
         DIPLOM, BACHELOR, MASTER
     }
 
-    private TYP_ABSCHLUSSARBEIT typ;
+    private AbschlussarbeitTyp typ;
 
     private String thema;
 
@@ -52,7 +52,7 @@ public class Abschlussarbeit implements Serializable {
      * @param note
      * @param ects
      */
-    public Abschlussarbeit(TYP_ABSCHLUSSARBEIT typ, String thema, String beschreibung, Date abgabetermin, double note, double ects) {
+    public Abschlussarbeit(AbschlussarbeitTyp typ, String thema, String beschreibung, Date abgabetermin, double note, double ects) {
         this.typ = typ;
         this.thema = thema;
         this.beschreibung = beschreibung;
@@ -75,11 +75,11 @@ public class Abschlussarbeit implements Serializable {
 
     @Enumerated(EnumType.ORDINAL)
     @Column(name = "TYP", precision = 1, scale = 0, nullable = false)
-    public TYP_ABSCHLUSSARBEIT getTyp() {
+    public AbschlussarbeitTyp getTyp() {
         return typ;
     }
 
-    public void setTyp(TYP_ABSCHLUSSARBEIT typ) {
+    public void setTyp(AbschlussarbeitTyp typ) {
         this.typ = typ;
     }
 

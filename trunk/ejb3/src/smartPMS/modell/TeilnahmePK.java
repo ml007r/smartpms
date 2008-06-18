@@ -2,6 +2,7 @@ package smartPMS.modell;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import java.io.Serializable;
 
 /**
  * Created by IntelliJ IDEA.
@@ -11,7 +12,7 @@ import javax.persistence.Embeddable;
  * To change this template use File | Settings | File Templates.
  */
 @Embeddable
-public class TeilnahmePK {
+public class TeilnahmePK implements Serializable {
 
     private long studentId;
 
