@@ -3,8 +3,6 @@ package smartPMS.session;
 import smartPMS.modell.Abschlussarbeit;
 import smartPMS.transfer.AbschlussarbeitVO;
 
-import javax.ejb.Local;
-import javax.ejb.Remote;
 import java.util.Collection;
 
 /**
@@ -14,9 +12,7 @@ import java.util.Collection;
  * Time: 19:26:26
  * To change this template use File | Settings | File Templates.
  */
-@Local
-@Remote
-public interface AbschlussarbeitFacade {
+public interface AbschlussarbeitSessionFacade {
 
     /**
      * Eine neue

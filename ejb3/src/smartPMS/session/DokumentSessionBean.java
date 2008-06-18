@@ -7,15 +7,27 @@
  */
 package smartPMS.session;
 
+import smartPMS.interfaces.DokumentFacade;
+import smartPMS.interfaces.DokumentFacadeHome;
+import smartPMS.interfaces.DokumentFacadeLocal;
+import smartPMS.interfaces.DokumentFacadeLocalHome;
 import smartPMS.modell.Dokument;
 import smartPMS.transfer.DokumentVO;
 
+import javax.ejb.CreateException;
+import javax.ejb.LocalHome;
+import javax.ejb.RemoteHome;
 import javax.ejb.Stateless;
 import java.util.Collection;
 
-@Stateless(name = "DokumentSessionEJB")
-public class DokumentSessionBean implements DokumentFacade {
+@Stateless(name = "DokumentFacade")
+@LocalHome(DokumentFacadeLocalHome.class)
+@RemoteHome(DokumentFacadeHome.class)
+public class DokumentSessionBean implements DokumentFacadeLocal, DokumentFacade {
 
+    public void ejbCreate() throws CreateException {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
 
     public DokumentSessionBean() {
     }
@@ -39,4 +51,6 @@ public class DokumentSessionBean implements DokumentFacade {
     public Collection<Dokument> getDokumente() {
         return null;  //To change body of implemented methods use File | Settings | File Templates.
     }
+
+
 }

@@ -172,4 +172,16 @@
     </definition>
 
 
+    <definition name="verwaltung_person_liste" extends="angemeldet">
+        <description>Personenliste anzeigen</description>
+        <put name="title" value="Personenverwaltung" type="string"/>
+        <put name="content" value="/jsp/verwaltung/personen/liste.jsp" type="page"/>
+    </definition>
+    <definition name="verwaltung_person_formular" extends="angemeldet">
+        <description>Personen anlegen/bearbeiten</description>
+        <put name="title" value="Person anlegen" type="string"/>
+        <put name="content" value="/jsp/verwaltung/personen/anlegen.jsp" type="page"/>
+    </definition>
+
+
 </tiles-definitions>

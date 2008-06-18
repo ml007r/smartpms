@@ -26,6 +26,8 @@ public class Lehrangebot {
 
     private Collection<Termin> termine;
 
+    private Collection<Dokument> dokumente;
+
     protected Lehrangebot() {
     }
 
@@ -98,5 +100,43 @@ public class Lehrangebot {
 
     public void setTermine(Collection<Termin> termine) {
         this.termine = termine;
+    }
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "lehrangebot")
+    public Collection<Dokument> getDokumente() {
+        return dokumente;
+    }
+
+    public void setDokumente(Collection<Dokument> dokumente) {
+        this.dokumente = dokumente;
+    }
+
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Lehrangebot)) return false;
+
+        Lehrangebot that = (Lehrangebot) o;
+
+        if (id != that.id) return false;
+        if (bezeichnung != null ? !bezeichnung.equals(that.bezeichnung) : that.bezeichnung != null) return false;
+        if (dokumente != null ? !dokumente.equals(that.dokumente) : that.dokumente != null) return false;
+        if (dozent != null ? !dozent.equals(that.dozent) : that.dozent != null) return false;
+        if (klausuren != null ? !klausuren.equals(that.klausuren) : that.klausuren != null) return false;
+        if (nummer != null ? !nummer.equals(that.nummer) : that.nummer != null) return false;
+        if (termine != null ? !termine.equals(that.termine) : that.termine != null) return false;
+
+        return true;
+    }
+
+    public int hashCode() {
+        int result;
+        result = (int) (id ^ (id >>> 32));
+        result = 31 * result + (nummer != null ? nummer.hashCode() : 0);
+        result = 31 * result + (bezeichnung != null ? bezeichnung.hashCode() : 0);
+        result = 31 * result + (dozent != null ? dozent.hashCode() : 0);
+        result = 31 * result + (klausuren != null ? klausuren.hashCode() : 0);
+        result = 31 * result + (termine != null ? termine.hashCode() : 0);
+        result = 31 * result + (dokumente != null ? dokumente.hashCode() : 0);
+        return result;
     }
 }

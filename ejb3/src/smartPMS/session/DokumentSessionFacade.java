@@ -3,8 +3,6 @@ package smartPMS.session;
 import smartPMS.modell.Dokument;
 import smartPMS.transfer.DokumentVO;
 
-import javax.ejb.Local;
-import javax.ejb.Remote;
 import java.util.Collection;
 
 /**
@@ -14,9 +12,7 @@ import java.util.Collection;
  * Time: 19:45:42
  * To change this template use File | Settings | File Templates.
  */
-@Local
-@Remote
-public interface DokumentFacade {
+public interface DokumentSessionFacade {
 
     public long createDokument(DokumentVO Dokument);
 

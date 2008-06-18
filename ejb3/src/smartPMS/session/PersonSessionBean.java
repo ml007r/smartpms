@@ -9,20 +9,30 @@ package smartPMS.session;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import smartPMS.interfaces.PersonFacade;
+import smartPMS.interfaces.PersonFacadeHome;
+import smartPMS.interfaces.PersonFacadeLocal;
+import smartPMS.interfaces.PersonFacadeLocalHome;
+import smartPMS.modell.Person;
 import smartPMS.transfer.SessionUser;
 
-import javax.ejb.Stateless;
+import javax.ejb.*;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-@Stateless
-public class PersonSessionBean implements PersonRemote {
+@Stateless(name = "PersonFacade")
+@LocalHome(PersonFacadeLocalHome.class)
+@RemoteHome(PersonFacadeHome.class)
+public class PersonSessionBean implements PersonFacadeLocal, PersonFacade {
+
+    public void ejbCreate() throws CreateException {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
 
     private static Log logger = LogFactory.getLog(PersonSessionBean.class);
 
     @PersistenceContext(unitName = "smartPMS")
     private EntityManager entityManager;
-
 
     public PersonSessionBean() {
         logger.trace(this);
@@ -34,4 +44,12 @@ public class PersonSessionBean implements PersonRemote {
     }
 
 
+    public long createPerson(Person person) {
+        try {
+            entityManager.persist(person);
+        } catch (EJBException e) {
+            return 0;
+        }
+        return person.getId();
+    }
 }

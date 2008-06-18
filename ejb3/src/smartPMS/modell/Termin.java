@@ -15,16 +15,14 @@ import java.util.Date;
 @Table(name = "termin")
 public class Termin implements Serializable {
 
-    public enum TYP {
+    public enum TerminTyp {
         VORLESUNG, UEBUNG, PRAKTIKUM, TUTORIUM
     }
-
-    ;
 
     private long id;
 
     @Enumerated(EnumType.ORDINAL)
-    private TYP typ;
+    private TerminTyp typ;
 
     private String raum;
 
@@ -51,7 +49,7 @@ public class Termin implements Serializable {
      * @param ende
      * @param lehrangebot
      */
-    public Termin(TYP typ, int wochentag, Date beginn, Date ende, Lehrangebot lehrangebot) {
+    public Termin(TerminTyp typ, int wochentag, Date beginn, Date ende, Lehrangebot lehrangebot) {
         this.typ = typ;
         this.wochentag = wochentag;
         this.beginn = beginn;
@@ -72,11 +70,11 @@ public class Termin implements Serializable {
     }
 
     @Column(name = "typ", precision = 1, scale = 0, nullable = false)
-    public TYP getTyp() {
+    public TerminTyp getTyp() {
         return typ;
     }
 
-    public void setTyp(TYP typ) {
+    public void setTyp(TerminTyp typ) {
         this.typ = typ;
     }
 

@@ -9,24 +9,30 @@ package smartPMS.session;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import smartPMS.interfaces.LehrangebotFacade;
+import smartPMS.interfaces.LehrangebotFacadeHome;
+import smartPMS.interfaces.LehrangebotFacadeLocal;
+import smartPMS.interfaces.LehrangebotFacadeLocalHome;
 import smartPMS.modell.Dozent;
 import smartPMS.modell.Lehrangebot;
 import smartPMS.modell.Termin;
 import smartPMS.transfer.LehrangebotVO;
 import smartPMS.transfer.TerminVO;
 
-import javax.ejb.EJBException;
-import javax.ejb.Stateless;
+import javax.ejb.*;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceUnit;
 import java.util.Collection;
 
-/**
- *
- */
-@Stateless(name = "LehrangebotSessionEJB")
-public class LehrangebotSessionBean implements LehrangebotFacade {
+@Stateless(name = "LehrangebotFacade")
+@LocalHome(LehrangebotFacadeLocalHome.class)
+@RemoteHome(LehrangebotFacadeHome.class)
+public class LehrangebotSessionBean implements LehrangebotFacadeLocal, LehrangebotFacade {
+
+    public void ejbCreate() throws CreateException {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
 
     private static final Log logger = LogFactory.getLog(LehrangebotSessionBean.class);
 
@@ -153,7 +159,7 @@ public class LehrangebotSessionBean implements LehrangebotFacade {
             throw new IllegalArgumentException();
         }
 
-        Termin t = new Termin(Termin.TYP.values()[termin.getTyp()], termin.getWochentag(), termin.getBeginn(), termin.getEnde(), entityManager.find(Lehrangebot.class, termin.getLehrangebotId()));
+        Termin t = new Termin(Termin.TerminTyp.values()[termin.getTyp()], termin.getWochentag(), termin.getBeginn(), termin.getEnde(), entityManager.find(Lehrangebot.class, termin.getLehrangebotId()));
 
         try {
             entityManager.persist(t);
@@ -201,4 +207,6 @@ public class LehrangebotSessionBean implements LehrangebotFacade {
             throw new Exception("termin_error_entfernen");
         }
     }
+
+
 }
