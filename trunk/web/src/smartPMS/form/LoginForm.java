@@ -16,8 +16,9 @@ import javax.servlet.http.HttpServletRequest;
  */
 public class LoginForm extends ActionForm {
 
-    private String benutzername;
+    // Benutzername
 
+    private String benutzername;
 
     public String getBenutzername() {
         return benutzername;
@@ -26,6 +27,8 @@ public class LoginForm extends ActionForm {
     public void setBenutzername(String benutzername) {
         this.benutzername = benutzername;
     }
+
+    // Passwort
 
     private String passwort;
 

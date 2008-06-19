@@ -34,9 +34,13 @@
             <attribute name="method" value="0" />
             <attribute name="URI" value="&lt;N/A&gt;" />
           </containerElement>
+          <containerElement type="library" name="Oracle JDBC" level="project">
+            <attribute name="method" value="0" />
+            <attribute name="URI" value="&lt;N/A&gt;" />
+          </containerElement>
           <containerElement type="library" name="hibernate3" level="project">
             <attribute name="method" value="0" />
-            <attribute name="URI" value="/" />
+            <attribute name="URI" value="&lt;N/A&gt;" />
           </containerElement>
           <containerElement type="library" level="module">
             <attribute name="method" value="0" />
@@ -69,6 +73,7 @@
     </orderEntry>
     <orderEntry type="library" name="JBoss 4.2.2.GA" level="application_server_libraries" />
     <orderEntry type="library" name="hibernate3" level="project" />
+    <orderEntry type="library" name="Oracle JDBC" level="project" />
     <orderEntryProperties />
   </component>
 </module>

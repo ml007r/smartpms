@@ -18,6 +18,7 @@ import smartPMS.transfer.SessionUser;
 
 import javax.ejb.*;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 
 @Stateless(name = "PersonFacade")
@@ -40,7 +41,16 @@ public class PersonSessionBean implements PersonFacadeLocal, PersonFacade {
 
     public SessionUser authProfessor(String name) {
         logger.info("Suche Benutzerkennung: " + name);
-        return (SessionUser) entityManager.createQuery("SELECT new smartPMS.transfer.SessionUser(p.id, CONCAT(p.vorname,CONCAT(' ', p.nachname)) ) FROM Person p").getSingleResult();
+
+        SessionUser sessionUser = null;
+
+        try {
+            sessionUser = (SessionUser) entityManager.createQuery("SELECT new smartPMS.transfer.SessionUser(p.id, CONCAT(p.vorname,CONCAT(' ', p.nachname)) ) FROM Person p").getSingleResult();
+        } catch (NoResultException e) {
+            logger.error("Professor mit der Benutzerkennung '" + name + "' nicht gefunden!");
+        }
+
+        return sessionUser;
     }
 
 
