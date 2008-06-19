@@ -41,5 +41,10 @@
                 <bean:message bundle="smartPMS" key="menu_hilfskraft"/>
             </html:link>
         </li>
+        <li>
+            <html:link action="/verwaltung/person/Anzeigen">
+                <bean:message bundle="smartPMS" key="menu_verwaltung"/>
+            </html:link>
+        </li>
     </ul>
 </div>

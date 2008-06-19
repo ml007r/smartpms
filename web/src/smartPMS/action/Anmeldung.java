@@ -26,21 +26,24 @@ public class Anmeldung extends Action {
     public ActionForward execute(ActionMapping actionMapping, ActionForm actionForm, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
 
         LoginForm loginForm = (LoginForm) actionForm;
+
+        // 1. Seitenaufruf ist immer ein Erfolg
+        if (loginForm.getBenutzername() == null && loginForm.getPasswort() == null)
+            return actionMapping.findForward("failure");
+
         logger.info("Benutzeranmeldung: " + loginForm.getBenutzername());
 
         SessionUser prof = null;
 
         PersonSessionFacade personEJB = SmartController.getPersonFacade();
-        logger.info(personEJB);
 
         try {
-            //personEJB.authProfessor(loginForm.getBenutzername());
+            prof = personEJB.authProfessor(loginForm.getBenutzername());
         } catch (Exception e) {
             logger.error("Konnte Professor nicht anmelden!", e);
         }
 
         if (prof == null) {
-
             ActionErrors errors = new ActionErrors();
             errors.add("benutzername", new ActionMessage("benutzername_falsch"));
 
