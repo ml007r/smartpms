@@ -65,7 +65,7 @@ public class Student extends Person {
         this.studiengang = studiengang;
     }
 
-    @Column(name = "matrikelnummer", precision = 10, scale = 0)
+    @Column(name = "matrikelnummer", precision = 10, scale = 0, unique = true)
     public long getMatrikelnummer() {
         return matrikelnummer;
     }

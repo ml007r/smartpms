@@ -345,5 +345,8 @@
         <set-property value="/org/apache/struts/validator/validator-rules.xml,/WEB-INF/validation.xml"
                       property="pathnames"/>
     </plug-in>
+    <plug-in className="org.apache.struts.tiles.TilesPlugin">
+        <set-property value="/WEB-INF/tiles-defs.xml" property="definitions-config"/>
+    </plug-in>
 
 </struts-config>

@@ -300,21 +300,22 @@
     </library>
     <library name="hibernate3">
       <CLASSES>
-        <root url="jar://C:/Programme/JBoss/4.2.2.GA/server/default/lib/hibernate.jar!/" />
-        <root url="jar://C:/Programme/JBoss/4.2.2.GA/server/default/lib/hibernate-annotations_1.jar!/" />
-        <root url="jar://C:/Programme/JBoss/4.2.2.GA/server/default/lib/commons-collections_1.jar!/" />
-        <root url="jar://C:/Programme/JBoss/4.2.2.GA/server/default/lib/commons-logging_1.jar!/" />
+        <root url="jar://C:/Programme/JBoss/4.2.2.GA/server/default/lib/hibernate-annotations.jar!/" />
+        <root url="jar://C:/Programme/JBoss/4.2.2.GA/server/default/lib/hibernate-entitymanager.jar!/" />
+        <root url="jar://C:/Programme/JBoss/4.2.2.GA/server/default/lib/hibernate3.jar!/" />
+        <root url="jar://C:/Programme/JBoss/4.2.2.GA/server/default/lib/commons-collections.jar!/" />
+        <root url="jar://C:/Programme/JBoss/4.2.2.GA/server/default/lib/commons-logging.jar!/" />
+        <root url="jar://C:/Programme/JBoss/4.2.2.GA/server/default/lib/cglib.jar!/" />
+        <root url="jar://C:/Programme/JBoss/4.2.2.GA/server/default/lib/antlr.jar!/" />
+        <root url="jar://C:/Programme/JBoss/4.2.2.GA/server/default/lib/dom4j.jar!/" />
         <root url="jar://C:/Programme/JBoss/4.2.2.GA/server/default/lib/asm.jar!/" />
-        <root url="jar://C:/Programme/JBoss/4.2.2.GA/server/default/lib/cglib_1.jar!/" />
-        <root url="jar://C:/Programme/JBoss/4.2.2.GA/server/default/lib/dom4j_1.jar!/" />
-        <root url="jar://C:/Programme/JBoss/4.2.2.GA/server/default/lib/antlr_1.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
     </library>
     <library name="Oracle JDBC">
       <CLASSES>
-        <root url="jar://$PROJECT_DIR$/ejb3/lib/ojdbc5.jar!/" />
+        <root url="jar://C:/Programme/JBoss/4.2.2.GA/server/default/lib/ojdbc5_g.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />

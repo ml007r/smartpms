@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.util.Date;
 
 /**
  * Created by IntelliJ IDEA.
@@ -19,6 +20,17 @@ public class Professor extends Dozent {
 
     private String fachgebiet;
 
+    private String passwort;
+
+    protected Professor() {
+    }
+
+    public Professor(String anrede, String vorname, String nachname, String anschrift1, String anschrift2, String postleitzahl, String wohnort, String telefon, String telefax, String mobiltelefon, String email, Date geburtsdatum, String titel, String buero, String fachgebiet, String passwort) {
+        super(anrede, vorname, nachname, anschrift1, anschrift2, postleitzahl, wohnort, telefon, telefax, mobiltelefon, email, geburtsdatum, titel, buero);
+        this.fachgebiet = fachgebiet;
+        this.passwort = passwort;
+    }
+
     @Column(name = "FACHGEBIET", length = 100, nullable = false)
     public String getFachgebiet() {
         return fachgebiet;
@@ -26,6 +38,15 @@ public class Professor extends Dozent {
 
     public void setFachgebiet(String fachgebiet) {
         this.fachgebiet = fachgebiet;
+    }
+
+    @Column(name = "PASSWORT", length = 100, nullable = false)
+    public String getPasswort() {
+        return passwort;
+    }
+
+    public void setPasswort(String passwort) {
+        this.passwort = passwort;
     }
 
     public boolean equals(Object o) {

@@ -25,7 +25,7 @@
         <tiles:insert attribute="menu"/>
     </div>
     <div id="messages">
-        <html:errors/>
+        <html:errors bundle="smartPMS"/>
     </div>
     <div id="content">
         <tiles:insert attribute="content"/>
@@ -36,3 +36,4 @@
 </div>
 </body>
 </html>
+
