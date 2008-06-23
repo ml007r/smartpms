@@ -18,12 +18,14 @@ import javax.servlet.http.HttpServletResponse;
  * Time: 11:42:40
  * To change this template use File | Settings | File Templates.
  */
-public class Anmeldung extends Action {
+public class Anmeldung extends DatenImport {
 
     private static Log logger = LogFactory.getLog(Anmeldung.class);
 
     @Override
     public ActionForward execute(ActionMapping actionMapping, ActionForm actionForm, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
+
+        super.execute(actionMapping, actionForm, httpServletRequest, httpServletResponse);
 
         LoginForm loginForm = (LoginForm) actionForm;
 
@@ -38,7 +40,7 @@ public class Anmeldung extends Action {
         PersonSessionFacade personEJB = SmartController.getPersonFacade();
 
         try {
-            prof = personEJB.authProfessor(loginForm.getBenutzername());
+            prof = personEJB.authProfessor(loginForm.getBenutzername(), loginForm.getPasswort());
         } catch (Exception e) {
             logger.error("Konnte Professor nicht anmelden!", e);
         }

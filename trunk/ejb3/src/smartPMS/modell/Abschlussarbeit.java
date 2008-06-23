@@ -33,8 +33,7 @@ public class Abschlussarbeit implements Serializable {
 
     private double ects = 30.0;
 
-    // TODO Dozent -> Professor
-    private Dozent professor;
+    private Professor professor;
 
     private Student student;
 
@@ -130,11 +129,11 @@ public class Abschlussarbeit implements Serializable {
     }
 
     @ManyToOne()
-    public Dozent getProfessor() {
+    public Professor getProfessor() {
         return professor;
     }
 
-    public void setProfessor(Dozent professor) {
+    public void setProfessor(Professor professor) {
         this.professor = professor;
     }
 

@@ -39,13 +39,14 @@ public class PersonSessionBean implements PersonFacadeLocal, PersonFacade {
         logger.trace(this);
     }
 
-    public SessionUser authProfessor(String name) {
+    public SessionUser authProfessor(String name, String passwort) {
         logger.info("Suche Benutzerkennung: " + name);
 
         SessionUser sessionUser = null;
 
         try {
-            sessionUser = (SessionUser) entityManager.createQuery("SELECT new smartPMS.transfer.SessionUser(p.id, CONCAT(p.vorname,CONCAT(' ', p.nachname)) ) FROM Person p").getSingleResult();
+            String query = "SELECT NEW smartPMS.transfer.SessionUser(p.id, CONCAT(p.vorname,CONCAT(' ', p.nachname)) ) FROM Professor p WHERE p.nachname = :name AND p.passwort = :passwort";
+            sessionUser = (SessionUser) entityManager.createQuery(query).setParameter("name", name).setParameter("passwort", passwort).getSingleResult();
         } catch (NoResultException e) {
             logger.error("Professor mit der Benutzerkennung '" + name + "' nicht gefunden!");
         }

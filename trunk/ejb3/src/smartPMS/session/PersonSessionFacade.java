@@ -16,7 +16,7 @@ public interface PersonSessionFacade {
      * @param name
      * @return
      */
-    public SessionUser authProfessor(String name);
+    public SessionUser authProfessor(String name, String passwort);
 
     /**
      * @param person

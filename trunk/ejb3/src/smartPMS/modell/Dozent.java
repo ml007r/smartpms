@@ -27,7 +27,6 @@ public class Dozent extends Person {
 
     public Dozent(String anrede, String vorname, String nachname, String anschrift1, String anschrift2, String postleitzahl, String wohnort, String telefon, String telefax, String mobiltelefon, String email, Date geburtsdatum, String titel) {
         super(anrede, vorname, nachname, anschrift1, anschrift2, postleitzahl, wohnort, telefon, telefax, mobiltelefon, email, geburtsdatum);
-
         this.titel = titel;
     }
 
@@ -37,7 +36,7 @@ public class Dozent extends Person {
         this.buero = buero;
     }
 
-    @Column(name = "titel", length = 20)
+    @Column(name = "titel", length = 20, nullable = false)
     public String getTitel() {
         return titel;
     }
@@ -46,7 +45,7 @@ public class Dozent extends Person {
         this.titel = titel;
     }
 
-    @Column(name = "buero", length = 20)
+    @Column(name = "buero", length = 20, unique = true)
     public String getBuero() {
         return buero;
     }
