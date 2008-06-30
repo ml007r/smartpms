@@ -37,7 +37,33 @@ public interface KlausurSessionFacade {
     public Klausur getKlausur(long id);
 
     /**
+     * Liefert eine Collection mit allen Klausuren.
+     *
      * @return
      */
     public Collection<Klausur> getKlausuren();
+
+    /**
+     * Liefert eine Collection mit allen Klausuren eines Dozenten.
+     *
+     * @param dozentId
+     * @return
+     */
+    public Collection<Klausur> getKlausuren(long dozentId);
+
+    /**
+     * Liefert eine Collection mit geschriebenen, nicht bewerteten, Klausuren.
+     *
+     * @param dozentId
+     * @return
+     */
+    public Collection<Klausur> getGeschriebeneKlausuren(long dozentId);
+
+    /**
+     * Liefert eine Collection mit nicht geschriebenen Klausuren.
+     *
+     * @param dozentId
+     * @return
+     */
+    public Collection<Klausur> getNeueKlausuren(long dozentId);
 }

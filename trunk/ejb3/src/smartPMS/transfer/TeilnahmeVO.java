@@ -2,26 +2,19 @@ package smartPMS.transfer;
 
 import java.io.Serializable;
 
-/**
- * Created by IntelliJ IDEA.
- * User: tbs
- * Date: 31.05.2008
- * Time: 10:32:19
- * To change this template use File | Settings | File Templates.
- */
+
 public class TeilnahmeVO implements Serializable {
 
-    private long id;
-
-    private double note;
-
-    private int versuch;
-
-    // Assoziationen
+    // Assoziationen (Primary Key)
 
     private long studentId;
 
     private long klausurId;
+
+    //
+    private double note;
+
+    private int versuch;
 
     /**
      *
@@ -29,12 +22,11 @@ public class TeilnahmeVO implements Serializable {
     public TeilnahmeVO() {
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
+    public TeilnahmeVO(long studentId, long klausurId, double note, int versuch) {
+        this.studentId = studentId;
+        this.klausurId = klausurId;
+        this.note = note;
+        this.versuch = versuch;
     }
 
     public double getNote() {

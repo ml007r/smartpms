@@ -13,13 +13,14 @@ import smartPMS.interfaces.PersonFacade;
 import smartPMS.interfaces.PersonFacadeHome;
 import smartPMS.interfaces.PersonFacadeLocal;
 import smartPMS.interfaces.PersonFacadeLocalHome;
-import smartPMS.modell.Person;
+import smartPMS.modell.*;
 import smartPMS.transfer.SessionUser;
 
 import javax.ejb.*;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
+import java.util.Collection;
 
 @Stateless(name = "PersonFacade")
 @LocalHome(PersonFacadeLocalHome.class)
@@ -46,14 +47,14 @@ public class PersonSessionBean implements PersonFacadeLocal, PersonFacade {
 
         try {
             String query = "SELECT NEW smartPMS.transfer.SessionUser(p.id, CONCAT(p.vorname,CONCAT(' ', p.nachname)) ) FROM Professor p WHERE p.nachname = :name AND p.passwort = :passwort";
-            sessionUser = (SessionUser) entityManager.createQuery(query).setParameter("name", name).setParameter("passwort", passwort).getSingleResult();
+            sessionUser = (SessionUser) entityManager.createQuery(query).setParameter("name", name)
+                    .setParameter("passwort", passwort).getSingleResult();
         } catch (NoResultException e) {
             logger.error("Professor mit der Benutzerkennung '" + name + "' nicht gefunden!");
         }
 
         return sessionUser;
     }
-
 
     public long createPerson(Person person) {
         try {
@@ -62,5 +63,21 @@ public class PersonSessionBean implements PersonFacadeLocal, PersonFacade {
             return 0;
         }
         return person.getId();
+    }
+
+    public Collection<Student> getStundenten() {
+        return entityManager.createQuery("SELECT s FROM Student s").getResultList();
+    }
+
+    public Collection<Hilfskraft> getHilfskraefte() {
+        return entityManager.createQuery("SELECT h FROM Hilfskraft h").getResultList();
+    }
+
+    public Collection<Dozent> getDozenten() {
+        return entityManager.createQuery("SELECT d FROM Dozent d").getResultList();
+    }
+
+    public Collection<Professor> getProfessoren() {
+        return entityManager.createQuery("SELECT p FROM Professor p").getResultList();
     }
 }

@@ -50,7 +50,10 @@ public class KlausurSessionBean implements KlausurFacadeLocal, KlausurFacade {
             throw new IllegalArgumentException();
         }
 
-        Klausur k = new Klausur(klausur.getBeginn(), klausur.getEnde(), entityManager.find(Lehrangebot.class, klausur.getLehrangebotId()));
+        Klausur k = new Klausur(
+                klausur.getBeginn(), klausur.getEnde(),
+                entityManager.find(Lehrangebot.class, klausur.getLehrangebotId())
+        );
         k.setLehrangebot(entityManager.find(Lehrangebot.class, klausur.getLehrangebotId()));
 
         try {
@@ -97,6 +100,24 @@ public class KlausurSessionBean implements KlausurFacadeLocal, KlausurFacade {
         return entityManager.createQuery("SELECT k FROM Klausur k").getResultList();
     }
 
+    public Collection<Klausur> getKlausuren(long dozentId) {
+        return entityManager.createQuery("SELECT k FROM Klausur k WHERE k.lehrangebot.dozent.id = :dozentId")
+                .setParameter("dozentId", dozentId).getResultList();
+    }
+
+    public Collection<Klausur> getGeschriebeneKlausuren(long dozentId) {
+        return entityManager.createQuery(
+                "SELECT k FROM Klausur k WHERE k.lehrangebot.dozent.id = :dozentId AND k.ende <= CURRENT_DATE"
+        )
+                .setParameter("dozentId", dozentId).getResultList();
+    }
+
+    public Collection<Klausur> getNeueKlausuren(long dozentId) {
+        return entityManager.createQuery(
+                "SELECT k FROM Klausur k WHERE k.lehrangebot.dozent.id = :dozentId AND k.beginn > CURRENT_DATE"
+        )
+                .setParameter("dozentId", dozentId).getResultList();
+    }
 
     public Collection<Teilnahme> getKlausurTeilnahmen(long klausurId) {
         return entityManager.createQuery("SELECT t FROM Teilnahme t").getResultList();

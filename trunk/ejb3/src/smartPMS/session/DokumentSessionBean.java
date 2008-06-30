@@ -18,12 +18,18 @@ import javax.ejb.CreateException;
 import javax.ejb.LocalHome;
 import javax.ejb.RemoteHome;
 import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.Collection;
 
 @Stateless(name = "DokumentFacade")
 @LocalHome(DokumentFacadeLocalHome.class)
 @RemoteHome(DokumentFacadeHome.class)
 public class DokumentSessionBean implements DokumentFacadeLocal, DokumentFacade {
+
+    @PersistenceContext(unitName = "smartPMS")
+    private EntityManager entityManager;
+
 
     public void ejbCreate() throws CreateException {
         //To change body of implemented methods use File | Settings | File Templates.
@@ -45,12 +51,15 @@ public class DokumentSessionBean implements DokumentFacadeLocal, DokumentFacade 
     }
 
     public Dokument getDokument(long id) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return entityManager.find(Dokument.class, id);
     }
 
     public Collection<Dokument> getDokumente() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return entityManager.createQuery("SELECT d FROM Dokument d").getResultList();
     }
 
-
+    public Collection<Dokument> getDokumente(long lehrangebotId) {
+        return entityManager.createQuery("SELECT d FROM Dokument d WHERE d.lehrangebot.id = :lehrangebotId")
+                .setParameter("lehrangebotId", lehrangebotId).getResultList();
+    }
 }

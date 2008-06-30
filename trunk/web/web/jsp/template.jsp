@@ -21,7 +21,7 @@
     <div id="header">
         <tiles:insert attribute="header"/>
     </div>
-    <div id="navigation">
+    <div id="menu">
         <tiles:insert attribute="menu"/>
     </div>
     <div id="messages">

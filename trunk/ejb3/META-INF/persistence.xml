@@ -9,6 +9,7 @@
             <property name="openjpa.Log" value="DefaultLevel=WARN, Tool=INFO"/>
         </properties>
     </persistence-unit-->
+
     <persistence-unit name="smartPMS">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <jta-data-source>java:/smartPMS</jta-data-source>
@@ -17,8 +18,10 @@
             <property name="hibernate.transaction.manager_lookup_class"
                       value="org.hibernate.transaction.JBossTransactionManagerLookup"/>
             <property name="hibernate.transaction.flush_before_completion" value="true"/>
-            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
             <!--property name="hibernate.show_sql" value="true" /-->
+
             <property name="jboss.entity.manager.factory.jndi.name" value="java:/smartPMS"/>
         </properties>
     </persistence-unit>

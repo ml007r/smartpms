@@ -2,15 +2,6 @@
 "UTF-8"
 ;
 
-#menu {
-    height: 24px;
-    margin: 0px 0px 0px 0px;
-    padding: 2px 5px 2px 5px;
-    background-color: cadetblue;
-    border-bottom: #000 1px dotted;
-    vertical-align: middle;
-}
-
 #menu ul {
     margin: 0px;
     padding: 0px;
@@ -19,12 +10,12 @@
 
 #menu a {
     text-decoration: none;
-    color: black;
+    color: snow;
 }
 
 #menu a:hover {
     text-decoration: underline;
-    color: gray;
+    color: silver;
 }
 
 #menu li {

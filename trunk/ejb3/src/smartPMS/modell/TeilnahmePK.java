@@ -21,7 +21,7 @@ public class TeilnahmePK implements Serializable {
     public TeilnahmePK() {
     }
 
-    @Column(name = "student")
+    @Column(name = "STUDENT")
     public long getStudentId() {
         return studentId;
     }
@@ -30,7 +30,7 @@ public class TeilnahmePK implements Serializable {
         this.studentId = studentId;
     }
 
-    @Column(name = "klausur")
+    @Column(name = "KLAUSUR")
     public long getKlausurId() {
         return klausurId;
     }

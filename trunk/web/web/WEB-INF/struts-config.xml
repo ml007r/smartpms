@@ -45,6 +45,8 @@
         <form-bean name="personListeForm" type="smartPMS.form.PersonListeForm"/>
         <form-bean name="personForm" type="smartPMS.form.PersonForm"/>
 
+        <!-- Teilnahme-Administration -->
+        <form-bean name="teilnahmeForm" type="smartPMS.form.TeilnahmeForm"/>
     </form-beans>
 
 
@@ -53,7 +55,6 @@
     </global-exceptions>
 
     <global-forwards>
-
     </global-forwards>
 
 
@@ -227,7 +228,7 @@
             <forward name="success_neu" path="abschlussarbeit_neu"/>
         </action>
 
-        <!-- Klausur bearbeiten (Anzeigen) -->
+        <!-- Abschlussarbeit bearbeiten (Anzeigen) -->
         <action path="/abschlussarbeit/Bearbeiten" type="smartPMS.action.abschlussarbeit.Bearbeiten"
                 name="abschlussarbeitForm"
                 validate="false">
@@ -235,13 +236,15 @@
             <forward name="success" path="abschlussarbeit_bearbeiten"/>
         </action>
 
-        <!-- Bestehendes Klausur speichern -->
+        <!-- Bestehendes Abschlussarbeit speichern -->
         <action path="/abschlussarbeit/Speichern" type="smartPMS.action.abschlussarbeit.Speichern"
                 name="abschlussarbeitForm"
                 validate="true" input="abschlussarbeit_bearbeiten">
             <forward name="failure" path="abschlussarbeit_bearbeiten"/>
             <forward name="success" path="abschlussarbeit"/>
         </action>
+
+        <action path="/abschlussarbeit/Benoten"/>
 
         <!-- Klausur entfernen -->
         <action path="/abschlussarbeit/Entfernen" type="smartPMS.action.abschlussarbeit.Entfernen"
@@ -309,25 +312,49 @@
         </action>
 
 
-        <action path="/abschlussarbeit/Benoten"/>
-
-
-        <!-- Personenverwaltung -->
-        <action path="/verwaltung/person/Anzeigen" type="smartPMS.action.verwaltung.PersonListeAnzeigen"
+        <!-- Personenadministration -->
+        <action path="/verwaltung/person/Anzeigen" type="smartPMS.action.verwaltung.person.PersonListeAnzeigen"
                 name="personListeForm"
                 validate="false">
             <forward name="success" path="verwaltung_person_liste"/>
         </action>
-        <action path="/verwaltung/person/Anlegen" type="smartPMS.action.verwaltung.PersonBearbeiten" name="personForm"
+        <action path="/verwaltung/person/Anlegen" type="smartPMS.action.verwaltung.person.PersonBearbeiten"
+                name="personForm"
                 validate="false">
             <forward name="success" path="verwaltung_person_formular"/>
         </action>
-        <action path="/verwaltung/person/Speichern" type="smartPMS.action.verwaltung.PersonSpeichern" name="personForm"
+        <action path="/verwaltung/person/Speichern" type="smartPMS.action.verwaltung.person.PersonSpeichern"
+                name="personForm"
                 validate="true" input="verwaltung_person_formular">
-            <forward name="success" path="verwaltung_person_liste"/>
+            <forward name="success" path="/verwaltung/person/Anzeigen.do"/>
             <forward name="failure" path="verwaltung_person_formular"/>
         </action>
 
+        <!-- Teilnahmeadministration -->
+        <action path="/verwaltung/teilnahme/Anlegen" type="smartPMS.action.verwaltung.teilnahme.TeilnahmeAnlegen"
+                name="teilnahmeForm" validate="false">
+            <forward name="success" path="verwaltung_teilnahme_formular"/>
+        </action>
+        <action path="/verwaltung/teilnahme/Speichern" type="smartPMS.action.verwaltung.teilnahme.TeilnahmeSpeichern"
+                name="teilnahmeForm" validate="true" input="verwaltung_teilnahme_formular">
+            <forward name="failure" path="verwaltung_teilnahme_formular"/>
+            <forward name="success" path="/verwaltung/teilnahme/Anlegen.do"/>
+        </action>
+
+        <!-- Klausuradministration -->
+        <action path="/verwaltung/klausur/Anzeigen" type="smartPMS.action.verwaltung.klausur.KlausurListeAnzeigen"
+                name="klausurListeForm" validate="false">
+            <forward name="success" path="verwaltung_klausur_liste"/>
+        </action>
+        <action path="/verwaltung/klausur/Schreiben" type="smartPMS.action.verwaltung.klausur.KlausurSchreiben"
+                name="klausurForm" validate="true" input="verwaltung_klausur_formular">
+            <forward name="success" path="/verwaltung/klausur/Anzeigen.do"/>
+            <forward name="failure" path="/verwaltung/klausur/Anzeigen.do"/>
+        </action>
+        <action path="/verwaltung/Anzeigen" type="smartPMS.action.verwaltung.Anzeigen" name="loginForm"
+                validate="false">
+            <forward name="success" path="verwaltung_anzeigen"/>
+        </action>
 
     </action-mappings>
 
@@ -345,8 +372,6 @@
         <set-property value="/org/apache/struts/validator/validator-rules.xml,/WEB-INF/validation.xml"
                       property="pathnames"/>
     </plug-in>
-    <plug-in className="org.apache.struts.tiles.TilesPlugin">
-        <set-property value="/WEB-INF/tiles-defs.xml" property="definitions-config"/>
-    </plug-in>
+
 
 </struts-config>

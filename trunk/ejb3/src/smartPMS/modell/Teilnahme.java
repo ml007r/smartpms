@@ -11,7 +11,7 @@ import java.io.Serializable;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-@Table(name = "teilnahme")
+@Table(name = "TEILNAHME")
 public class Teilnahme implements Serializable {
 
     @EmbeddedId
@@ -43,7 +43,7 @@ public class Teilnahme implements Serializable {
     }
 
     @ManyToOne
-    @JoinColumn(name = "student", referencedColumnName = "id", insertable = false, updatable = false)
+    @JoinColumn(name = "STUDENT", referencedColumnName = "ID", insertable = false, updatable = false)
     public Student getStudent() {
         return student;
     }
@@ -53,7 +53,7 @@ public class Teilnahme implements Serializable {
     }
 
     @ManyToOne
-    @JoinColumn(name = "klausur", referencedColumnName = "id", insertable = false, updatable = false)
+    @JoinColumn(name = "KLAUSUR", referencedColumnName = "ID", insertable = false, updatable = false)
     public Klausur getKlausur() {
         return klausur;
     }
@@ -62,7 +62,7 @@ public class Teilnahme implements Serializable {
         this.klausur = klausur;
     }
 
-    @Column(name = "versuch")
+    @Column(name = "VERSUCH")
     public int getVersuch() {
         return versuch;
     }
@@ -71,7 +71,7 @@ public class Teilnahme implements Serializable {
         this.versuch = versuch;
     }
 
-    @Column(name = "versuch", precision = 2, scale = 0)
+    @Column(name = "NOTE", precision = 2, scale = 0)
     public double getNote() {
         return note;
     }

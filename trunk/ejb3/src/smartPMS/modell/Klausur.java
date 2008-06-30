@@ -2,6 +2,7 @@ package smartPMS.modell;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
 
 /**
@@ -12,7 +13,7 @@ import java.util.Date;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-@Table(name = "Klausur")
+@Table(name = "KLAUSUR")
 public class Klausur implements Serializable {
 
     private long id;
@@ -27,7 +28,7 @@ public class Klausur implements Serializable {
 
     private Lehrangebot lehrangebot;
 
-    //private Collection<Teilnahme> teilnahmen;
+    private Collection<Teilnahme> teilnahmen;
 
     /**
      *
@@ -52,7 +53,7 @@ public class Klausur implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "klausurId")
     @SequenceGenerator(name = "klausurId", sequenceName = "seq_klausur_id", allocationSize = 1)
-    @Column(name = "id", precision = 10, scale = 0)
+    @Column(name = "ID", precision = 10, scale = 0)
     public long getId() {
         return id;
     }
@@ -62,7 +63,7 @@ public class Klausur implements Serializable {
     }
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "beginn")
+    @Column(name = "BEGINN")
     public Date getBeginn() {
         return beginn;
     }
@@ -72,7 +73,7 @@ public class Klausur implements Serializable {
     }
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "ende")
+    @Column(name = "ENDE")
     public Date getEnde() {
         return ende;
     }
@@ -81,13 +82,22 @@ public class Klausur implements Serializable {
         this.ende = ende;
     }
 
-    @Column(name = "ects", precision = 2, scale = 1)
+    @Column(name = "ECTS", precision = 2, scale = 1)
     public double getEcts() {
         return ects;
     }
 
     public void setEcts(double ects) {
         this.ects = ects;
+    }
+
+    @Column(name = "MINDEST_ECTS", precision = 2, scale = 1)
+    public double getMindestEcts() {
+        return mindestEcts;
+    }
+
+    public void setMindestEcts(double mindestEcts) {
+        this.mindestEcts = mindestEcts;
     }
 
     @ManyToOne
@@ -99,12 +109,19 @@ public class Klausur implements Serializable {
         this.lehrangebot = lehrangebot;
     }
 
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "klausur")
-//    public Collection<Teilnahme> getTeilnahmen() {
-//        return teilnahmen;
-//    }
-//
-//    public void setTeilnahmen(Collection<Teilnahme> teilnahmen) {
-//        this.teilnahmen = teilnahmen;
-//    }
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "klausur")
+    public Collection<Teilnahme> getTeilnahmen() {
+        return teilnahmen;
+    }
+
+    public void setTeilnahmen(Collection<Teilnahme> teilnahmen) {
+        this.teilnahmen = teilnahmen;
+    }
+
+
+    // Wrapper für JSP Seiten
+    @Transient
+    public int getAnzahlTeilnahmen() {
+        return teilnahmen.size();
+    }
 }

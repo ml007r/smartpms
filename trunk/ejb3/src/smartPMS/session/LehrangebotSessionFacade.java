@@ -1,11 +1,16 @@
 package smartPMS.session;
 
-/**
- * Created by IntelliJ IDEA.
- * User: tbs
- * Date: 16.06.2008
- * Time: 10:47:40
- * To change this template use File | Settings | File Templates.
- */
+import smartPMS.modell.Lehrangebot;
+import smartPMS.modell.Termin;
+
+import java.util.Collection;
+
 public interface LehrangebotSessionFacade {
+
+    public Collection<Lehrangebot> getLehrangebote();
+
+    public Collection<Lehrangebot> getLehrangebote(long dozentId);
+
+
+    public Collection<Termin> getTermine(long lehrangebotId);
 }

@@ -12,9 +12,9 @@ import java.util.Date;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-@Table(name = "person")
+@Table(name = "PERSON")
 @Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorColumn(name = "typ")
+@DiscriminatorColumn(name = "TYP")
 public abstract class Person implements Serializable {
 
     private long id;
@@ -104,8 +104,8 @@ public abstract class Person implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "personId")
-    @SequenceGenerator(name = "personId", sequenceName = "seq_person_id", allocationSize = 1)
-    @Column(name = "id", precision = 10, scale = 0)
+    @SequenceGenerator(name = "personId", sequenceName = "SEQ_PERSON_ID", allocationSize = 1)
+    @Column(name = "ID", precision = 10, scale = 0)
     public long getId() {
         return id;
     }
@@ -114,7 +114,7 @@ public abstract class Person implements Serializable {
         this.id = id;
     }
 
-    @Column(name = "anrede", length = 4, nullable = false)
+    @Column(name = "ANREDE", length = 4, nullable = false)
     public String getAnrede() {
         return anrede;
     }
@@ -123,7 +123,7 @@ public abstract class Person implements Serializable {
         this.anrede = anrede;
     }
 
-    @Column(name = "vorname", length = 50, nullable = false)
+    @Column(name = "VORNAME", length = 50, nullable = false)
     public String getVorname() {
         return vorname;
     }
@@ -132,7 +132,7 @@ public abstract class Person implements Serializable {
         this.vorname = vorname;
     }
 
-    @Column(name = "nachname", length = 100, nullable = false)
+    @Column(name = "NACHNAME", length = 100, nullable = false)
     public String getNachname() {
         return nachname;
     }
@@ -141,7 +141,12 @@ public abstract class Person implements Serializable {
         this.nachname = nachname;
     }
 
-    @Column(name = "anschrift1", length = 100)
+    @Transient
+    public String getName() {
+        return vorname + " " + nachname;
+    }
+
+    @Column(name = "ANSCHRIFT1", length = 100)
     public String getAnschrift1() {
         return anschrift1;
     }
@@ -150,7 +155,7 @@ public abstract class Person implements Serializable {
         this.anschrift1 = anschrift1;
     }
 
-    @Column(name = "anschrift2", length = 100)
+    @Column(name = "ANSCHRIFT2", length = 100)
     public String getAnschrift2() {
         return anschrift2;
     }
@@ -159,7 +164,7 @@ public abstract class Person implements Serializable {
         this.anschrift2 = anschrift2;
     }
 
-    @Column(name = "postleitzahl", length = 5)
+    @Column(name = "POSTLEITZAHL", length = 5)
     public String getPostleitzahl() {
         return postleitzahl;
     }
@@ -168,7 +173,7 @@ public abstract class Person implements Serializable {
         this.postleitzahl = postleitzahl;
     }
 
-    @Column(name = "wohnort", length = 100)
+    @Column(name = "WOHNORT", length = 100)
     public String getWohnort() {
         return wohnort;
     }
@@ -177,7 +182,7 @@ public abstract class Person implements Serializable {
         this.wohnort = wohnort;
     }
 
-    @Column(name = "telefon", length = 20)
+    @Column(name = "TELEFON", length = 20)
     public String getTelefon() {
         return telefon;
     }
@@ -186,7 +191,7 @@ public abstract class Person implements Serializable {
         this.telefon = telefon;
     }
 
-    @Column(name = "telefax", length = 20)
+    @Column(name = "TELEFAX", length = 20)
     public String getTelefax() {
         return telefax;
     }
@@ -195,7 +200,7 @@ public abstract class Person implements Serializable {
         this.telefax = telefax;
     }
 
-    @Column(name = "mobiltelefon", length = 20)
+    @Column(name = "MOBILTELEFON", length = 20)
     public String getMobiltelefon() {
         return mobiltelefon;
     }
@@ -204,7 +209,7 @@ public abstract class Person implements Serializable {
         this.mobiltelefon = mobiltelefon;
     }
 
-    @Column(name = "email", length = 255)
+    @Column(name = "EMAIL", length = 255)
     public String getEmail() {
         return email;
     }
@@ -214,7 +219,7 @@ public abstract class Person implements Serializable {
     }
 
     @Temporal(TemporalType.DATE)
-    @Column(name = "geburtsdatum")
+    @Column(name = "GEBURTSDATUM")
     public Date getGeburtsdatum() {
         return geburtsdatum;
     }

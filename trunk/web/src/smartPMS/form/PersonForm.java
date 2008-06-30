@@ -69,11 +69,21 @@ public class PersonForm extends ActionForm {
 
     //
 
+    private double wochenstunden;
+
+    private double stundensatz;
+
+    //
+
     private String titel;
 
     private String buero;
 
     //
+
+    private String fachgebiet;
+
+    private String passwort;
 
     public long getId() {
         return id;
@@ -237,6 +247,38 @@ public class PersonForm extends ActionForm {
         this.buero = buero;
     }
 
+    public double getWochenstunden() {
+        return wochenstunden;
+    }
+
+    public void setWochenstunden(double wochenstunden) {
+        this.wochenstunden = wochenstunden;
+    }
+
+    public double getStundensatz() {
+        return stundensatz;
+    }
+
+    public void setStundensatz(double stundensatz) {
+        this.stundensatz = stundensatz;
+    }
+
+    public String getFachgebiet() {
+        return fachgebiet;
+    }
+
+    public void setFachgebiet(String fachgebiet) {
+        this.fachgebiet = fachgebiet;
+    }
+
+    public String getPasswort() {
+        return passwort;
+    }
+
+    public void setPasswort(String passwort) {
+        this.passwort = passwort;
+    }
+
     //
 
     public void reset(ActionMapping actionMapping, HttpServletRequest httpServletRequest) {
@@ -259,9 +301,15 @@ public class PersonForm extends ActionForm {
         this.studiengang = "";
         this.titel = "";
         this.buero = "";
+        this.wochenstunden = 0.0;
+        this.stundensatz = 0.0;
+        this.fachgebiet = "";
+        this.passwort = "";
     }
 
     public ActionErrors validate(ActionMapping actionMapping, HttpServletRequest httpServletRequest) {
-        return super.validate(actionMapping, httpServletRequest);    //To change body of overridden methods use File | Settings | File Templates.
+        return super.validate(
+                actionMapping, httpServletRequest
+        );    //To change body of overridden methods use File | Settings | File Templates.
     }
 }

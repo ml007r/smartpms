@@ -1,7 +1,9 @@
 package smartPMS.session;
 
-import smartPMS.modell.Person;
+import smartPMS.modell.*;
 import smartPMS.transfer.SessionUser;
+
+import java.util.Collection;
 
 /**
  * Created by IntelliJ IDEA.
@@ -23,4 +25,25 @@ public interface PersonSessionFacade {
      * @return
      */
     public long createPerson(Person person);
+
+    /**
+     * @return
+     */
+    public Collection<Student> getStundenten();
+
+    /**
+     * @return
+     */
+    public Collection<Hilfskraft> getHilfskraefte();
+
+    /**
+     * @return
+     */
+    public Collection<Dozent> getDozenten();
+
+    /**
+     * @return
+     */
+    public Collection<Professor> getProfessoren();
+
 }

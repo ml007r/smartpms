@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  * Time: 11:42:40
  * To change this template use File | Settings | File Templates.
  */
-public class Anmeldung extends DatenImport {
+public class Anmeldung extends AbstractAction {
 
     private static Log logger = LogFactory.getLog(Anmeldung.class);
 
@@ -54,7 +54,7 @@ public class Anmeldung extends DatenImport {
         }
 
         logger.info("Professor authentifiziert!");
-        httpServletRequest.getSession().setAttribute("loggedUser", prof);
+        httpServletRequest.getSession().setAttribute("user", prof);
 
         return actionMapping.findForward("success");
     }
