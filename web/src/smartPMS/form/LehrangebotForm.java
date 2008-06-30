@@ -1,52 +1,59 @@
 package smartPMS.form;
 
+import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
+import smartPMS.modell.Dokument;
+import smartPMS.modell.Termin;
+import smartPMS.transfer.LehrangebotVO;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
+import java.util.Collection;
 
-/**
- * Created by IntelliJ IDEA.
- * User: tbs
- * Date: 01.06.2008
- * Time: 11:38:47
- * To change this template use File | Settings | File Templates.
- */
+
 public class LehrangebotForm extends ActionForm {
 
-    private long id;
+    private LehrangebotVO lehrangebot;
 
-    private String code;
+    private Collection<Dokument> dokumente;
 
-    private String bezeichnung;
+    private Collection<Termin> termine;
 
-    public long getId() {
-        return id;
+    public LehrangebotVO getLehrangebot() {
+        return lehrangebot;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setLehrangebot(LehrangebotVO lehrangebot) {
+        this.lehrangebot = lehrangebot;
     }
 
-    public String getCode() {
-        return code;
+    public Collection<Dokument> getDokumente() {
+        return dokumente;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setDokumente(Collection<Dokument> dokumente) {
+        this.dokumente = dokumente;
     }
 
-    public String getBezeichnung() {
-        return bezeichnung;
+    public Collection<Termin> getTermine() {
+        return termine;
     }
 
-    public void setBezeichnung(String bezeichnung) {
-        this.bezeichnung = bezeichnung;
+    public void setTermine(Collection<Termin> termine) {
+        this.termine = termine;
     }
 
     public void reset(ActionMapping actionMapping, HttpServletRequest httpServletRequest) {
-        this.id = 0;
-        this.code = null;
-        this.bezeichnung = null;
+        super.reset(actionMapping, httpServletRequest);
+        this.lehrangebot = new LehrangebotVO();
+        this.dokumente = new ArrayList<Dokument>();
+        this.termine = new ArrayList<Termin>();
+    }
+
+    public ActionErrors validate(ActionMapping actionMapping, HttpServletRequest httpServletRequest) {
+        return super.validate(
+                actionMapping, httpServletRequest
+        );    //To change body of overridden methods use File | Settings | File Templates.
     }
 }

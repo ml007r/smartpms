@@ -1,22 +1,32 @@
 package smartPMS.action.dokument;
 
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
+import org.apache.struts.action.*;
+import smartPMS.action.AbstractAction;
+import smartPMS.form.DokumentListeForm;
+import smartPMS.server.SmartController;
+import smartPMS.session.DokumentSessionFacade;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Created by IntelliJ IDEA.
- * User: tbs
- * Date: 01.06.2008
- * Time: 12:05:26
- * To change this template use File | Settings | File Templates.
- */
-public class Ansicht extends Action {
+
+public class Ansicht extends AbstractAction {
+
     public ActionForward execute(ActionMapping actionMapping, ActionForm actionForm, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
+        super.execute(actionMapping, actionForm, httpServletRequest, httpServletResponse);
+
+        DokumentSessionFacade dokumentEJB = SmartController.getDokumentFacade();
+        DokumentListeForm dForm = (DokumentListeForm) actionForm;
+
+        try {
+            dForm.setDokumente(dokumentEJB.getDokumente(dForm.getLehrangebotId()));
+        } catch (Exception e) {
+            ActionErrors errors = new ActionErrors();
+            errors.add("dokument", new ActionMessage(e.getMessage()));
+            super.addErrors(httpServletRequest, errors);
+        }
+
+
         return actionMapping.findForward("success");
     }
 }

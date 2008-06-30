@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.util.Date;
 
 /**
  * Created by IntelliJ IDEA.
@@ -20,6 +21,24 @@ public class Hilfskraft extends Student {
     private double stundenanzahl;
 
     private double stundensatz;
+
+    protected Hilfskraft() {
+    }
+
+    public Hilfskraft(String anrede, String vorname, String nachname, long matrikelnummer, String studiengang, double stundenanzahl, double stundensatz) {
+        super(anrede, vorname, nachname, matrikelnummer, studiengang);
+        this.stundenanzahl = stundenanzahl;
+        this.stundensatz = stundensatz;
+    }
+
+    public Hilfskraft(String anrede, String vorname, String nachname, String anschrift1, String anschrift2, String postleitzahl, String wohnort, String telefon, String telefax, String mobiltelefon, String email, Date geburtsdatum, long matrikelnummer, String studiengang, double stundenanzahl, double stundensatz) {
+        super(
+                anrede, vorname, nachname, anschrift1, anschrift2, postleitzahl, wohnort, telefon, telefax,
+                mobiltelefon, email, geburtsdatum, matrikelnummer, studiengang
+        );
+        this.stundenanzahl = stundenanzahl;
+        this.stundensatz = stundensatz;
+    }
 
     @Column(name = "STUNDENANZAHL", precision = 2, scale = 1)
     public double getStundenanzahl() {

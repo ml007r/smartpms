@@ -36,4 +36,10 @@ public interface DokumentSessionFacade {
      * @return
      */
     public Collection<Dokument> getDokumente();
+
+    /**
+     * @param lehrangebotId
+     * @return
+     */
+    public Collection<Dokument> getDokumente(long lehrangebotId);
 }

@@ -12,7 +12,7 @@ import java.util.Date;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-@Table(name = "dozent")
+@Table(name = "DOZENT")
 @DiscriminatorValue("D")
 public class Dozent extends Person {
 
@@ -26,17 +26,23 @@ public class Dozent extends Person {
     }
 
     public Dozent(String anrede, String vorname, String nachname, String anschrift1, String anschrift2, String postleitzahl, String wohnort, String telefon, String telefax, String mobiltelefon, String email, Date geburtsdatum, String titel) {
-        super(anrede, vorname, nachname, anschrift1, anschrift2, postleitzahl, wohnort, telefon, telefax, mobiltelefon, email, geburtsdatum);
+        super(
+                anrede, vorname, nachname, anschrift1, anschrift2, postleitzahl, wohnort, telefon, telefax,
+                mobiltelefon, email, geburtsdatum
+        );
         this.titel = titel;
     }
 
     public Dozent(String anrede, String vorname, String nachname, String anschrift1, String anschrift2, String postleitzahl, String wohnort, String telefon, String telefax, String mobiltelefon, String email, Date geburtsdatum, String titel, String buero) {
-        super(anrede, vorname, nachname, anschrift1, anschrift2, postleitzahl, wohnort, telefon, telefax, mobiltelefon, email, geburtsdatum);
+        super(
+                anrede, vorname, nachname, anschrift1, anschrift2, postleitzahl, wohnort, telefon, telefax,
+                mobiltelefon, email, geburtsdatum
+        );
         this.titel = titel;
         this.buero = buero;
     }
 
-    @Column(name = "titel", length = 20, nullable = false)
+    @Column(name = "TITEL", length = 20, nullable = false)
     public String getTitel() {
         return titel;
     }
@@ -45,7 +51,7 @@ public class Dozent extends Person {
         this.titel = titel;
     }
 
-    @Column(name = "buero", length = 20, unique = true)
+    @Column(name = "BUERO", length = 20, unique = true)
     public String getBuero() {
         return buero;
     }

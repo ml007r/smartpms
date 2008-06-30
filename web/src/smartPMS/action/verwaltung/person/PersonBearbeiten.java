@@ -1,5 +1,7 @@
-package smartPMS.action.verwaltung;
+package smartPMS.action.verwaltung.person;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
@@ -12,12 +14,17 @@ import javax.servlet.http.HttpServletResponse;
  * Created by IntelliJ IDEA.
  * User: tbs
  * Date: 17.06.2008
- * Time: 15:26:03
+ * Time: 15:15:01
  * To change this template use File | Settings | File Templates.
  */
-public class PersonListeAnzeigen extends Action {
+public class PersonBearbeiten extends Action {
+
+    private static Log logger = LogFactory.getLog(PersonBearbeiten.class);
+
 
     public ActionForward execute(ActionMapping actionMapping, ActionForm actionForm, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
-        return super.execute(actionMapping, actionForm, httpServletRequest, httpServletResponse);    //To change body of overridden methods use File | Settings | File Templates.
+        super.execute(actionMapping, actionForm, httpServletRequest, httpServletResponse);
+        logger.info("Bearbeite Person!");
+        return actionMapping.findForward("success");
     }
 }

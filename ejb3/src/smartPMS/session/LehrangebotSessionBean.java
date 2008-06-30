@@ -54,7 +54,8 @@ public class LehrangebotSessionBean implements LehrangebotFacadeLocal, Lehrangeb
      * @return
      */
     public Collection<Lehrangebot> getLehrangebotListe(long dozentId) {
-        return entityManager.createQuery("SELECT l FROM Lehrangebot l WHERE l.dozent.id = :dozentId").setParameter("dozentId", dozentId).getResultList();
+        return entityManager.createQuery("SELECT l FROM Lehrangebot l WHERE l.dozent.id = :dozentId")
+                .setParameter("dozentId", dozentId).getResultList();
     }
 
     /**
@@ -63,7 +64,9 @@ public class LehrangebotSessionBean implements LehrangebotFacadeLocal, Lehrangeb
      */
     public Lehrangebot getLehrangebot(long lehrangebotId) throws Exception {
         try {
-            return (Lehrangebot) entityManager.createQuery("SELECT l FROM Lehrangebot l LEFT JOIN FETCH l.dozent WHERE l.id = :lehrangebotId").setParameter("lehrangebotId", lehrangebotId).getSingleResult();
+            return (Lehrangebot) entityManager
+                    .createQuery("SELECT l FROM Lehrangebot l LEFT JOIN FETCH l.dozent WHERE l.id = :lehrangebotId")
+                    .setParameter("lehrangebotId", lehrangebotId).getSingleResult();
         } catch (NoResultException e) {
             logger.error("Konnte Lehrangebot nicht laden!", e);
             throw new Exception("lehrangebot_error_laden");
@@ -80,7 +83,10 @@ public class LehrangebotSessionBean implements LehrangebotFacadeLocal, Lehrangeb
             throw new IllegalArgumentException();
         }
 
-        Lehrangebot l = new Lehrangebot(lehrangebot.getNummer(), lehrangebot.getBezeichnung(), entityManager.find(Dozent.class, lehrangebot.getDozentId()));
+        Lehrangebot l = new Lehrangebot(
+                lehrangebot.getNummer(), lehrangebot.getBezeichnung(),
+                entityManager.find(Dozent.class, lehrangebot.getDozentId())
+        );
 
         try {
             entityManager.persist(l);
@@ -133,7 +139,8 @@ public class LehrangebotSessionBean implements LehrangebotFacadeLocal, Lehrangeb
      * @return
      */
     public Collection<Termin> getTerminListe(long lehrangebotId) {
-        return entityManager.createQuery("SELECT t FROM Termin t WHERE t.lehrangebot.id = :lehrangebotId").setParameter("lehrangebotId", lehrangebotId).getResultList();
+        return entityManager.createQuery("SELECT t FROM Termin t WHERE t.lehrangebot.id = :lehrangebotId")
+                .setParameter("lehrangebotId", lehrangebotId).getResultList();
     }
 
     /**
@@ -142,7 +149,8 @@ public class LehrangebotSessionBean implements LehrangebotFacadeLocal, Lehrangeb
      */
     public Termin getTermin(long terminId) throws Exception {
         try {
-            return (Termin) entityManager.createQuery("SELECT t FROM Termin t WHERE t.id = :terminId").setParameter("terminId", terminId).getSingleResult();
+            return (Termin) entityManager.createQuery("SELECT t FROM Termin t WHERE t.id = :terminId")
+                    .setParameter("terminId", terminId).getSingleResult();
         } catch (NoResultException e) {
             logger.error("Konnte Termin nicht laden!", e);
             throw new Exception("termin_error_laden");
@@ -159,7 +167,10 @@ public class LehrangebotSessionBean implements LehrangebotFacadeLocal, Lehrangeb
             throw new IllegalArgumentException();
         }
 
-        Termin t = new Termin(Termin.TerminTyp.values()[termin.getTyp()], termin.getWochentag(), termin.getBeginn(), termin.getEnde(), entityManager.find(Lehrangebot.class, termin.getLehrangebotId()));
+        Termin t = new Termin(
+                Termin.TerminTyp.values()[termin.getTyp()], termin.getWochentag(), termin.getBeginn(), termin.getEnde(),
+                entityManager.find(Lehrangebot.class, termin.getLehrangebotId())
+        );
 
         try {
             entityManager.persist(t);
@@ -209,4 +220,18 @@ public class LehrangebotSessionBean implements LehrangebotFacadeLocal, Lehrangeb
     }
 
 
+    public Collection<Lehrangebot> getLehrangebote() {
+        return entityManager.createQuery("SELECT l FROM Lehrangebot l").getResultList();
+    }
+
+    public Collection<Lehrangebot> getLehrangebote(long dozentId) {
+        return entityManager.createQuery("SELECT l FROM Lehrangebot l WHERE l.dozent.id = :dozentId")
+                .setParameter("dozentId", dozentId).getResultList();
+    }
+
+    public Collection<Termin> getTermine(long lehrangebotId) {
+        return entityManager.createQuery("SELECT t FROM Termin t WHERE t.lehrangebot.id = :lehrangebotId")
+                .setParameter("lehrangebotId", lehrangebotId).
+                getResultList();
+    }
 }

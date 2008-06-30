@@ -183,5 +183,27 @@
         <put name="content" value="/jsp/verwaltung/personen/anlegen.jsp" type="page"/>
     </definition>
 
+    <definition name="verwaltung_teilnahme_formular" extends="angemeldet">
+        <description>Erzeugt eine neue Anmeldung zur Klausur</description>
+        <put name="title" value="Teilnahme anlegen" type="string"/>
+        <put name="content" value="/jsp/verwaltung/teilnahme/formular.jsp" type="page"/>
+    </definition>
+
+    <definition name="verwaltung_klausur_liste" extends="angemeldet">
+        <description>Zeigt die Klausuren-Liste in der Administration</description>
+        <put name="title" value="Klausuren anzeigen" type="string"/>
+        <put name="content" value="/jsp/verwaltung/klausur/liste.jsp" type="page"/>
+    </definition>
+    <definition name="verwaltung_klausur_formular" extends="angemeldet">
+        <description>Klausur in der Administration</description>
+        <put name="title" value="Klausuren schreiben" type="string"/>
+        <put name="content" value="/jsp/verwaltung/klausur/formular.jsp" type="page"/>
+    </definition>
+    <definition name="verwaltung_anzeigen" extends="angemeldet">
+        <description>Startseite der Administration</description>
+        <put name="title" value="Startseite" type="string"/>
+        <put name="content" value="/jsp/verwaltung/startseite.jsp" type="page"/>
+    </definition>
+
 
 </tiles-definitions>

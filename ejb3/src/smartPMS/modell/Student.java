@@ -14,7 +14,7 @@ import java.util.Date;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-@Table(name = "student")
+@Table(name = "STUDENT")
 @DiscriminatorValue("S")
 public class Student extends Person {
 
@@ -60,12 +60,15 @@ public class Student extends Person {
      * @param studiengang
      */
     public Student(String anrede, String vorname, String nachname, String anschrift1, String anschrift2, String postleitzahl, String wohnort, String telefon, String telefax, String mobiltelefon, String email, Date geburtsdatum, long matrikelnummer, String studiengang) {
-        super(anrede, vorname, nachname, anschrift1, anschrift2, postleitzahl, wohnort, telefon, telefax, mobiltelefon, email, geburtsdatum);
+        super(
+                anrede, vorname, nachname, anschrift1, anschrift2, postleitzahl, wohnort, telefon, telefax,
+                mobiltelefon, email, geburtsdatum
+        );
         this.matrikelnummer = matrikelnummer;
         this.studiengang = studiengang;
     }
 
-    @Column(name = "matrikelnummer", precision = 10, scale = 0, unique = true)
+    @Column(name = "MATRIKELNUMMER", precision = 10, scale = 0, unique = true)
     public long getMatrikelnummer() {
         return matrikelnummer;
     }
@@ -74,7 +77,7 @@ public class Student extends Person {
         this.matrikelnummer = matrikelnummer;
     }
 
-    @Column(name = "studiengang", length = 100, nullable = false)
+    @Column(name = "STUDIENGANG", length = 100, nullable = false)
     public String getStudiengang() {
         return studiengang;
     }
@@ -83,7 +86,7 @@ public class Student extends Person {
         this.studiengang = studiengang;
     }
 
-    @Column(name = "semester", precision = 2, scale = 0)
+    @Column(name = "SEMESTER", precision = 2, scale = 0)
     public int getSemester() {
         return semester;
     }

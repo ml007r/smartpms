@@ -11,7 +11,7 @@ import java.util.Collection;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-@Table(name = "lehrangebot")
+@Table(name = "LEHRANGEBOT")
 public class Lehrangebot {
 
     private long id;
@@ -47,8 +47,8 @@ public class Lehrangebot {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "lehrangebotId")
-    @SequenceGenerator(name = "lehrangebotId", sequenceName = "seq_lehrangebot_id", allocationSize = 1)
-    @Column(name = "id", precision = 10, scale = 0)
+    @SequenceGenerator(name = "lehrangebotId", sequenceName = "SEQ_LEHRANGEBOT_ID", allocationSize = 1)
+    @Column(name = "ID", precision = 10, scale = 0)
     public long getId() {
         return id;
     }
@@ -57,7 +57,7 @@ public class Lehrangebot {
         this.id = id;
     }
 
-    @Column(name = "nummer", length = 10, nullable = false)
+    @Column(name = "NUMMER", length = 10, nullable = false)
     public String getNummer() {
         return nummer;
     }
@@ -66,7 +66,7 @@ public class Lehrangebot {
         this.nummer = nummer;
     }
 
-    @Column(name = "bezeichnung", length = 100, nullable = false)
+    @Column(name = "BEZEICHNUNG", length = 100, nullable = false)
     public String getBezeichnung() {
         return bezeichnung;
     }

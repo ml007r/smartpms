@@ -12,7 +12,7 @@ import java.util.Date;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-@Table(name = "termin")
+@Table(name = "TERMIN")
 public class Termin implements Serializable {
 
     public enum TerminTyp {
@@ -59,8 +59,8 @@ public class Termin implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "terminId")
-    @SequenceGenerator(name = "terminId", sequenceName = "seq_termin_id", allocationSize = 1)
-    @Column(name = "id", precision = 10, scale = 0)
+    @SequenceGenerator(name = "terminId", sequenceName = "SEQ_TERMIN_ID", allocationSize = 1)
+    @Column(name = "ID", precision = 10, scale = 0)
     public long getId() {
         return id;
     }
@@ -69,7 +69,7 @@ public class Termin implements Serializable {
         this.id = id;
     }
 
-    @Column(name = "typ", precision = 1, scale = 0, nullable = false)
+    @Column(name = "TYP", precision = 1, scale = 0, nullable = false)
     public TerminTyp getTyp() {
         return typ;
     }
@@ -78,7 +78,7 @@ public class Termin implements Serializable {
         this.typ = typ;
     }
 
-    @Column(name = "raum", length = 5)
+    @Column(name = "RAUM", length = 5)
     public String getRaum() {
         return raum;
     }
@@ -87,7 +87,7 @@ public class Termin implements Serializable {
         this.raum = raum;
     }
 
-    @Column(name = "wochentag", precision = 1, scale = 0)
+    @Column(name = "WOCHENTAG", precision = 1, scale = 0)
     public int getWochentag() {
         return wochentag;
     }
@@ -97,7 +97,7 @@ public class Termin implements Serializable {
     }
 
     @Temporal(TemporalType.TIME)
-    @Column(name = "beginn", nullable = false)
+    @Column(name = "BEGINN", nullable = false)
     public Date getBeginn() {
         return beginn;
     }
@@ -107,7 +107,7 @@ public class Termin implements Serializable {
     }
 
     @Temporal(TemporalType.TIME)
-    @Column(name = "ende", nullable = false)
+    @Column(name = "ENDE", nullable = false)
     public Date getEnde() {
         return ende;
     }
