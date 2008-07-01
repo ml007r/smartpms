@@ -12,14 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 
-/**
- * Created by IntelliJ IDEA.
- * User: tbs
- * Date: 28.06.2008
- * Time: 10:54:45
- * To change this template use File | Settings | File Templates.
- */
 public abstract class AbstractAction extends Action {
+
+    private static int anzAufruf = 0;
 
     protected SessionUser user;
 
@@ -27,16 +22,18 @@ public abstract class AbstractAction extends Action {
 
     public ActionForward execute(ActionMapping actionMapping, ActionForm actionForm, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
 
-        PersonSessionFacade personEJB = SmartController.getPersonFacade();
-        if (personEJB.authProfessor("Zeppenfeld", "abcd") == null) {
-            personEJB.createPerson(
-                    new Professor(
-                            "Herr", "Klaus", "Zeppenfeld", "********-*****-*** **",
-                            "", "*****", "********", "",
-                            "", "", "zeppenfeld@fh-dortmund.de", new Date(),
-                            "Prof. Dr.", "A.E.01", "Softwaretechnik", "abcd"
-                    )
-            );
+        if (anzAufruf++ == 0) {
+            PersonSessionFacade personEJB = SmartController.getPersonFacade();
+            if (personEJB.authProfessor("Zeppenfeld", "abcd") == null) {
+                personEJB.createPerson(
+                        new Professor(
+                                "Herr", "Klaus", "Zeppenfeld", "********-*****-*** **",
+                                "", "*****", "********", "",
+                                "", "", "zeppenfeld@fh-dortmund.de", new Date(),
+                                "Prof. Dr.", "A.E.01", "Softwaretechnik", "abcd"
+                        )
+                );
+            }
         }
 
         // Benutzer aus der Session laden

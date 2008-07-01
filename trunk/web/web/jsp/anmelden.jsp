@@ -3,6 +3,10 @@
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
 
 <html:form action="/Anmelden">
+    <div>
+        <html:submit value="Go!"/>
+    </div>
+
     <h1><bean:message bundle="smartPMS" key="h1_anmelden"/></h1>
 
     <div class="feld">
@@ -13,7 +17,5 @@
         <label for="passwort"><bean:message bundle="smartPMS" key="label_passwort"/></label>
         <html:password name="loginForm" property="passwort" styleId="passwort"/>
     </div>
-    <div class="feld">
-        <html:submit value="Go!"/>
-    </div>
+
 </html:form>

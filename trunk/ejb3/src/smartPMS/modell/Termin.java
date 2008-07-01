@@ -124,4 +124,40 @@ public class Termin implements Serializable {
     public void setLehrangebot(Lehrangebot lehrangebot) {
         this.lehrangebot = lehrangebot;
     }
+
+    @Transient
+    public String getTypText() {
+        switch (typ) {
+            case PRAKTIKUM:
+                return "Praktikum";
+            case TUTORIUM:
+                return "Tutorium";
+            case UEBUNG:
+                return "Übung";
+            case VORLESUNG:
+                return "Vorlesung";
+        }
+        return "";
+    }
+
+    @Transient
+    public String getWochentagText() {
+        switch (wochentag) {
+            case 0:
+                return "Montag";
+            case 1:
+                return "Dienstag";
+            case 2:
+                return "Mittwoch";
+            case 3:
+                return "Donnerstag";
+            case 4:
+                return "Freitag";
+            case 5:
+                return "Samstag";
+            case 6:
+                return "Sonntag";
+        }
+        return "";
+    }
 }

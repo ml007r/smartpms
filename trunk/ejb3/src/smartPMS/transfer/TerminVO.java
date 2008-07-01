@@ -26,7 +26,6 @@ public class TerminVO implements Serializable {
 
     private long lehrangebotId;
 
-
     public TerminVO() {
     }
 

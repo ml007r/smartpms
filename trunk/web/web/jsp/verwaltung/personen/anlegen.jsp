@@ -4,9 +4,9 @@
 <%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic" %>
 
 <script type="text/javascript">
-    function showSpecialFields(elem) {
-        switch (elem.value) {
-            case 1:
+    function showSpecialFields(val) {
+        switch (val) {
+            case '1':
                 showField("matrikelFeld", true);
                 showField("studiengangFeld", true);
                 showField("semesterFeld", true);
@@ -17,35 +17,35 @@
                 showField("stundensatzFeld", false);
                 break;
 
-            case 2:
+            case '2':
                 showField("matrikelFeld", true);
                 showField("studiengangFeld", true);
                 showField("semesterFeld", true);
                 showField("titelFeld", false);
                 showField("bueroFeld", false);
-                showField("fachgebiet", false);
+                showField("fachgebietFeld", false);
                 showField("wochenstundenFeld", true);
                 showField("stundensatzFeld", true);
                 break;
 
-            case 3:
+            case '3':
                 showField("matrikelFeld", false);
                 showField("studiengangFeld", false);
                 showField("semesterFeld", false);
                 showField("titelFeld", true);
                 showField("bueroFeld", true);
-                showField("fachgebiet", false);
+                showField("fachgebietFeld", false);
                 showField("wochenstundenFeld", false);
                 showField("stundensatzFeld", false);
                 break;
 
-            case 4:
+            case '4':
                 showField("matrikelFeld", false);
                 showField("studiengangFeld", false);
                 showField("semesterFeld", false);
                 showField("titelFeld", true);
                 showField("bueroFeld", true);
-                showField("fachgebiet", true);
+                showField("fachgebietFeld", true);
                 showField("wochenstundenFeld", false);
                 showField("stundensatzFeld", false);
                 break;
@@ -54,7 +54,7 @@
     }
 
     function showField(name, flag) {
-        document.getElementById(name).style.visibility = flag == true ? "" : "hidden";
+        document.getElementById(name).style.display = flag == true ? "" : "none";
     }
 </script>
 
@@ -68,7 +68,7 @@
 
     <div class="feld">
         <label for="typ"><bean:message bundle="smartPMS" key="person_typ"/></label>
-        <html:select name="personForm" property="typ" styleId="typ" onchange="showSpecialFields(this);">
+        <html:select name="personForm" property="typ" styleId="typ" onchange="showSpecialFields(this.value);">
             <html:option value="0" bundle="smartPMS" key="bitte_auswaehlen"/>
             <html:option value="1" bundle="smartPMS" key="person_typ_1"/>
             <html:option value="2" bundle="smartPMS" key="person_typ_2"/>
@@ -76,14 +76,14 @@
             <html:option value="4" bundle="smartPMS" key="person_typ_4"/>
         </html:select>
     </div>
-    <div class="feld" style="visibility:hidden;">
+    <div class="feld">
         <label for="anrede"><bean:message bundle="smartPMS" key="person_anrede"/></label>
         <html:select name="personForm" property="anrede" styleId="anrede">
             <html:option value="Herr" bundle="smartPMS" key="person_anrede_1"/>
             <html:option value="Frau" bundle="smartPMS" key="person_anrede_2"/>
         </html:select>
     </div>
-    <div class="feld" id="titelFeld" style="visibility:hidden;">
+    <div class="feld" id="titelFeld" style="display:none;">
         <label for="titel"><bean:message bundle="smartPMS" key="person_titel"/></label>
         <html:text name="personForm" property="titel" styleId="titel"/>
     </div>
@@ -131,31 +131,35 @@
         <label for="geburtsdatum"><bean:message bundle="smartPMS" key="person_geburtsdatum"/></label>
         <html:text name="personForm" property="geburtsdatumString" styleId="geburtsdatum"/>
     </div>
-    <div class="feld" id="matrikelFeld" style="visibility:hidden;">
+    <div class="feld" id="matrikelFeld" style="display:none;">
         <label for="matrikel"><bean:message bundle="smartPMS" key="person_matrikel"/></label>
         <html:text name="personForm" property="matrikel" styleId="matrikel"/>
     </div>
-    <div class="feld" id="studiengangFeld" style="visibility:hidden;">
+    <div class="feld" id="studiengangFeld" style="display:none;">
         <label for="studiengang"><bean:message bundle="smartPMS" key="person_studiengang"/></label>
         <html:text name="personForm" property="studiengang" styleId="studiengang"/>
     </div>
-    <div class="feld" id="semesterFeld" style="visibility:hidden;">
+    <div class="feld" id="semesterFeld" style="display:none;">
         <label for="studiengang"><bean:message bundle="smartPMS" key="person_studiengang"/></label>
         <html:text name="personForm" property="studiengang" styleId="studiengang"/>
     </div>
-    <div class="feld" id="bueroFeld" style="visibility:hidden;">
+    <div class="feld" id="bueroFeld" style="display:none;">
         <label for="buero"><bean:message bundle="smartPMS" key="person_buero"/></label>
         <html:text name="personForm" property="buero" styleId="buero"/>
     </div>
-    <div class="feld" id="fachgebietFeld" style="visibility:hidden;">
+    <div class="feld" id="fachgebietFeld" style="display:none;">
         <label for="fachgebiet"><bean:message bundle="smartPMS" key="person_fachgebiet"/></label>
         <html:text name="personForm" property="fachgebiet" styleId="fachgebiet"/>
     </div>
-    <div class="feld" id="wochenstundenFeld" style="visibility:hidden;">
+    <div class="feld" id="passwortFeld" style="display:none;">
+        <label for="passwortFeld"><bean:message bundle="smartPMS" key="person_passwort"/></label>
+        <html:password name="personForm" property="passwort" styleId="passwort"/>
+    </div>
+    <div class="feld" id="wochenstundenFeld" style="display:none;">
         <label for="wochenstunden"><bean:message bundle="smartPMS" key="person_wochenstunden"/></label>
         <html:text name="personForm" property="wochenstunden" styleId="wochenstunden"/>
     </div>
-    <div class="feld" id="stundensatzFeld" style="visibility:hidden;">
+    <div class="feld" id="stundensatzFeld" style="display:none;">
         <label for="stundensatz"><bean:message bundle="smartPMS" key="person_stundensatz"/></label>
         <html:text name="personForm" property="stundensatz" styleId="stundensatz"/>
     </div>

@@ -24,7 +24,7 @@
           <containerElement type="facet" facetId="web/web/Web">
             <attribute name="method" value="4" />
             <attribute name="URI" value="web.war" />
-            <attribute name="contextRoot" value="/smartPMS" />
+            <attribute name="contextRoot" value="/" />
           </containerElement>
         </packaging>
       </configuration>

@@ -1,29 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
-    <!--persistence-unit name="smartPMS">
-        <properties>
-            <property name="openjpa.ConnectionURL" value="jdbc:oracle:thin:@localhost:1521:XE"/>
-            <property name="openjpa.ConnectionDriverName" value="oracle.jdbc.OracleDriver"/>
-            <property name="openjpa.ConnectionUserName" value="smartpms"/>
-            <property name="openjpa.ConnectionPassword" value="smartpms!4u"/>
-            <property name="openjpa.Log" value="DefaultLevel=WARN, Tool=INFO"/>
-        </properties>
-    </persistence-unit-->
-
     <persistence-unit name="smartPMS">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <jta-data-source>java:/smartPMS</jta-data-source>
         <properties>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
             <property name="hibernate.transaction.manager_lookup_class"
                       value="org.hibernate.transaction.JBossTransactionManagerLookup"/>
             <property name="hibernate.transaction.flush_before_completion" value="true"/>
-
-            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <!--property name="hibernate.hbm2ddl.auto" value="create-drop"/-->
             <!--property name="hibernate.show_sql" value="true" /-->
-
             <property name="jboss.entity.manager.factory.jndi.name" value="java:/smartPMS"/>
         </properties>
     </persistence-unit>
-
 </persistence>

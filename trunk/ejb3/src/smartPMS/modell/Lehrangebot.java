@@ -2,6 +2,7 @@ package smartPMS.modell;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.io.Serializable;
 
 /**
  * Created by IntelliJ IDEA.
@@ -12,7 +13,7 @@ import java.util.Collection;
  */
 @Entity
 @Table(name = "LEHRANGEBOT")
-public class Lehrangebot {
+public class Lehrangebot implements Serializable {
 
     private long id;
 

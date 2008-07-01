@@ -20,6 +20,7 @@
         <!-- Lehrangebotsverwaltung -->
         <form-bean name="lehrangebotListeForm" type="smartPMS.form.LehrangebotListeForm"/>
         <form-bean name="lehrangebotForm" type="smartPMS.form.LehrangebotForm"/>
+        <form-bean name="terminForm" type="smartPMS.form.TerminForm"/>
 
         <!-- Dokumentenverwaltung -->
         <form-bean name="dokumentListeForm" type="smartPMS.form.DokumentListeForm"/>
@@ -86,9 +87,8 @@
         <!-- Neues LehrangebotForm anlegen (Speichern) -->
         <action path="/lehrangebot/Anlegen" type="smartPMS.action.lehrangebot.Anlegen" name="lehrangebotForm"
                 validate="true" input="lehrangebot_neu">
-            <forward name="failure" path="lehrangebot_neu"/>
-            <forward name="success" path="lehrangebot"/>
-            <forward name="success_neu" path="lehrangebot_neu"/>
+            <forward name="failure" path="lehrangebot"/>
+            <forward name="success" path="lehrangebot_neu"/>
         </action>
 
         <!-- Bestehendes LehrangebotForm bearbeiten (Anzeigen) -->
@@ -102,13 +102,33 @@
         <action path="/lehrangebot/Speichern" type="smartPMS.action.lehrangebot.Speichern" name="lehrangebotForm"
                 validate="true" input="lehrangebot_bearbeiten">
             <forward name="failure" path="lehrangebot_bearbeiten"/>
-            <forward name="success" path="lehrangebot"/>
+            <forward name="success" path="/lehrangebot/Ansicht.do"/>
         </action>
 
         <!-- LehrangebotForm entfernen -->
         <action path="/lehrangebot/Entfernen" type="smartPMS.action.lehrangebot.Entfernen" name="lehrangebotForm"
                 validate="false">
-            <forward name="success" path="lehrangebot"/>
+            <forward name="success" path="/lehrangebot/Ansicht.do"/>
+        </action>
+
+
+        <!-- **************************************************************************************************** -->
+        <!-- ****** Terminverwaltung **************************************************************************** -->
+        <!-- **************************************************************************************************** -->
+
+        <action path="/termin/Anlegen" type="smartPMS.action.termin.Anlegen" name="terminForm" validate="false">
+            <forward name="success" path="termin_formular"/>
+        </action>
+
+        <action path="/termin/Bearbeiten" type="smartPMS.action.termin.Bearbeiten" name="terminForm" validate="false">
+            <forward name="failure" path="/lehrangebot/Ansicht.do"/>
+            <forward name="success" path="termin_formular"/>
+        </action>
+
+        <action path="/termin/Speichern" type="smartPMS.action.termin.Speichern" name="terminForm" validate="true"
+                input="termin_formular">
+            <forward name="failure" path="termin_formular"/>
+            <forward name="success" path="/lehrangebot/Ansicht.do"/>
         </action>
 
 
@@ -123,25 +143,17 @@
             <forward name="success" path="dokument"/>
         </action>
 
-        <!-- Neues Dokument anlegen (Speichern) -->
+        <!-- Neues Dokument anlegen -->
         <action path="/dokument/Anlegen" type="smartPMS.action.dokument.Anlegen" name="dokumentForm"
-                validate="true" input="dokument_neu">
-            <forward name="failure" path="dokument_neu"/>
-            <forward name="success" path="dokument"/>
-            <forward name="success_neu" path="dokument_neu"/>
+                validate="false" >
+            <forward name="failure" path="dokument" />
+            <forward name="success" path="dokument_hochladen"/>
         </action>
 
-        <!-- Dokument bearbeiten (Anzeige) -->
-        <action path="/dokument/Bearbeiten" type="smartPMS.action.dokument.Bearbeiten" name="dokumentForm"
-                validate="false">
-            <forward name="failure" path="dokument"/>
-            <forward name="success" path="dokument_bearbeiten"/>
-        </action>
-
-        <!-- Bestehendes Dokument speichern -->
+        <!-- Bestehendes Dokument speichern (hochladen) -->
         <action path="/dokument/Speichern" type="smartPMS.action.dokument.Speichern" name="dokumentForm"
-                validate="true" input="dokument_bearbeiten">
-            <forward name="failure" path="dokument_bearbeiten"/>
+                validate="true" input="dokument_hochladen">
+            <forward name="failure" path="dokument_hochladen"/>
             <forward name="success" path="dokument"/>
         </action>
 
@@ -355,6 +367,7 @@
                 validate="false">
             <forward name="success" path="verwaltung_anzeigen"/>
         </action>
+
 
     </action-mappings>
 

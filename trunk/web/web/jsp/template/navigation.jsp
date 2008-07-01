@@ -4,17 +4,17 @@
 
 <ul>
     <li>
-        <html:link action="/lehrangebot/Ansicht" titleKey="menu_lehrangebot">
+        <html:link action="/lehrangebot/Ansicht" titleKey="menu_lehrangebot" onclick="showProgress();">
             <bean:message bundle="smartPMS" key="menu_lehrangebot"/>
         </html:link>
     </li>
     <li>
-        <html:link action="/dokument/Ansicht" titleKey="menu_dokument">
+        <html:link action="/dokument/Ansicht" titleKey="menu_dokument" onclick="showProgress();">
             <bean:message bundle="smartPMS" key="menu_dokument"/>
         </html:link>
     </li>
     <li>
-        <html:link action="/klausur/Ansicht" titleKey="menu_klausur">
+        <html:link action="/klausur/Ansicht" titleKey="menu_klausur" onclick="showProgress();">
             <bean:message bundle="smartPMS" key="menu_klausur"/>
         </html:link>
     </li>
@@ -38,7 +38,7 @@
     </li>
     <li>
         <html:link action="/verwaltung/Anzeigen" titleKey="menu_verwaltung"
-                   onclick="alert('Diese Funktion ist nur im ShowCase verfügbar!');">
+                   onclick="alert('Diese Funktion ist nur im ShowCase verfügbar!');showProgress();">
             <bean:message bundle="smartPMS" key="menu_verwaltung"/>
         </html:link>
     </li>
