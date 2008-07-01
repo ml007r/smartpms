@@ -36,6 +36,14 @@
             <attribute name="method" value="0" />
             <attribute name="URI" value="&lt;N/A&gt;" />
           </containerElement>
+          <containerElement type="library" name="Oracle JDBC" level="project">
+            <attribute name="method" value="0" />
+            <attribute name="URI" value="/WEB-INF/lib" />
+          </containerElement>
+          <containerElement type="library" name="hibernate3" level="project">
+            <attribute name="method" value="0" />
+            <attribute name="URI" value="/WEB-INF/lib" />
+          </containerElement>
           <containerElement type="library" name="struts" level="project">
             <attribute name="method" value="1" />
             <attribute name="URI" value="/WEB-INF/lib" />

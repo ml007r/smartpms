@@ -11,7 +11,7 @@
         <description>Allgemeines Template</description>
         <put name="title" value="" type="string"/>
         <put name="header" value="/jsp/template/header.jsp" type="page"/>
-        <put name="menu" value="/jsp/template/navigation.jsp" type="page"/>
+        <put name="menu" value=""/>
         <put name="content" value="/jsp/template/content.jsp" type="page"/>
         <put name="footer" value="/jsp/template/footer.jsp" type="page"/>
     </definition>
@@ -66,19 +66,6 @@
         <put name="content" value="/jsp/dokument/startseite.jsp" type="page"/>
     </definition>
 
-    <!-- Neues Dokument erstellen -->
-    <definition name="dokument_neu" extends="angemeldet">
-        <description>Neues Dokument erstellen</description>
-        <put name="title" value="Neues Dokumente" type="string"/>
-        <put name="content" value="/jsp/dokument/formular.jsp" type="page"/>
-    </definition>
-
-    <!--  Dokument bearbeiten -->
-    <definition name="dokument_bearbeiten" extends="dokument_neu">
-        <description>Ein bestehendes Dokument bearbeiten</description>
-        <put name="title" value="Dokument bearbeiten" type="string"/>
-    </definition>
-
     <!-- (Neues) Dokument hochladen -->
     <definition name="dokument_hochladen" extends="angemeldet">
         <description>Dokument hochladen</description>
@@ -87,6 +74,7 @@
     </definition>
 
 
+    
     <!-- Klausuren -->
     <definition name="klausur" extends="angemeldet">
         <description>Startseite der Klausuren</description>
@@ -203,6 +191,11 @@
         <description>Startseite der Administration</description>
         <put name="title" value="Startseite" type="string"/>
         <put name="content" value="/jsp/verwaltung/startseite.jsp" type="page"/>
+    </definition>
+    <definition name="termin_formular" extends="angemeldet">
+        <description>Termin anlegen oder bearbeiten</description>
+        <put name="title" value="Termin anlegen bzw. bearbeiten" type="string" />
+        <put name="content" value="/jsp/lehrangebot/termin_formular.jsp" type="page" />
     </definition>
 
 

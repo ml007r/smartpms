@@ -17,18 +17,18 @@ import java.util.Collection;
  */
 public class LehrangebotListeForm extends ActionForm {
 
-    private Collection<Lehrangebot> lehrangebot;
+    private Collection<Lehrangebot> lehrangebote;
 
-    public Collection<Lehrangebot> getLehrangebot() {
-        return lehrangebot;
+    public Collection<Lehrangebot> getLehrangebote() {
+        return lehrangebote;
     }
 
-    public void setLehrangebot(Collection<Lehrangebot> lehrangebot) {
-        this.lehrangebot = lehrangebot;
+    public void setLehrangebote(Collection<Lehrangebot> lehrangebote) {
+        this.lehrangebote = lehrangebote;
     }
 
     public void reset(ActionMapping actionMapping, HttpServletRequest httpServletRequest) {
         super.reset(actionMapping, httpServletRequest);
-        this.lehrangebot = new ArrayList<Lehrangebot>();
+        this.lehrangebote = new ArrayList<Lehrangebot>();
     }
 }

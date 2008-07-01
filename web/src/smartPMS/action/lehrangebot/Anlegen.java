@@ -20,6 +20,7 @@ public class Anlegen extends AbstractAction {
         DokumentSessionFacade dokumentEJB = SmartController.getDokumentFacade();
         LehrangebotSessionFacade lehrangebotEJB = SmartController.getLehrangebotFacade();
         LehrangebotForm fForm = (LehrangebotForm) actionForm;
+        fForm.getLehrangebot().setDozentId(user.getId());
 
         try {
             fForm.setDokumente(dokumentEJB.getDokumente(fForm.getLehrangebot().getId()));

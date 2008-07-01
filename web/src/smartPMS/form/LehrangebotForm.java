@@ -4,6 +4,7 @@ import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
 import smartPMS.modell.Dokument;
+import smartPMS.modell.Klausur;
 import smartPMS.modell.Termin;
 import smartPMS.transfer.LehrangebotVO;
 
@@ -19,6 +20,8 @@ public class LehrangebotForm extends ActionForm {
     private Collection<Dokument> dokumente;
 
     private Collection<Termin> termine;
+
+    private Collection<Klausur> klausuren;
 
     public LehrangebotVO getLehrangebot() {
         return lehrangebot;
@@ -44,13 +47,24 @@ public class LehrangebotForm extends ActionForm {
         this.termine = termine;
     }
 
+    public Collection<Klausur> getKlausuren() {
+        return klausuren;
+    }
+
+    public void setKlausuren(Collection<Klausur> klausuren) {
+        this.klausuren = klausuren;
+    }
+
+    @Override
     public void reset(ActionMapping actionMapping, HttpServletRequest httpServletRequest) {
         super.reset(actionMapping, httpServletRequest);
         this.lehrangebot = new LehrangebotVO();
         this.dokumente = new ArrayList<Dokument>();
         this.termine = new ArrayList<Termin>();
+        this.klausuren = new ArrayList<Klausur>();
     }
 
+    @Override
     public ActionErrors validate(ActionMapping actionMapping, HttpServletRequest httpServletRequest) {
         return super.validate(
                 actionMapping, httpServletRequest

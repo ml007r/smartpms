@@ -19,83 +19,7 @@
     <option name="historyRevisionsNumber" value="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/Termin.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/Termin.java" />
-      <change type="MOVED" beforePath="C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\web\src\smartPMS\action\verwaltung\PersonBearbeiten.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/verwaltung/person/PersonBearbeiten.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/smartPMS/form/AbschlussarbeitForm.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/form/AbschlussarbeitForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/Hilfskraft.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/Hilfskraft.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web/jsp/template/navigation.jsp" afterPath="$PROJECT_DIR$/web/web/jsp/template/navigation.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/transfer/TeilnahmeVO.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/transfer/TeilnahmeVO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/smartPMS/action/dokument/Entfernen.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/dokument/Entfernen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/smartPMS/action/Startseite.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/Startseite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/Person.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/Person.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/Student.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/Student.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/smartPMS/form/DokumentListeForm.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/form/DokumentListeForm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/verwaltung/klausur" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/smartPMS/form/PersonForm.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/form/PersonForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/smartPMS/form/AbschlussarbeitListeForm.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/form/AbschlussarbeitListeForm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/verwaltung/teilnahme/TeilnahmeListeAnzeigen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/transfer/AbschlussarbeitVO.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/transfer/AbschlussarbeitVO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/smartPMS/action/abschlussarbeit/Bearbeiten.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/abschlussarbeit/Bearbeiten.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/ejb3/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web/jsp/verwaltung/personen/anlegen.jsp" afterPath="$PROJECT_DIR$/web/web/jsp/verwaltung/personen/anlegen.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/Dozent.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/Dozent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web/WEB-INF/tiles-defs.xml" afterPath="$PROJECT_DIR$/web/web/WEB-INF/tiles-defs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/verwaltung/teilnahme/TeilnahmeAnlegen.java" />
-      <change type="MOVED" beforePath="C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\web\src\smartPMS\action\verwaltung\PersonSpeichern.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/verwaltung/person/PersonSpeichern.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web/jsp/verwaltung/personen/liste.jsp" afterPath="$PROJECT_DIR$/web/web/jsp/verwaltung/personen/liste.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/smartPMS/form/TeilnahmeForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web/jsp/verwaltung/startseite.jsp" afterPath="$PROJECT_DIR$/web/web/jsp/verwaltung/startseite.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/AbstractAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/Teilnahme.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/Teilnahme.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/verwaltung/teilnahme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/Lehrangebot.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/Lehrangebot.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/verwaltung/klausur/KlausurListeAnzeigen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/MessageResources.properties" afterPath="$PROJECT_DIR$/web/src/MessageResources.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web/jsp/template.jsp" afterPath="$PROJECT_DIR$/web/web/jsp/template.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/smartPMS/action/abschlussarbeit/Anlegen.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/abschlussarbeit/Anlegen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/session/DokumentSessionBean.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/session/DokumentSessionBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/smartPMS/action/Anmeldung.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/Anmeldung.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/smartPMS/action/hilfskraft/Anlegen.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/hilfskraft/Anlegen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/smartPMS/action/abschlussarbeit/Entfernen.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/abschlussarbeit/Entfernen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/session/DokumentSessionFacade.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/session/DokumentSessionFacade.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/session/PersonSessionBean.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/session/PersonSessionBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/web/jsp/verwaltung/klausur" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/smartPMS/action/abschlussarbeit/Speichern.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/abschlussarbeit/Speichern.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/session/LehrangebotSessionFacade.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/session/LehrangebotSessionFacade.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/smartPMS/action/dokument/Anlegen.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/dokument/Anlegen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/session/PersonSessionFacade.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/session/PersonSessionFacade.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smartPMS.iws" afterPath="$PROJECT_DIR$/smartPMS.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web/WEB-INF/struts-config.xml" afterPath="$PROJECT_DIR$/web/web/WEB-INF/struts-config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/verwaltung/person" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/web/jsp/verwaltung/klausur/liste.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/smartPMS/action/dokument/Bearbeiten.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/dokument/Bearbeiten.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/web/jsp/verwaltung/teilnahme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/session/KlausurSessionFacade.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/session/KlausurSessionFacade.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/smartPMS/form/LehrangebotForm.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/form/LehrangebotForm.java" />
-      <change type="DELETED" beforePath="C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\web\src\smartPMS\action\DatenImport.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/Klausur.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/Klausur.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/smartPMS/action/lehrangebot/Anlegen.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/lehrangebot/Anlegen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/smartPMS/form/KlausurListeForm.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/form/KlausurListeForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web/jsp/klausur/startseite.jsp" afterPath="$PROJECT_DIR$/web/web/jsp/klausur/startseite.jsp" />
-      <change type="MOVED" beforePath="C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\web\src\smartPMS\action\verwaltung\PersonListeAnzeigen.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/verwaltung/person/PersonListeAnzeigen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/transfer/DokumentVO.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/transfer/DokumentVO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/smartPMS/action/dokument/Ansicht.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/dokument/Ansicht.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/web/jsp/verwaltung/teilnahme/formular.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/smartPMS/action/abschlussarbeit/Ansicht.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/abschlussarbeit/Ansicht.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/smartPMS/action/dokument/Speichern.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/dokument/Speichern.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web/css/menu.css" afterPath="$PROJECT_DIR$/web/web/css/menu.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/session/LehrangebotSessionBean.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/session/LehrangebotSessionBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/verwaltung/klausur/KlausurSchreiben.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/smartPMS/form/DokumentForm.java" afterPath="$PROJECT_DIR$/web/src/smartPMS/form/DokumentForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web/css/smartPMS.css" afterPath="$PROJECT_DIR$/web/web/css/smartPMS.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/verwaltung/Anzeigen.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/exceptions/NotLoggedInException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/session/KlausurSessionBean.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/session/KlausurSessionBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/exceptions" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/TeilnahmePK.java" afterPath="$PROJECT_DIR$/ejb3/src/smartPMS/modell/TeilnahmePK.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/smartPMS/action/verwaltung/teilnahme/TeilnahmeSpeichern.java" />
-    </list>
+    <list default="true" name="Default" comment="" />
     <ignored path="smartPMS.iws" />
     <ignored path=".idea/workspace.xml" />
   </component>
@@ -159,80 +83,7 @@
     <favorites_list name="smartPMS" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="menu.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/web/css/menu.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="17" selection-start="213" selection-end="213" vertical-scroll-proportion="0.8163842">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="anlegen.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/web/jsp/verwaltung/personen/anlegen.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="21" selection-start="2631" selection-end="2631" vertical-scroll-proportion="-0.18318318">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="persistence.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ejb3/META-INF/persistence.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="63" selection-start="505" selection-end="505" vertical-scroll-proportion="-0.3783784">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="startseite.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/web/jsp/verwaltung/startseite.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="55" selection-start="261" selection-end="261" vertical-scroll-proportion="0.25525525">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navigation.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/web/jsp/template/navigation.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="29" selection-start="1749" selection-end="1749" vertical-scroll-proportion="1.2515724">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="struts-config.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/web/WEB-INF/struts-config.xml">
-          <provider editor-type-id="com.intellij.struts.diagram.DiagramEditorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="347" column="17" selection-start="16243" selection-end="16243" vertical-scroll-proportion="0.63822526">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tiles-defs.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/web/WEB-INF/tiles-defs.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="200" column="17" selection-start="9130" selection-end="9130" vertical-scroll-proportion="1.7147148">
-              <folding>
-                <marker date="1214815775218" expanded="true" signature="7630:7860" placeholder="..." />
-                <marker date="1214815775218" expanded="true" signature="7932:8165" placeholder="..." />
-                <marker date="1214815775218" expanded="true" signature="8241:8491" placeholder="..." />
-                <marker date="1214815775218" expanded="true" signature="8562:8816" placeholder="..." />
-                <marker date="1214815775218" expanded="true" signature="8889:9129" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -246,122 +97,6 @@
   </component>
   <component name="J2EEProjectPane">
     <subPane>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="smartPMS" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.JavaeeProjectNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Web Facets" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.FacetHolderNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Web (in web)" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.web.nodes.WebFacetNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="web" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.web.nodes.WebRootNodeDescriptor" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="smartPMS" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.JavaeeProjectNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Web Facets" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.FacetHolderNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Web (in web)" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.web.nodes.WebFacetNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="web" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.web.nodes.WebRootNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="jsp" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.DirectoryNodeDescriptor" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="smartPMS" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.JavaeeProjectNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Web Facets" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.FacetHolderNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Web (in web)" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.web.nodes.WebFacetNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="web" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.web.nodes.WebRootNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="jsp" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.DirectoryNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="lehrangebot" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.DirectoryNodeDescriptor" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="smartPMS" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.JavaeeProjectNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Web Facets" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.FacetHolderNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Web (in web)" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.web.nodes.WebFacetNodeDescriptor" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="smartPMS" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.JavaeeProjectNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="EJB Facets" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.FacetHolderNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="EJB (in ejb3)" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.ejb.nodes.EjbFacetNodeDescriptor" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="smartPMS" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.JavaeeProjectNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="JPA Facets" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.FacetHolderNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="ejb3" />
-          <option name="myItemType" value="com.intellij.jpa.view.nodes.PersistenceFacetNodeDescriptor" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="smartPMS" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.JavaeeProjectNodeDescriptor" />
-        </PATH_ELEMENT>
-      </PATH>
-    </subPane>
-    <subPane subId="file">
       <PATH>
         <PATH_ELEMENT>
           <option name="myItemId" value="smartPMS" />
@@ -415,54 +150,6 @@
           <option name="myItemId" value="Web (in web)" />
           <option name="myItemType" value="com.intellij.javaee.module.view.web.nodes.WebFacetNodeDescriptor" />
         </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="web" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.web.nodes.WebRootNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="jsp" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.DirectoryNodeDescriptor" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="smartPMS" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.JavaeeProjectNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Web Facets" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.FacetHolderNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Web (in web)" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.web.nodes.WebFacetNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="web" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.web.nodes.WebRootNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="jsp" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.DirectoryNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="verwaltung" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.DirectoryNodeDescriptor" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="smartPMS" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.JavaeeProjectNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Web Facets" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.FacetHolderNodeDescriptor" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Web (in web)" />
-          <option name="myItemType" value="com.intellij.javaee.module.view.web.nodes.WebFacetNodeDescriptor" />
-        </PATH_ELEMENT>
       </PATH>
       <PATH>
         <PATH_ELEMENT>
@@ -494,6 +181,56 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="smartPMS" />
           <option name="myItemType" value="com.intellij.jpa.view.nodes.PersistenceUnitNodeDescriptor" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="smartPMS" />
+          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.JavaeeProjectNodeDescriptor" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="JPA Facets" />
+          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.FacetHolderNodeDescriptor" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="ejb3" />
+          <option name="myItemType" value="com.intellij.jpa.view.nodes.PersistenceFacetNodeDescriptor" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="smartPMS" />
+          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.JavaeeProjectNodeDescriptor" />
+        </PATH_ELEMENT>
+      </PATH>
+    </subPane>
+    <subPane subId="file">
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="smartPMS" />
+          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.JavaeeProjectNodeDescriptor" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Web Facets" />
+          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.FacetHolderNodeDescriptor" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Web (in web)" />
+          <option name="myItemType" value="com.intellij.javaee.module.view.web.nodes.WebFacetNodeDescriptor" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="smartPMS" />
+          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.JavaeeProjectNodeDescriptor" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="EJB Facets" />
+          <option name="myItemType" value="com.intellij.javaee.module.view.nodes.FacetHolderNodeDescriptor" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="EJB (in ejb3)" />
+          <option name="myItemType" value="com.intellij.javaee.module.view.ejb.nodes.EjbFacetNodeDescriptor" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
@@ -602,7 +339,51 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="form" />
+          <option name="myItemId" value="action" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="smartPMS" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="smartPMS" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="action" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="termin" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="smartPMS" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="smartPMS" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="action" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="lehrangebot" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -730,6 +511,54 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\web\web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\web\web\jsp" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="smartPMS" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\web\web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\web\web\jsp" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\web\web\jsp\lehrangebot" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="smartPMS" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\web\src" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
@@ -814,66 +643,6 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="web" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\web" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\web\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\web\src\smartPMS" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\web\src\smartPMS\action" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\web\src\smartPMS\action\dokument" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="smartPMS" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="web" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\web" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\web\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\web\src\smartPMS" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\web\src\smartPMS\action" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\web\src\smartPMS\action\abschlussarbeit" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="smartPMS" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
           <option name="myItemId" value="ejb3" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
         </PATH_ELEMENT>
@@ -907,98 +676,6 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\ejb3\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\ejb3\src\smartPMS" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="smartPMS" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="ejb3" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\ejb3" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\ejb3\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\ejb3\src\smartPMS" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\ejb3\src\smartPMS\transfer" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="smartPMS" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="ejb3" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\ejb3" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\ejb3\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\ejb3\src\smartPMS" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\ejb3\src\smartPMS\session" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="smartPMS" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="ejb3" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\ejb3" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\ejb3\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="smartPMS" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="ejb3" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\ejb3" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Dokumente und Einstellungen\tbs\Eigene Dateien\smartPMS\ejb3\META-INF" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -1064,67 +741,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JBoss Server.smartPMS">
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG" enabled="false" merge="false">
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="ADDITIONAL_CLASS_PATH" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="wholeProject" />
-      </option>
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method>
-        <option name="Make" value="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -1146,6 +762,18 @@
       <method>
         <option name="Make" value="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
     </configuration>
     <configuration default="true" type="GeronimoConfiguration" factoryName="Local">
       <option name="WORKING_DIRECTORY" />
@@ -1190,13 +818,62 @@
       <option name="PASSWORD" value="" />
       <predefined_log_file id="JBoss" enabled="true" />
     </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG" enabled="false" merge="false">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="ADDITIONAL_CLASS_PATH" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method>
+        <option name="Make" value="true" />
+      </method>
+    </configuration>
     <configuration default="false" name="smartPMS" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 4.2.2.GA">
       <option name="WORKING_DIRECTORY" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="8080" />
       <option name="LOCAL" value="true" />
       <option name="OPEN_IN_BROWSER" value="true" />
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/smartPMS/" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
       <option name="COMMON_VM_ARGUMENTS" value="" />
       <JAVAEE_FACET FACET_ID="ear/javaeeApplication/smartPMS" DEPLOYMENT_SOURCE_NAME="jar">
         <option name="DEPLOY" value="true" />
@@ -1324,16 +1001,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1288" height="780" extended-state="6" />
+    <frame x="-4" y="-4" width="1288" height="780" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32772166" order="13" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3265306" order="13" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="4" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24907975" order="1" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3265306" order="1" />
       <window_info id="Struts Assistant" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32883435" order="4" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39931154" order="4" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3532182" order="4" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874355" order="14" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" order="3" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32702237" order="8" />
@@ -1343,13 +1020,13 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="0" />
       <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="5" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="6" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292683" order="0" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3097561" order="0" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" order="12" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39862543" order="6" />
       <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="10" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3846154" order="2" />
-      <window_info id="SVN Repositories" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32874355" order="9" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23704867" order="2" />
+      <window_info id="SVN Repositories" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32810047" order="9" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="5" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="15" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
@@ -1365,7 +1042,7 @@
     <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Viele neue Dinge... oder ... auch.. nicht." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bilder" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
@@ -1387,6 +1064,7 @@
     <MESSAGE value="Viel angelegt" />
     <MESSAGE value="Neue Facade Interfaces + Umstieg auf JBoss 4.2.2&#10;&#10;Jetzt klappt alles prima ;)" />
     <MESSAGE value="Viele neue Dinge... oder ... auch.. nicht." />
+    <MESSAGE value="Bilder" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1427,65 +1105,110 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/src/smartPMS/action/dokument/Ansicht.java">
+    <entry file="file://$PROJECT_DIR$/web/web/jsp/lehrangebot/startseite.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="345" selection-end="345" vertical-scroll-proportion="0.14834206">
+        <state line="26" column="60" selection-start="1476" selection-end="1476" vertical-scroll-proportion="0.53504276">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/smartPMS/action/dokument/Bearbeiten.java">
+    <entry file="file://$PROJECT_DIR$/ejb3/src/smartPMS/modell/TeilnahmePK.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="455" selection-end="455" vertical-scroll-proportion="0.14834206">
+        <state line="14" column="13" selection-start="304" selection-end="304" vertical-scroll-proportion="0.33333334">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/smartPMS/action/dokument/Entfernen.java">
+    <entry file="file://$PROJECT_DIR$/ejb3/src/smartPMS/modell/Termin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="341" selection-end="341" vertical-scroll-proportion="0.118673645">
+        <state line="18" column="4" selection-start="370" selection-end="412" vertical-scroll-proportion="0.40759075">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/smartPMS/action/dokument/Speichern.java">
+    <entry file="file://$PROJECT_DIR$/web/src/smartPMS/action/termin/Anlegen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="340" selection-end="340" vertical-scroll-proportion="0.14834206">
+        <state line="10" column="29" selection-start="334" selection-end="698" vertical-scroll-proportion="0.29668412">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/smartPMS/action/termin/Bearbeiten.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="359" selection-end="359" vertical-scroll-proportion="0.35602096">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/smartPMS/action/termin/Speichern.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.4363002">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/MessageResources.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="21" selection-start="4342" selection-end="4342" vertical-scroll-proportion="0.9727891">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Programme/JBoss/4.2.2.GA/server/default/lib/hibernate-annotations.jar!/org/hibernate/cfg/annotations/CollectionBinder.class">
+    <entry file="file://$PROJECT_DIR$/web/src/smartPMS/form/TerminForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="0" selection-start="9789" selection-end="9789" vertical-scroll-proportion="0.67320263">
+        <state line="55" column="43" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.85714287">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb3/src/smartPMS/transfer/TerminVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="247" selection-end="247" vertical-scroll-proportion="0.32635254">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ejb3/src/smartPMS/modell/Lehrangebot.java">
+    <entry file="file://$PROJECT_DIR$/web/src/smartPMS/action/lehrangebot/Entfernen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="5" selection-start="3466" selection-end="3466" vertical-scroll-proportion="0.5693069">
+        <state line="20" column="16" selection-start="794" selection-end="794" vertical-scroll-proportion="0.66933334">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb3/src/smartPMS/session/LehrangebotSessionBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="13" selection-start="958" selection-end="958" vertical-scroll-proportion="-6.48">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ejb3/src/smartPMS/modell/Teilnahme.java">
+    <entry file="file://$PROJECT_DIR$/web/src/smartPMS/action/lehrangebot/Anlegen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="31" selection-start="1096" selection-end="1103" vertical-scroll-proportion="0.36448598">
+        <state line="20" column="6" selection-start="895" selection-end="1098" vertical-scroll-proportion="0.45333335">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ejb3/src/smartPMS/modell/Klausur.java">
+    <entry file="file://$PROJECT_DIR$/web/web/jsp/lehrangebot/termin_formular.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="42" selection-start="2366" selection-end="2374" vertical-scroll-proportion="0.45094663">
+        <state line="46" column="83" selection-start="2879" selection-end="2879" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ejb3/src/smartPMS/modell/Dozent.java">
+    <entry file="file://$PROJECT_DIR$/web/web/jsp/lehrangebot/formular.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="0" selection-start="1911" selection-end="1911" vertical-scroll-proportion="0.32656515">
+        <state line="34" column="42" selection-start="1555" selection-end="1555" vertical-scroll-proportion="0.040572792">
           <folding />
         </state>
       </provider>
@@ -1495,55 +1218,14 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="347" column="17" selection-start="16243" selection-end="16243" vertical-scroll-proportion="0.63822526">
+        <state line="121" column="0" selection-start="5405" selection-end="5405" vertical-scroll-proportion="0.043147206">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/web/WEB-INF/tiles-defs.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="200" column="17" selection-start="9130" selection-end="9130" vertical-scroll-proportion="1.7147148">
-          <folding>
-            <marker date="1214815775218" expanded="true" signature="7630:7860" placeholder="..." />
-            <marker date="1214815775218" expanded="true" signature="7932:8165" placeholder="..." />
-            <marker date="1214815775218" expanded="true" signature="8241:8491" placeholder="..." />
-            <marker date="1214815775218" expanded="true" signature="8562:8816" placeholder="..." />
-            <marker date="1214815775218" expanded="true" signature="8889:9129" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/web/jsp/verwaltung/startseite.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="55" selection-start="261" selection-end="261" vertical-scroll-proportion="0.25525525">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/web/jsp/template/navigation.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="29" selection-start="1749" selection-end="1749" vertical-scroll-proportion="1.2515724">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/web/css/menu.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="17" selection-start="213" selection-end="213" vertical-scroll-proportion="0.8163842">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/web/jsp/verwaltung/personen/anlegen.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="21" selection-start="2631" selection-end="2631" vertical-scroll-proportion="-0.18318318">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ejb3/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="63" selection-start="505" selection-end="505" vertical-scroll-proportion="-0.3783784">
+        <state line="183" column="17" selection-start="8203" selection-end="8203" vertical-scroll-proportion="0.41935483">
           <folding />
         </state>
       </provider>
